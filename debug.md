@@ -8,7 +8,7 @@
 
 #### 查看内核配置 
 
-sysctl下的很多配置的解释可以到：https://www.kernel.org/doc/Documentation/sysctl 找到。　　
+sysctl下的很多配置的解释可以到[这里](https://www.kernel.org/doc/Documentation/sysctl) 找到。　　
 sysctl和在proc下的操作sys是一致的，所以相比/proc/sys这么长的路径，还是用sysctl来得快。　　
 
 #### 丢弃内核缓存 
