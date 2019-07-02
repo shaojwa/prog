@@ -21,6 +21,23 @@ sysctl和在proc下的操作sys是等效的:
      $ sysctl -a | grep file
      fs.file-max = 6564913
      fs.file-nr = 7808 0 6564913
+     
+代码：
+
+    /*
+    * One file with associated inode and dcache is very roughly 1K. Per default
+    * do not use more than 10% of our memory for files.
+    */
+    void __init files_maxfiles_init(void)
+    {
+	    unsigned long n;
+	    unsigned long memreserve = (totalram_pages - nr_free_pages()) * 3/2;
+
+	    memreserve = min(memreserve, totalram_pages - 1);
+	    n = ((totalram_pages - memreserve) * (PAGE_SIZE / 1024)) / 10;
+
+	    files_stat.max_files = max_t(unsigned long, n, NR_FILE);
+    }       
 
 #### 一个进程可以分配的最大文件句柄数
     
@@ -31,7 +48,8 @@ sysctl和在proc下的操作sys是等效的:
 
      $ sysctl -a | grep pid_max
      kernel.pid_max = 32768
- 内核代码：
+     
+ 代码：
  
     // pid.c
     int pid_max = PID_MAX_DEFAULT;
