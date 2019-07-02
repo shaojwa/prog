@@ -9,7 +9,12 @@ sysctl下的很多配置的解释可以到[这里](https://www.kernel.org/doc/Do
 
 #### 内核参数的设置
 
-sysctl和在proc下的操作sys是一致的，所以相比/proc/sys这么长的路径，还是用sysctl来得快。　
+sysctl和在proc下的操作sys是等效的:
+
+    $ echo  1620100 > /proc/sys/fs/file-max
+    $ sysctl -w fs.file-max=1620100
+
+所以相比/proc/sys这么长的路径，还是用sysctl来得快,毕竟sysctl可以先用-a查一下。　
 
 #### 内核分配的最大文件句柄数量
     
