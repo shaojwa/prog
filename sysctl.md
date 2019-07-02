@@ -31,6 +31,16 @@ sysctl和在proc下的操作sys是等效的:
 
      $ sysctl -a | grep pid_max
      kernel.pid_max = 32768
+ 内核代码：
+ 
+    // pid.c
+    int pid_max = PID_MAX_DEFAULT;
+    
+    // threads.h
+    /*
+    * This controls the default maximum pid allocated to a process
+    */
+    #define PID_MAX_DEFAULT (CONFIG_BASE_SMALL ? 0x1000 : 0x8000)
 
 #### 丢弃内核缓存 
 
