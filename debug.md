@@ -108,4 +108,4 @@
 
     tar xf centos_gdb_python_debug_mini.tgz -C debug
     debug/install.sh
-    （gdb）thread apply all py-list
+    (gdb) thread apply all py-list
