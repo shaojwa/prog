@@ -1,15 +1,28 @@
 
 
 #### gdb基本用法
-搜索命令
 
-    apropos 
-    
 远程调试
 
     gdbserver --attach :4444 <pid>
     gdb ceph-mds
     target remote 192.168.0.11:4444
+    
+搜索命令
+
+    apropos 
+    
+查看线程
+
+    info thread
+
+切换线程
+
+    thread <ID> 
+ 
+查看栈帧（backtrace）
+
+    bt
     
 断点
 
@@ -21,8 +34,12 @@
     maint print symbol all.sym 
     info functions ptr::ptr
     set multiple-symbols // 多符号匹配时的行为
+
+当前源码位置
+
+    frame
     
-当前指令
+当前指令位置
 
     where
     p $rip
@@ -30,12 +47,7 @@
 变量类型
     
     ptype
-    wahtis
-    
-查看线程
-
-    info thread
-    thread <ID> 
+    whatis
     
 查看类
     
@@ -83,8 +95,8 @@
 信号捕捉
 
     info signals // 显示所有信号以及默认的gdb处理方式
-	info handle  // =  info signals
-	handle signal keywords
+    info handle  // =  info signals
+    handle signal keywords
     
 指定程序启动参数
 
