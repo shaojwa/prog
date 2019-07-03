@@ -20,9 +20,7 @@
 
     thread <ID> 
  
-查看栈帧（backtrace）
 
-    bt
     
 断点
 
@@ -35,13 +33,18 @@
     info functions ptr::ptr
     set multiple-symbols // 多符号匹配时的行为
 
-当前源码位置
+查看指定的栈帧
 
     frame
     
+查看所有栈帧（backtrace）
+
+    bt      // 考虑用full 限定符
+    where   // 等同于 bt 考虑用full 限定符
+    
 当前指令位置
 
-    where
+    
     p $rip
     
 变量类型
