@@ -103,3 +103,9 @@
     (gdb) file /opt/h3c/bin/ceph-mds
     (gdb) set args -f --cluster ceph --id mds0 --setuser ceph --setgroup ceph
     (gdb) run
+
+### python debug
+
+    tar xf centos_gdb_python_debug_mini.tgz -C debug
+    debug/install.sh
+    （gdb）thread apply all py-list
