@@ -1,5 +1,3 @@
-
-
 #### gdb基本用法
 
 远程调试
@@ -19,9 +17,16 @@
 切换线程
 
     thread <ID> 
- 
 
+查看所有栈帧（backtrace）
+
+    bt      // 考虑用full 限定符
+    where   // 等同于 bt 考虑用full 限定符
     
+查看指定的栈帧
+
+    frame
+
 断点
 
     save breakpoints <filename> // 保存断点
@@ -33,15 +38,7 @@
     info functions ptr::ptr
     set multiple-symbols // 多符号匹配时的行为
 
-查看指定的栈帧
 
-    frame
-    
-查看所有栈帧（backtrace）
-
-    bt      // 考虑用full 限定符
-    where   // 等同于 bt 考虑用full 限定符
-    
 当前指令位置
 
     
