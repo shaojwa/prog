@@ -23,9 +23,13 @@
     bt      // 考虑用full 限定符
     where   // 等同于 bt 考虑用full 限定符
     
-查看指定的栈帧
+切换到指定的栈帧
 
-    frame
+    frame <frame_id>
+    
+查看栈帧的详细情况
+
+    info frame
 
 断点
 
@@ -109,3 +113,9 @@
     tar xf centos_gdb_python_debug_mini.tgz -C debug
     debug/install.sh
     (gdb) thread apply all py-list
+
+
+#### 为什么bt显示的某些栈帧看不到参数
+
+一个软件的正式版本一般都是经过优化的，如果一个接口的参数，在调用这个接口之后不再使用，那么这个接口的参数一般会通过寄存器传入。
+这个参数也就不会在栈帧中看到，除非是对内层的调用。所以如果碰到某个接口的参数无法显示，不用觉得奇怪。
