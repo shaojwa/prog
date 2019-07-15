@@ -1,4 +1,4 @@
-#### 两个 sys kernel的区别
+#### 两个 sys/kernel的区别
  
     /proc/sys/kernel
     
@@ -11,6 +11,12 @@ sysctl接口, 调整监控内核操作
 
 
 [参考sys](https://www.ibm.com/developerworks/cn/linux/l-cn-sysfs/index.html)
+
+    /sys/fs
+
+这里按照设计是用于描述系统中所有文件系统，包括文件系统本身和按文件系统分类存放的已挂载点，但目前只有 fuse,gfs2 等少数文件系统支持 sysfs 接口，一些传统的虚拟文件系统(VFS)层次控制参数仍然在 sysctl (/proc/sys/fs) 接口中；之前用到过的debugfs就挂载这个目录下：
+
+    mount -t debugfs none /sys/kernel/debug
 
 #### printk的打印级别解释
 
