@@ -1,3 +1,22 @@
+#### 两个 sys kernel的区别
+ 
+    /proc/sys/kernel
+    
+sysctl接口, 调整监控内核操作
+
+    /sys/kernel
+    
+这里的sys是sysfs文件系统的挂载点，sysfs相比proc有很多优点，sysfs的设计原则是一个属性文件做一件事情，sysfs文件一般只有一个值。
+目前很多/proc下的功能已经移动到/sys/下，新设计的内核机制应该尽量使用sysfs机制，而将proc保留给纯净的"进程文件系统"。这里是内核所有可调整参数的位置，目前只有 uevent_helper, kexec_loaded, mm, 和新式的 slab 分配器等几项较新的设计在使用它，其它内核可调整参数仍然位于 sysctl (/proc/sys/kernel) 接口中;
+
+
+[参考sys](https://www.ibm.com/developerworks/cn/linux/l-cn-sysfs/index.html)
+
+#### printk的打印级别解释
+
+    # cat /proc/sys/kernel/printk
+    4(current) 4(default) 1(minimum) 7(boot-time-default)
+
 #### gdb基本用法
 
 远程调试
