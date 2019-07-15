@@ -119,3 +119,10 @@
 
 一个软件的正式版本一般都是经过优化的，如果一个接口的参数，在调用这个接口之后不再使用，那么这个接口的参数一般会通过寄存器传入。
 这个参数也就不会在栈帧中看到，除非是对内层的调用。所以如果碰到某个接口的参数无法显示，不用觉得奇怪。
+
+#### 内核日志打开
+
+    echo module libceph +p > /sys/kernel/debug/dynamic_debug/control
+    echo file fs/ceph/mds_clinet.c +p > /sys/kernel/debug/dynamic_debug/control
+    echo file net/ceph/messenger.c line 1278 +p > /sys/kernel/debug/dynamic_debug/control
+    echo file net/ceph/messenger.c func ceph_mds_do_request +p > /sys/kernel/debug/dynamic_debug/control
