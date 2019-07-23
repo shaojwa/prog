@@ -1,9 +1,10 @@
 ### dmsg 和 /var/log/messages区别是什么？
 
-* dmesg 显示从系统当次启动开始时的所有日志。从内核缓冲器中读取所有的消息。
-  通过 -f 可以指定facilities，比如deamon，通过dmesg --help 查看所有的facility
-  通过 -l 可以指定level
-  通过 -k 可以指定内核消息
+    dmesg 显示从系统当次启动开始时的所有日志。
+    默认从内核缓冲器中读取所有的消息。
+    通过 -f 可以指定facilities，比如deamon，通过dmesg --help 查看所有的facility
+    通过 -l 可以指定level。
+    通过 -k 可以指定内核消息。
 
 #### 两个 sys/kernel的区别
  
