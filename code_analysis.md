@@ -1,0 +1,22 @@
+#### 如何解决C代码中的double直接用等号比较问题
+
+比如如下代码：
+
+    #include <stdio.h>
+    int main() {
+      double a = 0.1;
+      double b = 0.05;
+      b *= 2;
+      if (a == b) {
+        printf("equal\n");
+      } else {
+        printf("not equal\n");
+      }
+      return 0;
+    }
+  
+  这代码用-Wall编译也是不会报错的：
+    
+     gcc -Wall double_equal.c
+
+
