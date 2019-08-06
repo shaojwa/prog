@@ -20,17 +20,18 @@
     w     14012  0.0  0.0 113192  2908 pts/9    T    11:50   0:00 /bin/bash ./write.sh
 
 #### 当前shelll的bash进程
-   
-   [dev ~]$ cat /proc/11146/stack
-  [<ffffffff8b48e8f7>] do_wait+0x1c7/0x240
-  [<ffffffff8b48fc89>] kernel_wait4+0x89/0x140
-  [<ffffffff8b48fdc6>] SYSC_wait4+0x86/0x90
-  [<ffffffff8b48fe6e>] SyS_wait4+0xe/0x10
-  [<ffffffff8b403917>] do_syscall_64+0x67/0x1b0
-  [<ffffffff8bbd36a7>] entry_SYSCALL64_slow_path+0x25/0x25
-  [<ffffffffffffffff>] 0xffffffffffffffff
+
+    [dev ~]$ cat /proc/11146/stack
+    [<ffffffff8b48e8f7>] do_wait+0x1c7/0x240
+    [<ffffffff8b48fc89>] kernel_wait4+0x89/0x140
+    [<ffffffff8b48fdc6>] SYSC_wait4+0x86/0x90
+    [<ffffffff8b48fe6e>] SyS_wait4+0xe/0x10
+    [<ffffffff8b403917>] do_syscall_64+0x67/0x1b0
+    [<ffffffff8bbd36a7>] entry_SYSCALL64_slow_path+0x25/0x25
+    [<ffffffffffffffff>] 0xffffffffffffffff
   
   用户态：
+  
     [dev ~]$ pstack 11146
     #0  0x00007f97bb8d8a3c in waitpid () from /lib64/libc.so.6
     #1  0x0000000000440b24 in waitchld.isra.10 ()
@@ -41,17 +42,17 @@
     #6  0x000000000041c96e in main ()
 
   当执行ctrl-z之后： 
-  
-  [dev ~]$ cat /proc/11146/stack
-  [<ffffffff8b4d1f85>] wait_woken+0x65/0x80
-  [<ffffffff8b892493>] n_tty_read+0x3d3/0x8c0
-  [<ffffffff8b88dcf2>] tty_read+0x92/0xf0
-  [<ffffffff8b652877>] __vfs_read+0x37/0x160
-  [<ffffffff8b652a2c>] vfs_read+0x8c/0x130
-  [<ffffffff8b652fd5>] SyS_read+0x55/0xc0
-  [<ffffffff8b403917>] do_syscall_64+0x67/0x1b0
-  [<ffffffff8bbd36a7>] entry_SYSCALL64_slow_path+0x25/0x25
-  [<ffffffffffffffff>] 0xffffffffffffffff
+
+    [dev ~]$ cat /proc/11146/stack
+    [<ffffffff8b4d1f85>] wait_woken+0x65/0x80
+    [<ffffffff8b892493>] n_tty_read+0x3d3/0x8c0
+    [<ffffffff8b88dcf2>] tty_read+0x92/0xf0
+    [<ffffffff8b652877>] __vfs_read+0x37/0x160
+    [<ffffffff8b652a2c>] vfs_read+0x8c/0x130
+    [<ffffffff8b652fd5>] SyS_read+0x55/0xc0
+    [<ffffffff8b403917>] do_syscall_64+0x67/0x1b0
+    [<ffffffff8bbd36a7>] entry_SYSCALL64_slow_path+0x25/0x25
+    [<ffffffffffffffff>] 0xffffffffffffffff
 
 用户态：
 
