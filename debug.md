@@ -72,7 +72,7 @@ sysctl接口, 调整监控内核操作
 符号
 
     maint print symbol all.sym 
-    info functions ptr::ptr
+    info functions C_ObjectOperation_decodevals
     set multiple-symbols // 多符号匹配时的行为
 
 
