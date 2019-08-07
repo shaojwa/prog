@@ -140,6 +140,9 @@ sysctl接口, 调整监控内核操作
     (gdb) file /opt/h3c/bin/ceph-mds
     (gdb) set args -f --cluster ceph --id mds0 --setuser ceph --setgroup ceph
     (gdb) run
+    
+指定命令启动
+    gdb -p 1234 -ex 'break MOSDOpReply::decode_payload'
 
 ### python debug
 
