@@ -8,4 +8,4 @@
 
     According to [ls.c](http://git.savannah.gnu.org/cgit/coreutils.git/tree/src/ls.c?id=v8.21#n3785) (line 3785), 
     . means an [SELinux ACL](https://en.wikipedia.org/wiki/Security-Enhanced_Linux). 
-    + means a [general ACL](https://en.wikipedia.org/wiki/Access_control_list#Filesystem_ACLs).
+    + means a general ACL(https://en.wikipedia.org/wiki/Access_control_list#Filesystem_ACLs).
