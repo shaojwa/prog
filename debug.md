@@ -162,3 +162,11 @@ sysctl接口, 调整监控内核操作
     echo file fs/ceph/mds_clinet.c +p > /sys/kernel/debug/dynamic_debug/control
     echo file net/ceph/messenger.c line 1278 +p > /sys/kernel/debug/dynamic_debug/control
     echo file net/ceph/messenger.c func ceph_mds_do_request +p > /sys/kernel/debug/dynamic_debug/control
+ 
+#### 看ELF文件依赖的库文件
+ 
+    ldd /bin/ceph-mds
+    
+#### 看ELF文件的加载路劲
+
+    readelf -d /bin/ceph-mds
