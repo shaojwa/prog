@@ -12,3 +12,9 @@ last reboot 时间的重叠常常伴随last -x中shutdown用户的system down事
 没有正确记录的原因有意外断电，也有reboot带-d参数这样人为特意不写入shutdown事件。
 所以其实时间重叠也是正常的现象，last只是去读取wtmp文件，要是文件本身数据就有偏差，那结果也就不可靠。
 所以last得数据只是一种系统在没出异常时的参考。
+
+
+* last -x  | grep reboot 等价于 last reboot
+* reboot    用户的开始时间就是系统的启动时间
+* shutdown  用户的时间段是关机时间但并不是所有的关机都有shutdown日志
+* shutdown  命令不会产生shutdown日志???
