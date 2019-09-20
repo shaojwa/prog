@@ -1,5 +1,5 @@
 
-* 找到socket对应的fd号
+* 在lsof输出的 FD 列找到socket对应的fd号
     
         lsof -np <pid> 
 
