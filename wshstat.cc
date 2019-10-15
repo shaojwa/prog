@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     exit(-1);
   }
 
-  printf("stat.st_ino = %d\n", buffer.st_ino);
+  printf("stat.st_ino = %u\n", buffer.st_ino);
   printf("stat.st_nlink = %d\n", buffer.st_nlink);
   printf("stat.st_size = %d\n", buffer.st_size);
   printf("stat.st_blocks = %d\n", buffer.st_blocks);
