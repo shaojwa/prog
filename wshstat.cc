@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
   int status;
   status = stat(argv[1], &buffer);
   if (status == -1) {
-    printf("eror: %d\n", errno);
+    printf("error: %d\n", errno);
     exit(-1);
   }
 
