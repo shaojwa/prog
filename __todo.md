@@ -21,5 +21,3 @@
     
     linux 系统编程p55
     原生编程规范 是什么意思？    
-
-    ifdown和ifconfig区别
