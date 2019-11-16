@@ -1,4 +1,6 @@
     
+    http://kerneltrap.org/node/517
+    
     对目录调用 stat 系统调用时的返回值是什么意思？
     sync，syncfs，fsync，fdatasync 等系统调用的区别和注意点？
     lock_gettime() 接口中，CLOCK_REALTIME and CLOCK_MONOTONIC 区别以及适用场景？
