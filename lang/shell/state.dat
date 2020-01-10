@@ -1,0 +1,3 @@
+#Nmap scan initiated as: nmap -v -F --min-rate 16 --max-hostgroup     16 -iL list.txt -oN nmap.out
+24241 192.168.10.95
+

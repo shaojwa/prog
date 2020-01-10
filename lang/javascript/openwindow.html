@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title></title>
+    <script src="ut.js"></script>
+    <script type="text/javascript">
+        function setUrl() {
+            window.location.href = "http://www.zhihu.com";
+        }
+
+        function openUrl() {
+            var obj = window.open("https://www.zhihu.com", "zhihu-window");
+            alert(obj);
+            return obj;
+        }
+    </script>
+</head>
+
+<body>
+<button id="btn1" onclick="openUrl()"> open zhihu </button><br/>
+</body>
+</html>

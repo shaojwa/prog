@@ -1,0 +1,79 @@
+#Nmap scan initiated as: nmap -v -F --min-rate 128 --max-hostgroup 2 -iL list.txt -oN nmap.out
+
+Nmap scan report for 192.168.10.110
+
+# Nmap 6.40 scan initiated Mon Feb 29 16:00:26 2016 as: nmap --append-output -v -F --min-rate 128 --max-hostgroup 2 -iL list.txt -oN nmap.out
+Nmap scan report for 192.168.10.111
+Host is up (0.00018s latency).
+All 100 scanned ports on 192.168.10.111 are filtered
+
+Nmap scan report for 192.168.10.112
+Host is up (0.0015s latency).
+All 100 scanned ports on 192.168.10.112 are filtered
+
+Nmap scan report for 192.168.10.113
+Host is up (0.00017s latency).
+All 100 scanned ports on 192.168.10.113 are filtered
+
+Nmap scan report for 192.168.10.114
+Host is up (0.00014s latency).
+All 100 scanned ports on 192.168.10.114 are filtered
+
+Nmap scan report for 192.168.10.115
+Host is up (0.00015s latency).
+All 100 scanned ports on 192.168.10.115 are filtered
+
+Nmap scan report for 192.168.10.116
+Host is up (0.00064s latency).
+All 100 scanned ports on 192.168.10.116 are filtered
+
+Nmap scan report for 192.168.10.117
+Host is up (0.0011s latency).
+All 100 scanned ports on 192.168.10.117 are filtered
+
+Nmap scan report for 192.168.10.118
+Host is up (0.00096s latency).
+All 100 scanned ports on 192.168.10.118 are filtered
+
+Nmap scan report for 192.168.10.119
+Host is up (0.00017s latency).
+All 100 scanned ports on 192.168.10.119 are filtered
+
+Nmap scan report for 192.168.10.120
+Host is up (0.00016s latency).
+All 100 scanned ports on 192.168.10.120 are filtered
+
+Nmap scan report for 192.168.10.121
+Host is up (0.0010s latency).
+All 100 scanned ports on 192.168.10.121 are filtered
+
+Nmap scan report for 192.168.10.122
+Host is up (0.00048s latency).
+All 100 scanned ports on 192.168.10.122 are filtered
+
+Nmap scan report for 192.168.10.123
+Host is up (0.00018s latency).
+All 100 scanned ports on 192.168.10.123 are filtered
+
+Nmap scan report for 192.168.10.124
+Host is up (0.0014s latency).
+All 100 scanned ports on 192.168.10.124 are filtered
+
+Increasing send delay for 192.168.10.126 from 0 to 5 due to 18 out of 59 dropped probes since last increase.
+Nmap scan report for 192.168.10.125
+Host is up (0.00016s latency).
+All 100 scanned ports on 192.168.10.125 are filtered
+
+Nmap scan report for 192.168.10.126
+Host is up (1.0s latency).
+Not shown: 98 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+111/tcp open  rpcbind
+
+Nmap scan report for 192.168.10.127
+Host is up (0.00015s latency).
+All 100 scanned ports on 192.168.10.127 are filtered
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Mon Feb 29 16:01:23 2016 -- 17 IP addresses (17 hosts up) scanned in 57.31 seconds

@@ -1,0 +1,3 @@
+#Nmap scan initiated as: nmap -v -F --min-rate 128 --max-hostgroup 2 -iL list.txt -oN nmap.out
+12203
+192.168.10.127
