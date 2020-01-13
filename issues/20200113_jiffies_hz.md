@@ -2,6 +2,8 @@ jiffies 值的获取，iffies的初始值并不是0，而是300s后即将溢出�
 
 http://books.gigatux.nl/mirror/kerneldevelopment/0672327201/ch10lev1sec3.html
 
+http://users.nccs.gov/~fwang2/linux/lk_timer.txt
+
 #### 正确方法
 
 ```
