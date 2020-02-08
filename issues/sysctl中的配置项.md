@@ -1,8 +1,3 @@
-#### 系统调用号在什么头文件定义？
-    
-    asm/unistd_64.h:190:#define __NR_gettid 186
-    bits/syscall.h:577:# define SYS_gettid __NR_gettid  
-
 #### 内核配置说明文档
 
 sysctl下的很多配置的解释可以到[这里](https://www.kernel.org/doc/Documentation/sysctl) 找到。  
