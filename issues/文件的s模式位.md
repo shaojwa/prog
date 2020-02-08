@@ -1,4 +1,3 @@
-
 #### 文件的s模式
 
   [wsh@dev code]$ ll -i /bin/sudo
