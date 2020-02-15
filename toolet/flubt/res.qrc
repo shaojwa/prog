@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/img">
+        <file alias="onekey">res/onekey.png</file>
+        <file alias="cust">res/cust.png</file>
+        <file alias="btnmin">res/btnmin.png</file>
+        <file alias="btnclose">res/btnclose.png</file>
+        <file alias="btncloseh">res/btncloseh.png</file>
+        <file alias="btnminh">res/btnminh.png</file>
+        <file alias="logoico">res/logo.ico</file>
+        <file alias="logopng">res/logo.png</file>
+        <file alias="toolbarbg">res/toolbarbg.png</file>
+    </qresource>
+</RCC>

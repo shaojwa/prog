@@ -1,0 +1,1 @@
+"C:\Program Files\7-Zip\7z.exe" a -tzip -slp -sae -aoa ..\le\res.zip .\res\*

@@ -1,0 +1,277 @@
+<HTML>
+    <HEAD>
+        <meta charset="UTF-8" ></meta>
+        <TITLE>pple</TITLE>
+        <HTA:APPLICATION ID="pple"
+        APPLICATIONNAME="pple"
+        BORDERSTYLE="normal"
+        CAPTION="yes"
+        ICON="logo.ico"
+        MAXIMIZEBUTTON="no"
+        MINIMIZEBUTTON="no"
+        SHOWINTASKBAR="yes"
+        SINGLEINSTANCE="yes"
+        SYSMENU="yes"
+        VERSION="1.0"
+        WINDOWSTATE="maximize"/>
+        <script type="text/javascript">
+            var gIndex = 0;
+            var gTotal = 0;
+            var logfile = "list.out"
+            function startSearch() {
+                var searchPath = document.getElementById("searchPath");
+                var pattern = document.getElementById("pattern");
+                var state = document.getElementById("lblSearch");
+                if (searchPath.value == "" || pattern.value == "") {
+                    state.innerHTML = "注意：搜索路径和匹配字串不能为空";
+                    return;
+                }
+                if (!dirExist(searchPath.value)) {
+                    state.innerHTML = "注意：请确认本地搜索路径是否存在";
+                    return;
+                }
+                state.innerHTML = "";
+                var btnStart = document.getElementById("btnSearch");
+                btnSearch.value = "正在搜索..."
+                btnSearch.disabled = true;
+                document.getElementById("divPage").style.visibility="hidden";
+                clear();
+                findLog(searchPath.value,  pattern.value);
+                btnSearch.value = "开始搜索"
+                btnSearch.disabled = false;
+                showTotal();
+                listFirst();
+            }
+            function startBackup() {
+                var backupPath = document.getElementById("backupPath");
+                var state = document.getElementById("lblBackup");
+                 if (backupPath.value == "") {
+                    state.innerHTML = "注意：备份路径不能为空";
+                    return;
+                }
+                if (!dirExist(backupPath.value)) {
+                    state.innerHTML = "注意：请确认本地搜索路径是否存在";
+                    return;
+                }
+                state.innerHTML = "";
+                var btnBackup = document.getElementById("btnBackup");
+                btnBackup.value = "正在提取...";
+                btnBackup.disabled = true;
+                copyLog(backupPath.value);
+                btnBackup.value = "开始提取";
+                btnBackup.disabled = false;
+                state.innerHTML = "提取完成"
+            }
+
+            function dirExist(dirPath) {
+                status.innerHTML = dirPath;
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                if (!fso.FolderExists(dirPath)) {
+                    return false;
+                }
+                return true;
+            }
+
+            function findLog(searchPath, pattern) {
+                var objShell = new ActiveXObject("WScript.Shell");
+                var cmdline = "cmd /c findlog.bat " + searchPath + " " +  pattern;
+                var ret = objShell.run(cmdline, 0, true);
+                return;
+            }
+
+            function showTotal() {
+                gTotal = 0;
+                var count = 0;
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                if (fso.FileExists(logfile)) {
+                    var file = fso.OpenTextFile(logfile);
+                    var table = document.getElementById("tblSearch");
+                    while(!file.AtEndofStream) {
+                        file.ReadLine();
+                        count++;
+                    }
+                    gTotal = count;
+                    file.Close();
+                }
+                var state =  document.getElementById("lblSearch");
+                state.innerHTML = "搜索到匹配日志：" + count + " 条";
+                var div = document.getElementById("divPage");
+                if (gTotal > 0) {
+                    div.style.visibility="visible";
+                } else {
+                    div.style.visibility="hidden";
+                }
+            }
+
+            function listFirst() {
+                gIndex = 0;
+                listNext();
+            }
+
+            function listNext() {
+                clear();
+                gIndex += list(gIndex, 10);
+                var btnNext = document.getElementById("btnNext");
+                if (gIndex == gTotal) {
+                    btnNext.disabled = true;
+                } else {
+                    btnNext.disabled = false;
+                }
+            }
+
+           function list(from, len) {
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                if (!fso.FileExists(logfile)) {
+                    return 0;
+                }
+                var file = fso.OpenTextFile(logfile);
+                var table = document.getElementById("tblSearch");
+                var row;
+                var cell;
+                var text;
+                var line;
+                var count = 0;
+                var index = 0;
+                while(!file.AtEndofStream) {
+                    line = file.ReadLine();
+                    if (index < from) {
+                        index++;
+                        continue;
+                    }
+                    index++;
+                    // add index
+                    row = table.insertRow(count);
+                    cell = row.insertCell(0);
+                    cell.style.width = "50px";
+                    text = document.createTextNode(index);
+                    cell.appendChild(text);
+
+                    // add filename
+                    cell = row.insertCell(1);
+                    text = document.createTextNode(line);
+                    cell.appendChild(text);
+                    count++;
+                    if (count == len) {
+                        break;
+                    }
+                }
+                file.Close();
+                return count;
+           }
+
+           function clear() {
+                var table = document.getElementById("tblSearch");
+                while(table.rows.length > 0) {
+                    table.deleteRow(0);
+                }
+           }
+
+           function copyLog(backup) {
+                var objShell = new ActiveXObject("WScript.Shell");
+                var cmdline = "cmd /c copylog.bat " + backup;
+                var ret = objShell.run(cmdline, 0, true);
+                return;
+           }
+
+           function mkdir(dir) {
+                var objShell = new ActiveXObject("WScript.Shell");
+                var cmdline = "cmd /c mkdir " + dir;
+                var ret = objShell.run(cmdline, 0, true);
+                return;
+          }
+        </script>
+    </HEAD>
+
+
+    <style>
+        label {
+            height: 24;
+            font-size: 12;
+        }
+
+        input {
+            overflow:visible;
+            border:1px solid lightblue;
+            background-color:#ffffff;
+            cursor:text;
+            width: 600;
+            height: 24;
+            font-size: 12;
+        }
+        button {
+            border:1px solid black;
+            background-color:#ffffff;
+            width: 100;
+            height: 24;
+            font-size: 12;
+        }
+
+
+        table, th, td {
+            width: 650;
+            border-collapse:collapse;
+            border:1px solid black;
+            font-size: 12;
+        }
+
+
+        th, td {
+            border:1px solid black;
+        }
+
+        .divBlock {
+            width:800;
+            height:1000;
+            background-color:#A4BED9;
+        }
+
+        .divLine {
+            height: 30;
+            vertical-align: middle;
+        }
+
+    </style>
+
+    <BODY SCROLL="no" style="text-align:center", style="background-color:#DDEDFB">
+        <div class="divBlock">
+        <div class="divLine"></div>
+        <div class="divLine" >
+            <label>搜索目录:</label>
+            <input id="searchPath" type="text" />
+        </div>
+        <div class="divLine" >
+            <label>匹配格式:</label>
+            <input id="pattern" type="text" />
+        </div>
+        <hr>
+        <div class="divLine" >
+            <button id="btnSearch" onclick="startSearch()">开始搜索</button>
+        </div>
+        <div class="divLine" >
+            <label id="lblSearch"></label>
+        </div>
+        <div id="divPage" class="divLine" style="visibility:hidden" >
+            <button id="btnFirst" onclick="listFirst()">第一页</button>
+            <button id="btnNext" onclick="listNext()">下一页</button>
+        </div>
+        <div style="overflow:auto; max-height: 400px" >
+            <table id="tblSearch"></table>
+        </div>
+        <hr>
+        <div class="divLine" >
+            <label>备份目录:</label>
+            <input id="backupPath" type="text" />
+        </div>
+        <hr>
+        <div class="divLine" >
+            <button id="btnBackup" onclick="startBackup()">开始提取</button><br/>
+        </div>
+        <div class="divLine" >
+            <label id="lblBackup"></label>
+        </div>
+        <div>
+        <table id="tblSearch" border="1">
+        </table>
+        </div>
+    </BODY>
+</HTML>

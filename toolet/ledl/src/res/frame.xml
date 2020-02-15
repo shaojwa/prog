@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window mininfo="948,552" size="948,552" maxinfo="948,552" roundcorner="0">
+    <Font name="微软雅黑" id="0" size="12" default="true" />
+	<Font name="微软雅黑" id="1" size="14" />
+	<Font name="微软雅黑" id="2" size="16" />
+	<Font name="微软雅黑" id="3" size="18" />
+	<Font name="微软雅黑" id="4" size="20" />
+	<Font name="微软雅黑" id="5" size="22" />
+	<Font name="微软雅黑" id="6" size="24" />
+	<Font name="微软雅黑" id="7" size="26" />
+	<Font name="微软雅黑" id="8" size="28" />
+	<HorizontalLayout name="bg" bkimage="file='bg.png'" hole="true" >
+		<VerticalLayout>
+			<!-- 上半部分-->
+			<VerticalLayout height="140" inset="30,10,30,10">
+				<HorizontalLayout name="hlPlaceHolder" height="5" ></HorizontalLayout>
+				<HorizontalLayout name="hlTitleBar" height="35" childpadding="5" >
+					<Label name="lblProductName" font="5" text="" width="50" textcolor="#FFFFFFFF" />
+					<VerticalLayout>
+						<HorizontalLayout name="hlPlaceHolder"></HorizontalLayout>
+						<Label name="lblToolName" font="2" text="日志提取工具" txwidth="140" textcolor="#FFFFFFFF" />
+					</VerticalLayout>
+					<Label name="lblPlaceHolder"/>
+					<Button name="btnMin" height="20" width="26" normalimage="file='btn_min.png' source='0,0,26,20'" hotimage="file='btn_min.png' source='27,0,53,20'" pushimage="file='btn_min.png' source='54,0,80,20'"/>	
+					<Button name="btnMax" height="20" width="26" normalimage="file='btn_max.png' source='0,0,26,20'" hotimage="file='btn_max.png' source='27,0,53,20'" pushimage="file='btn_max.png' source='54,0,80,20'"/>	
+					<Button name="btnClose" height="20" width="26" normalimage="file='btn_close.png' source='0,0,26,20'" hotimage="file='btn_close.png' source='27,0,53,20'" pushimage="file='btn_close.png' source='54,0,80,20'"	/>
+				</HorizontalLayout>	
+				<HorizontalLayout name="hlPlaceHolder" height="10" ></HorizontalLayout>
+				<HorizontalLayout name="hlControlPanel" childpadding="10" visible="false" >
+					<Label name="lblPlaceHolder" width="20"/>
+					<HorizontalLayout width="45" height="54" bkimage="file='dd.png'"></HorizontalLayout>
+					<Label name="lblExtractState"></Label>
+					<Button name="btnStop" height="36" width="96" text="停止" font="2" textcolor="#FF11C008" hottextcolor="#FFFFFFFF" normalimage="file='btn_state.png' source='96,0,96,36'" hotimage="file='btn_state.png' source='0,0,96,36' "/>	
+					<Button name="btnBack" height="36" width="96" text="返回" font="2" textcolor="#FF11C008" hottextcolor="#FFFFFFFF" normalimage="file='btn_state.png' source='96,0,96,36'" hotimage="file='btn_state.png' source='0,0,96,36' "/>
+					<Label name="lblPlaceHolder" width="20"/>
+				</HorizontalLayout>
+			</VerticalLayout>
+
+			<!-- 下半部分 -->
+			<TabLayout name="tlMainPanel">
+				<VerticalLayout inset="30,10,30,10">
+					<HorizontalLayout height="200">
+						<HorizontalLayout width="283" height="196" bkimage="file='layout1.png'"></HorizontalLayout>
+						<VerticalLayout>
+							<HorizontalLayout name="hlPlaceHolder" ></HorizontalLayout>
+							<HorizontalLayout width="545" height="88" bkimage="file='layout2.png'"></HorizontalLayout>
+							<HorizontalLayout name="hlPlaceHolder" ></HorizontalLayout>
+						</VerticalLayout>
+					</HorizontalLayout>
+					
+					<TabLayout name="tlExtractType">
+						<VerticalLayout>
+							<HorizontalLayout height="65" >
+								<HorizontalLayout name="hlPlaceHolder" ></HorizontalLayout>
+								<Button name="btnExtractAuto" width="211" height="65" normalimage="file='btn_extract_auto.png' source='0,0,211,65'" hotimage="file='btn_extract_auto.png' source='0,65,211,130'"/>	
+								<HorizontalLayout name="hlPlaceHolder" ></HorizontalLayout>
+							</HorizontalLayout>
+							<HorizontalLayout name="hlPlaceHolder" height="20"> </HorizontalLayout>
+							<HorizontalLayout>
+								<HorizontalLayout name="hlPlaceHolder" ></HorizontalLayout>
+								<Button name="btnAdvance" height="22" font="1" text="高级配置" width="60" textcolor="#FF73AEFF" />	
+								<HorizontalLayout name="hlPlaceHolder" ></HorizontalLayout>
+							</HorizontalLayout>
+							<HorizontalLayout name="hlPlaceHolder" ></HorizontalLayout>
+
+						</VerticalLayout>
+						<VerticalLayout > 
+							<HorizontalLayout name="hlPlaceHolder" > </HorizontalLayout>
+							<HorizontalLayout name="hlOptions" height="36" inset="5,0,5,0" childpadding="5" >
+								<VerticalLayout>
+									<HorizontalLayout name="hlPlaceHolder" height="7"></HorizontalLayout>
+									<HorizontalLayout height="22">
+										<HorizontalLayout >
+											<Label name="lblPattern" font="1" height="22" text="匹配模式" width="60" textcolor="#FF73AEFF" tooltip="用于匹配日志文件名的郑则表达式" />
+											<Edit name="edtPattern" height="22" width="180" font="1" bordersize="1" textcolor="#FFC0C0C0" bordercolor="#FFC0C0C0" focusbordercolor="#FF337BAD"/>
+										</HorizontalLayout>
+										<HorizontalLayout >
+											<Label name="lblSrc" height="22" font="1" text="搜索路径" width="60" textcolor="#FF73AEFF" tooltip="日志查找的根目录"/>
+											<Edit name="edtSrc" height="22" width="180" font="1" bordersize="1" textcolor="#FFC0C0C0" bordercolor="#FFC0C0C0" focusbordercolor="#FF337BAD"/>
+										</HorizontalLayout>
+										<HorizontalLayout >
+											<Label name="lblDst" height="22" font="1" text="备份路径" width="60" textcolor="#FF73AEFF" tooltip="日志备份的根目录"/>
+											<Edit name="edtDst" height="22" width="180" font="1" bordersize="1"  textcolor="#FFC0C0C0" bordercolor="#FFC0C0C0" focusbordercolor="#FF337BAD"/>
+										</HorizontalLayout>
+									</HorizontalLayout>
+									<HorizontalLayout name="hlPlaceHolder" height="7"></HorizontalLayout>
+								</VerticalLayout>
+								<Button name="btnExtract" text="提取"  width="96" height="36" font="2" textcolor="#FF11C008" hottextcolor="#FFFFFFFF" normalimage="file='btn_state.png' source='96,0,96,36'" hotimage="file='btn_state.png' source='0,0,96,36'" />
+								<VerticalLayout width="27">
+									<HorizontalLayout name="hlPlaceHolder" height="7"></HorizontalLayout>
+									<Button name="btnCloseAdvance" height="20" normalimage="file='btn_close.png' source='0,0,27,20'" />
+									<HorizontalLayout name="hlPlaceHolder" height="7"></HorizontalLayout>
+								</VerticalLayout>
+							</HorizontalLayout>
+							<HorizontalLayout height="30" >
+								<HorizontalLayout width="290"></HorizontalLayout>
+								<Button name="btnSrcBrowse" text="浏览" textcolor="#FFFFFFFF" width="80" bordersize="1"  />
+								<HorizontalLayout width="170"></HorizontalLayout>
+								<Button name="btnDstBrowse" text="浏览" textcolor="#FFFFFFFF" width="80" bordersize="1" />
+								<HorizontalLayout></HorizontalLayout>
+							</HorizontalLayout>
+							<HorizontalLayout></HorizontalLayout>
+						</VerticalLayout>
+					</TabLayout>
+				</VerticalLayout>
+				<VerticalLayout inset="30,10,30,10" bkcolor="#FFF5F5F5">
+					<HorizontalLayout>
+						<HorizontalLayout width="80"></HorizontalLayout>
+						<VerticalLayout>
+							<Label name="lblSystemLog" text="系统日志" font="6" textcolor="#FF333333"/>	
+							<HorizontalLayout>
+								<VerticalLayout>
+									<HorizontalLayout name="hlProcess"  width="51" height="52" bkimage="file='task.png' source='204,0,255,52'"></HorizontalLayout>
+									<Label name="lblProcess" text="进程日志" font="3" textcolor="#FF135BB6"/>
+									<Label name="lblProcessState" text="未完成" font="0" textcolor="#FFF10909"/>
+								</VerticalLayout>
+								<VerticalLayout>
+									<HorizontalLayout name="hlOper" width="51" height="52" bkimage="file='task.png' source='204,0,255,52'"></HorizontalLayout>
+									<Label name="lblOper" text="操作日志" font="3" textcolor="#FF135BB6"/>
+									<Label name="lblOperState" text="未完成" font="0" textcolor="#FFF10909"/>
+								</VerticalLayout>
+								<VerticalLayout></VerticalLayout>
+								<VerticalLayout></VerticalLayout>
+								<VerticalLayout></VerticalLayout>
+							</HorizontalLayout>
+						</VerticalLayout>
+					</HorizontalLayout>	
+					<HorizontalLayout>
+						<HorizontalLayout width="80"></HorizontalLayout>
+						<VerticalLayout>
+							<Label name="lblServiceLog" text="服务日志" font="6" textcolor="#FF333333"/>
+							<HorizontalLayout>
+								<VerticalLayout>
+									<HorizontalLayout name="hlWeb" width="51" height="52" bkimage="file='task.png' source='204,0,255,52'"></HorizontalLayout>
+									<Label name="lblWeb" text="WEB日志" font="3" textcolor="#FF135BB6"/>
+									<Label name="lblWebState" text="未完成" font="0" textcolor="#FFF10909"/>
+								</VerticalLayout>
+								<VerticalLayout>
+									<HorizontalLayout name="hlSmb" width="51" height="52" bkimage="file='task.png' source='204,0,255,52'"></HorizontalLayout>
+									<Label name="lblSmb" text="SMB日志" font="3" textcolor="#FF135BB6"/>
+									<Label name="lblSmbState" text="未完成" font="0" textcolor="#FFF10909"/>
+								</VerticalLayout>
+								<VerticalLayout>
+									<HorizontalLayout name="hlFtp" width="51" height="52" bkimage="file='task.png' source='204,0,255,52'"></HorizontalLayout>
+									<Label name="lblFtp" text="FTP日志" font="3" textcolor="#FF135BB6"/>
+									<Label name="lblFtpState" text="未完成" font="0" textcolor="#FFF10909"/>
+								</VerticalLayout>
+								<VerticalLayout>
+									<HorizontalLayout name="hlSsh" width="51" height="52" bkimage="file='task.png' source='204,0,255,52'"></HorizontalLayout>
+									<Label name="lblSsh" text="SSH日志" font="3" textcolor="#FF135BB6"/>	
+									<Label name="lblSshState" text="未完成" font="0" textcolor="#FFF10909"/>
+								</VerticalLayout>
+								<VerticalLayout>
+									<HorizontalLayout name="hlDatabase" width="51" height="52" bkimage="file='task.png' source='204,0,255,52'"></HorizontalLayout>
+									<Label name="lblDatabase" text="数据库日志" font="3" textcolor="#FF135BB6"/>
+									<Label name="lblDatabaseState" text="未完成" font="0" textcolor="#FFF10909"/>
+								</VerticalLayout>
+							</HorizontalLayout>
+						</VerticalLayout>
+					</HorizontalLayout>
+				</VerticalLayout>
+			</TabLayout>
+		</VerticalLayout>
+	</HorizontalLayout>
+</Window>
