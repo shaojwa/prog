@@ -19,10 +19,3 @@ wait会保存之前wait过的进程的信息，然后当wait某个进程时，�
 所以当我们man wait3或者 man wait4时会告诉我们，These functions are obsolete; 
 wait3 就是等待任一子进程，wait4就是可以指定某一进程。3、4表示的是参数个数。
 
-
-## 线程
-
-#### 线程的等待为什么叫join
-
-join本意是加入，对应的detach叫分离。
-glibc中的thread_join调用lll_wait_tid 实现
