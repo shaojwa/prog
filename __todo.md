@@ -9,4 +9,5 @@ pthread_cond_wait 为什么需要传递 mutex 参数？(https://www.zhihu.com/qu
 Goodbye semaphores?（https://lwn.net/Articles/166195/）
 https://stackoverflow.com/questions/4764945/difference-between-completion-variables-and-semaphores
 c++ 的线程库以及同步库提供的接口和pthread接口的对应关系是什么？
+linux存在强制锁（mandatory lock）和劝告锁（advisory lock），使用场景是什么？
 ```
