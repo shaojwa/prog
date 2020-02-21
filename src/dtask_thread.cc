@@ -1,7 +1,11 @@
+#include <unistd.h>
+#include <sys/types.h>
 #include <sys/syscall.h>
 #include <stdlib.h>
-#include <stdio.h>
 #include <pthread.h>
+#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int get_tid() {
   return syscall(SYS_gettid);
@@ -9,12 +13,12 @@ int get_tid() {
 
 static void *start_fn(void *arg)
 {
-  printf("thread %d start\n", get_tid());
-  //if (!vfork()) {
-  //  sleep(120);
-  //}
-  sleep(120);
-  printf("thread %d returns\n", get_tid());
+  cout << "thread start: " << get_tid() << endl;
+  if (!vfork()) {
+    sleep(120);
+  }
+  //sleep(120);
+  cout << "thread returns: " << get_tid() << endl;
 }
 
 struct thread_t {
@@ -27,23 +31,25 @@ int main(int argc, char* argv[]) {
   int ret;
   thread_t th;
   th.fn = start_fn;
-  printf("thread %d start\n", get_tid());
+  cout << "thread start: " << get_tid() << endl;
   ret = pthread_create(&th.id, NULL, th.fn, NULL);
   if (ret) {
-    printf("ERROR: create thread failed: %d\n", ret);
+    cout << "ERROR: create thread failed: " << ret << endl;
     exit(0);
   }
-  printf("OK: create thread done\n");
-  if (!vfork()) {
-    sleep(60);
-    return;
-  }
+  cout << "OK: create thread done" << endl;
+  //if (!vfork()) {
+  //  sleep(60);
+  //  return 0;
+  //}
+  cout << "call pthred_join()" << endl;
   ret = pthread_join(th.id, NULL);
   if (ret) {
-    printf("ERROR: join thread failed: %d\n", ret);
+    cout << "ERROR: join thread failed: " << ret << endl;
     exit(0);
   }
-  printf("OK: join thread done\n");
-  printf("thread %d returns\n", get_tid());
+  cout << "OK: join thread done" << endl;
+  cout << "thread returns: " << get_tid() << endl;
+
   return 0;
 }
