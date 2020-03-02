@@ -5,3 +5,10 @@ Cannot change this setting while the inferior is running.
 (gdb) set non-stop on
 Cannot change this setting while the inferior is running.
 ```
+
+#### non-stop模式
+```
+set target-async on
+set pagination off
+set non-stop on
+```
