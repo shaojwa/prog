@@ -4,4 +4,4 @@
 Cannot change this setting while the inferior is running.
 (gdb) set non-stop on
 Cannot change this setting while the inferior is running.
-``
+```
