@@ -1,3 +1,10 @@
+#### stdc++
+```
+#include <bits/stdc++.h>
+```
+
+这个头文件包括了所有的cpp标准库以及STL头文件，据说这是为了测试以及教学使用，平时做工程一般不推荐用，因为这会增加可能的不必要的麻烦以及编译时间。
+
 #### 代码头部
 
     typedef unsigned long long ull;
@@ -11,6 +18,7 @@
     int dy[] = {0,1,0,-1};
 
     cerr << "\nTime elapsed:" << 1000 * clock() / CLOCKS_PER_SEC << "ms\n";
+
 
 #### 头文件顺序
 
