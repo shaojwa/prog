@@ -20,7 +20,7 @@ static inline bool has_group_leader_pid(struct task_struct *p)
 ```
 
 tgid就是thread group id的意思，就是通过看task中的tgid（线程所在的进程id）是否等于pid（线程的id号）。
-另外task_struct结构找那个的两个字段：
+另外task_struct结构中的两个字段：
 ```
 struct task_struct {
   ...
