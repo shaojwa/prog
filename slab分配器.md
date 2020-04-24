@@ -1,5 +1,7 @@
 https://www.ibm.com/developerworks/cn/linux/l-linux-slab-allocator/index.html
 
+https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
+
 ## 内存管理的两个目标
 1. 最小化管理内存所需要的时间。
 1. 最小化管理内催所需要的空间（当可用内存尽可能大）。
