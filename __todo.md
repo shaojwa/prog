@@ -1,3 +1,8 @@
+
+#### SLUB
+
+https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
+
 #### cond_wait占用时间片么
 #### O_PATH 参数是什么作用
 1. open的时候有O_NOFOLLOW标记时，如果文件存在且是软链接，那么就返回失败。
