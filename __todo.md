@@ -1,4 +1,8 @@
 
+#### kdump
+
+https://www.ibm.com/developerworks/cn/linux/l-cn-kdump1/index.html
+
 #### SLUB
 
 https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
