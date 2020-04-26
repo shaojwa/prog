@@ -23,8 +23,7 @@ oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmc
 1. 就是后续操作只是fd-level的操作，文件本身并没有打开，所以read，write，fchmod，fchown都会出错。
 
 ```
-std::unordered_map;
-std::unordered_multimap;
+看一下ld的man手册
 当进程文件删除之后，gdb挂载之后，为什么无法查看线程？
 kill -kill 一个线程后为什么会把这个线程所在的进程中的所有线程杀掉？
 
@@ -58,8 +57,14 @@ ctrl+\终止前台进程组中进程并产生core
 linux 系统编程p55
 原生编程规范 是什么意思？
 iopath结合图理解
+
+// std
+std::unordered_map;
+std::unordered_multimap;
 std::hash (std::bitset)
 move也会抛出异常，所以不是所有的类型都是movable
+
+// acm
 信心上限树是什么(UCT) 是什么东西？
 1234b2有其他算法需要了解下
 红黑树实现
