@@ -1,11 +1,20 @@
 ```
 线程有创建它的父线程么？(done） 没有，ppid只显示父进程的pid 
 进程的状态和它的线程的状态什么关系？(done)
+快排实现一下(done)
+
 微服务化架构设计了解一下
 kdump了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-kdump1/index.html
 SLUB 了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
 oom和oops机制了解一下：oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmcore的机制
 cond_wait占用时间片么
+
+####
+Your GCC is too old. Please run following command to add DTS to your environment:
+scl enable devtoolset-8 bash
+Or add following line to the end of ~/.bashrc to add it permanently:
+source scl_source enable devtoolset-8
+
 
 #### O_PATH 参数是什么作用
 1. open的时候有O_NOFOLLOW标记时，如果文件存在且是软链接，那么就返回失败。
