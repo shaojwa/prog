@@ -1,18 +1,12 @@
-#### 微服务化架构设计
+```
+线程有创建它的父线程么？(done） 没有，ppid只显示父进程的pid 
+进程的状态和它的线程的状态什么关系？(done)
+微服务化架构设计了解一下
+kdump了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-kdump1/index.html
+SLUB 了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
+oom和oops机制了解一下：oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmcore的机制
+cond_wait占用时间片么
 
-#### kdump
-
-https://www.ibm.com/developerworks/cn/linux/l-cn-kdump1/index.html
-
-#### SLUB
-
-https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
-
-## oom和oops机制
-
-oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmcore的机制
-
-#### cond_wait占用时间片么
 #### O_PATH 参数是什么作用
 1. open的时候有O_NOFOLLOW标记时，如果文件存在且是软链接，那么就返回失败。
 1. 因为follow的时候就可能循环，软链接指向另外一个软链接。
@@ -22,7 +16,6 @@ oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmc
 1. 就是用来判断文件系统目录树上的某个位置是否存在。
 1. 就是后续操作只是fd-level的操作，文件本身并没有打开，所以read，write，fchmod，fchown都会出错。
 
-```
 看一下ld的man手册
 当进程文件删除之后，gdb挂载之后，为什么无法查看线程？
 kill -kill 一个线程后为什么会把这个线程所在的进程中的所有线程杀掉？
