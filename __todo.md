@@ -22,6 +22,7 @@ oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmc
 1. 就是用来判断文件系统目录树上的某个位置是否存在。
 1. 就是后续操作只是fd-level的操作，文件本身并没有打开，所以read，write，fchmod，fchown都会出错。
 
+```
 std::unordered_map;
 std::unordered_multimap;
 当进程文件删除之后，gdb挂载之后，为什么无法查看线程？
@@ -69,3 +70,4 @@ http://kerneltrap.org/node/517
 https://sourceware.org/gdb/onlinedocs/gdb/Non_002dStop-Mode.html
 https://sourceware.org/gdb/onlinedocs/gdb/Asynchronous-and-non_002dstop-modes.html
 https://stackoverflow.com/questions/19181834/what-is-the-concept-of-vruntime-in-cfs
+```
