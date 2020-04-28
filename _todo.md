@@ -1,8 +1,14 @@
+#### done
 ```
 线程有创建它的父线程么？(done） 没有，ppid只显示父进程的pid 
 进程的状态和它的线程的状态什么关系？(done)
 快排实现一下(done)
+atop中的slab内存了解一下(done)
+```
 
+#### todo
+
+```
 微服务化架构设计了解一下
 kdump了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-kdump1/index.html
 SLUB 了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
