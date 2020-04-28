@@ -1,5 +1,4 @@
 ```
-了解vm.vfs_cache_pressure对内核内存回收的影响？
 线程有创建它的父线程么？(done） 没有，ppid只显示父进程的pid 
 进程的状态和它的线程的状态什么关系？(done)
 快排实现一下(done)
