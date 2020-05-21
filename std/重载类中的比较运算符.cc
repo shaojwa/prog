@@ -34,7 +34,7 @@ int main(void) {
   return 0;
 }
 
-/* 输出
+/* output
 Cls(n_)
 Cls(n_)
 operator<
