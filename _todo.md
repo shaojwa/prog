@@ -9,11 +9,13 @@ atop中的slab内存了解一下(done)
 #### todo
 
 ```
+std::map的操作线程安全么？
 微服务化架构设计了解一下
 kdump了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-kdump1/index.html
 SLUB 了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
 oom和oops机制了解一下：oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmcore的机制
 cond_wait占用时间片么
+```
 
 ####
 Your GCC is too old. Please run following command to add DTS to your environment:
