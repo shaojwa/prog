@@ -1,6 +1,6 @@
-/*
-* 如果类作为std::set等元素的中的元素，那儿需要在类中重载比较运算符，重载的时候，operator< 必须是const修饰。
-*/
+//
+// 如果类作为std::set等元素的中的元素，那儿需要在类中重载比较运算符，重载的时候，operator< 必须是const修饰。
+//
 
 #include <map>
 #include <set>
