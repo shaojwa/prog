@@ -11,6 +11,7 @@ atop中的slab内存了解一下(done)
 ```
 菱形继承
 WHR算法
+何解决C代码中的double直接用等号比较问题
 std::map的操作线程安全么？
 微服务化架构设计了解一下
 kdump了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-kdump1/index.html
