@@ -1,7 +1,7 @@
 #### todo
 20200706
 ```
-/usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
+lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
 单例中资源的释放
 ```
 
