@@ -1,0 +1,28 @@
+#### 为什么需要flock
+
+比如定时任务，如果任务在定时时间间隔内没有完成，那么这个定时任务就可能有多个同时执行，如何避免？
+
+在执行任务的时候，创建一个文件，如果这个文件在锁定，表示有相关的进程正在执行，那么其他定时任务就不会启动成功。
+
+比如：
+```
+flock -xn file.lock ./test_flock.sh
+```
+在 test_flock退出之后，再次执行这个命令就不会成功，shell下返回1。如果改成share lock，那么就可以有多个示例运行。
+
+
+#### proc 下的 lock是什么
+flock 在执行的时候，就会创建一个 lock，这lock可以在 /proc/locks下看到，比如：
+```
+13: FLOCK  ADVISORY  READ  32534 08:71:7471105 0 EOF
+15: FLOCK  ADVISORY  READ  32504 08:71:7471105 0 EOF
+```
+
+/proc/下有一个lock文件， info proc可以看到，这个文件显示的是当前的file lock以及lease。
+
+通过man 2 flock可以看到，flock 这个接口串门用来处理file lock，读一遍man可以知道。
+
+file lock是用文件来当锁用，这个锁是进程间使用，可以多进程共享这把锁，也可以互斥。
+
+flock创建一个lock之后，会和一个open-file表项关联。
+
