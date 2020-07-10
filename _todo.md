@@ -10,6 +10,7 @@ atop中的slab内存了解一下(done)
 
 20200710
 ```
+/usr/src/kernel4.4.0/Documentation/filesystems/locks.txt lock相关东西了解一下
 Algorithm::Diff::sdiff() 算法了解
 ```
 20200706
