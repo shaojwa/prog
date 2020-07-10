@@ -9,8 +9,12 @@ atop中的slab内存了解一下(done)
 #### todo
 
 20200710
+flock
 ```
+https://stackoverflow.com/questions/22486651/why-does-flock-use-a-descriptor-or-file
 /usr/src/kernel4.4.0/Documentation/filesystems/locks.txt lock相关东西了解一下
+```
+```
 Algorithm::Diff::sdiff() 算法了解
 ```
 20200706
