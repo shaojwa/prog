@@ -1,9 +1,13 @@
 ## 参考
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.44.2782&rep=rep1&type=pdf
 https://zhuanlan.zhihu.com/p/38810568
+https://juejin.im/post/5b1f69dee51d4506d25e31ea
 
-存储领域，对于非结构化的数据，kv形式是当前最通用的存储形式，比如LevelDB。
+存储领域，对于非结构化的数据（kv形式）是当前非常常见的存储形式。
+而kv存储的实现机制中，常见的就是LSM-tree，比如LevelDB，RocksDB。
+LSM-tree最早是1996年的一篇论文《The Log-Structured Merge-Tree (LSM-Tree)》
+
 很多引擎都是采用Log-Structured Merge-Tree 结构来做kv存储，特点是写性能很好，读性能也不错。  
-
 LSM-tree是一种对写进行优化的实现方式，核心自然是把随机写变成顺序写。因此它的缺陷就是写放大。
 机械硬盘来说，顺序写和随机写的性能据说差1000倍，所以改成顺序写的价值是很大的。
 
