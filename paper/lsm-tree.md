@@ -1,7 +1,9 @@
 ## 参考
+```
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.44.2782&rep=rep1&type=pdf
 https://zhuanlan.zhihu.com/p/38810568
 https://juejin.im/post/5b1f69dee51d4506d25e31ea
+```
 
 存储领域，对于非结构化的数据（kv形式）是当前非常常见的存储形式。
 而kv存储的实现机制中，常见的就是LSM-tree，比如LevelDB，RocksDB。
