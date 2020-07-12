@@ -1,9 +1,19 @@
-## 参考
+#### 参考
 ```
 http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.44.2782&rep=rep1&type=pdf
-https://zhuanlan.zhihu.com/p/38810568
-https://juejin.im/post/5b1f69dee51d4506d25e31ea
 ```
+#### 摘要
+
+1. 标准的及基于磁盘的索引结构，比如B-Tree，会成倍得增加IO开销，为什么？因为需要维护索引？
+1. LSM-tree 也是基于磁盘的数据结构，在文件需要被高频率得插入或者删除记录的情况下，来提供低成本的文件索引开销。
+1. LSM-tree一种一种算法，来延迟以及打包index的修改。
+1. LSM-tree将修改从基于内存的组件，转存到一层或者多层的基于磁盘的组件中，这个过程以高效的归并排序来进行。
+1. 在处理的过程中，所有的index value都是持续可访问的（除去非常短的加锁时间），要么通过内存组件，或者通过磁盘组件。
+1. 和传统的类似B-Tree访问方式比起来，这个算法显著减少磁臂的移动。所以在磁道臂开销占绝大多数存储开销的场进行下，会提高性能。
+1. LSM-tree这种方式也推广到除插入和删除之外的其他操作上。
+
+
+####
 
 存储领域，对于非结构化的数据（kv形式）是当前非常常见的存储形式。
 而kv存储的实现机制中，常见的就是LSM-tree，比如LevelDB，RocksDB。
@@ -40,3 +50,8 @@ LSM-tree的关键指标是写放大，写分好几种，有立即写和延迟写
 
 
 #### LevelDB 中的compaction压缩
+
+#### 附录
+
+https://zhuanlan.zhihu.com/p/38810568
+https://juejin.im/post/5b1f69dee51d4506d25e31ea
