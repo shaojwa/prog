@@ -7,7 +7,12 @@ atop中的slab内存了解一下(done)
 ```
 
 #### todo
-20200714 pthread_spin_lock了解一下  
+20200714
+```
+pthread_spin_lock了解一下
+https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
+```
+
 20200710 flock 了解一下 
 ```
 https://stackoverflow.com/questions/22486651/why-does-flock-use-a-descriptor-or-file
