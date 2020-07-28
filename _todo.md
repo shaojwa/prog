@@ -7,8 +7,12 @@ atop中的slab内存了解一下(done)
 ```
 
 #### todo
-20200714
+
 ```
+20200728
+Linux Kernel中AEP的现状和发展
+
+20200714
 pthread_spin_lock了解一下
 https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
 paire vs struct-with-2-fields
