@@ -9,5 +9,5 @@
 #### core
 还是物理概念，一个NUMA节点有一个到多个core
 
-#### logical processer
+#### logical processor
 逻辑概念，相当于超线程中的thread，是操作系统，应用程序角度看到的处理器数目
