@@ -1,4 +1,3 @@
-```
 for (set<SnapRealm*>::iterator p = open_children.begin(); p != open_children.end(); )
 {
     SnapRealm *realm = *p;
@@ -11,4 +10,3 @@ for (set<SnapRealm*>::iterator p = open_children.begin(); p != open_children.end
       ++p;
     }
   }
-```
