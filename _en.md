@@ -1,9 +1,12 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 
-1. dependent, Signal all dependent instructions that data is ready
-1. scheme, out-of-order general scheme
+1. dependent, Signal all dependent instructions that data is ready.
 1. number, nproc - print the number of processing units available.
+1. scheme, out-of-order general scheme
+1. eliminate，Can we eliminate such dependencies?
+1. speculation， value speculation.
+1. divert, if we divert the second write to an alternate storage location
 
 #### 数量
 ```
