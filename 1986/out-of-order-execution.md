@@ -11,10 +11,13 @@ CPU Time = duration of clock cycle × CPI × IC
 在一定的程度之后，添加更多的管道状态是没什么用的，因为control/data的风险在增加。只有当CPI为1时才不会有风险。
 
 #### 接下去怎么做
-（1）通过利用ILP（指令级的并发）来降低CPI。（2）复制HW（hardware）
+（1）通过利用ILP（指令级的并发）来降低CPI。（2）更多的HW（hardware）
 
 #### 超标量的问题
 （1）只有相互独立的指令可以并行（2）相邻的指令常常并不独立。
 
 #### 乱序执行
 （1）基于数据流图（2）需要保持原有程序的语法。
+
+#### 什么是commit一条指令
+commit an instruction
