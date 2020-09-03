@@ -7,6 +7,8 @@ https://wikidiff.com/dispatch/deliver
 1. eliminate, Can we eliminate such dependencies?
 1. speculation, value speculation.
 1. divert, if we divert the second write to an alternate storage location.
+1. respect
+1. redundant
 
 #### 数量
 ```
