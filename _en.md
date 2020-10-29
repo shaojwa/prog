@@ -3,17 +3,21 @@ https://wikidiff.com/dispatch/deliver
 
 1. dependent, Signal all dependent instructions that data is ready.
 1. number, nproc - print the number of processing units available.
-1. scheme, out-of-order general scheme.
 1. eliminate, Can we eliminate such dependencies?
 1. speculation, value speculation.
 1. divert, if we divert the second write to an alternate storage location.
 1. respect
 1. redundant
 
+#### 相比
+in contrast to 0, which gets you to the beginning, regardless of whitespace or not.
+
 #### 数量
-```
 sched_getcpu() returns the number of the CPU on which the calling thread is currently executing.
-```
+
+#### 方案/主题
+out-of-order general scheme.
+
 
 #### 终端相关
 
