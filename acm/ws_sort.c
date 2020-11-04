@@ -8,7 +8,7 @@ void swap(int *left, int *right) {
 } 
 
 // qsort
-void wqsorts(int *base, size_t first, size_t last) {
+void ws_qsort_s(int *base, size_t first, size_t last) {
   if (first == last) {
     return;
   }
@@ -47,7 +47,7 @@ void wqsorts(int *base, size_t first, size_t last) {
   wqsorts(base, left + 1, last);
 }
 
-void wqsortl(int *base, size_t length) {
+void ws_qsort_l(int *base, size_t length) {
   if (length == 1) {
     return;
   } else if (length == 2) {
@@ -85,7 +85,7 @@ void wqsortl(int *base, size_t length) {
 
 
 // insert sort
-void wisort (int *base, size_t nmemb) {
+void ws_insert_sort (int *base, size_t nmemb) {
   int i = 0, j = 0;
   for (i = 0; i < nmemb - 1; i++) {
     for (j = i + 1; j < nmemb; j++) {
@@ -116,9 +116,9 @@ int main() {
     printf("before sort:\n");
     for (i = 0; i < count; i++) { printf("%d ", num[i]); }
     printf("\n");
-    // wqsorts(num, 0, count - 1);
-    // wqsortl(num, count);
-    wisort(num, count); 
+    // ws_qsort_s(num, 0, count - 1);
+    // wq_sort_l(num, count);
+    ws_insert_sort(num, count); 
     printf("after sort:\n");
     for (i = 0; i < count; i++) { printf("%d ", num[i]); }
     printf("\n");
