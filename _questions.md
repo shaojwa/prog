@@ -6,7 +6,7 @@ batch中的不同task又怎么在框架内构造？不同的派生task，派生b
 1. Mutex中的Lock/Unlock是void类型，而ptherad_mutex_lock是有返回值的，怎么做这个一层屏蔽转换？
 
 1. decode接口有没有针对char指针的输出进行处理？
-
+1. int返回值是否为0怎么写？
 
 done
 ```
