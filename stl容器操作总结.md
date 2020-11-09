@@ -50,13 +50,6 @@ level_to_expire.count(k);
 * 为什么list的pop_back没有返回值？
 stackoverflow上的解释是，对象的构造函数可能会抛异常，这样通过pop系列函数返回时，对象已经pop掉，而因为异常可能没有获取到这个对象，那么这个对象就会丢失。容器的pop都无法实现成exception safe。
 
-参考：
-
-```
-https://stackoverflow.com/questions/12600330/pop-back-return-value
-http://www.gotw.ca/gotw/008.htm
-```
-
 * list 的删除接口为什么用erase，而不用remove？
 受限remove这个词已经被用于一个算法名，定义在<algorithm>中。要留意remove的实现原理。remove其实不会真的删除元数，只是将不用删除的元数过滤出来。
 类属于属组中把不需要删除的元数往前移，这样移动之后访问到的就都是不需要删除的远处。其实remove算法设计的时候是没有删除元数权限的，只有遍历以及赋值。
@@ -76,3 +69,10 @@ void intrusive_ptr_add_ref(Inode *in) {
 }
 ```
 什么时候会调用intrusive_ptr_add_ref(), intrusive_ptr递增一个非空指针上的引用计数时。
+    
+#### 参考
+
+```
+https://stackoverflow.com/questions/12600330/pop-back-return-value
+http://www.gotw.ca/gotw/008.htm
+```
