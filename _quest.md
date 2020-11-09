@@ -9,6 +9,11 @@
 但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
 batch中的不同task又怎么在框架内构造？不同的派生task，派生batch必然需要有自己的特定接口吧
 
+1. libc里已经有strtol()，但是ceph中又实现 strict_strtol() 系列函数将string转为整数，为什么要新实现一个？
+``` 
+int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
+```
+
 ----
 写法
 1. 边界怎么说？ bound，比如复杂度的上界，下界一般用lower bound， upper bound。
