@@ -12,6 +12,9 @@ argument (ref: man shutdown)
 #### below
 The 'gdb' script provided below can be modified as fits.
 
+#### care
+Making a thread detached is useful for some types of daemon threads whose exit status the application does not need to care  about.
+
 #### crude
 // 初略的，大概的
 
@@ -45,6 +48,9 @@ This is equivalent to calling pthread_exit(3) with the value
 #### hang
 // 挂起
 
+#### indeterminate
+it is indeterminate which thread—the caller or the new thread—will next execute.
+
 #### IIRC
 if I remember correctly
 
@@ -57,6 +63,15 @@ logged-in users (ref: man shutdown)
 #### number
 nproc - print the number of processing units available.
 sched_getcpu() returns the number of the CPU on which the calling thread is currently executing.
+
+#### order
+it  is not possible to join with the thread in order to obtain its exit status. 
+
+#### obtain
+it  is not possible to join with the thread in order to obtain its exit status. 
+
+#### possible
+it  is not possible to join with the thread in order to obtain its exit status. 
 
 #### redundant
 // 冗余的
@@ -75,8 +90,11 @@ value speculation.
 out-of-order general scheme.
 
 #### trail
-SUDO gives an audit trail I believe under /var/log/secure. // n.痕迹 v.跟踪
+SUDO gives an audit trail I believe under /var/log/secure.
 
+#### unless
+Unless real-time scheduling  policies  are  being employed.
+ 
 #### vertex
 
 #### wall
