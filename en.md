@@ -97,5 +97,8 @@ Unless real-time scheduling  policies  are  being employed.
  
 #### vertex
 
+#### violation
+This is in violation of the POSIX threads specification
+
 #### wall
 wall message: the mssage sent by command wall 
