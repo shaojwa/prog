@@ -27,7 +27,10 @@ in contrast to 0, which gets you to the beginning, regardless of whitespace or n
 #### default
 By default, on RedHat based distributions like CentOS and Fedora.
 
-### dependent
+#### demonstrate
+The program below demonstrates the use of pthread_create(), as well as a number of other functions in the pthreads API.
+
+#### dependent
 Signal all dependent instructions that data is ready.
 
 #### divert
