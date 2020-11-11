@@ -13,22 +13,33 @@ int gettid2() {
   return syscall(SYS_gettid);
 }
 
+int gettid() {
+  return gettid1();
+}
+
 void* start_routine(void *param) {
-  printf("thread start, tid: %d\n", gettid1());
-  sleep(100);
-  printf("thread return, tid: %d\n", gettid2());
+  printf("new thread, start, tid %d\n", gettid());
+  printf("new thread, sleep 10 secs\n");
+  sleep(10);
+  printf("new thread, return, tid %d\n", gettid());
+  int retval = 1;
+  pthread_exit(&retval);
 }
 
 int main(void) {
   pthread_t tid;
-  printf("primary thread, tid: %d\n", gettid1());
+  printf("__NR_gettid %d\n", __NR_gettid);
+  printf("SYS_gettid %d\n", SYS_gettid);
+  printf("primary thread, tid %d\n", gettid());
   int ret = pthread_create(&tid, NULL, start_routine, NULL);
   if (0 == ret) {
-    printf("create thread success, new thread tid: %lu\n", tid);
+    printf("primary thread, new thread tid %lu\n", tid);
   } else {
-    printf("create thread faile.\n");
+    printf("primary thread, create thread fail.\n");
   }
-  int retval = 2;
-  printf("primary thread return, tid: %d\n", gettid2());
-  pthread_exit(&retval);
+  void *pretval = NULL;
+  pthread_join(tid, &pretval);
+  printf("primary thread, pthread join returned\n");
+  printf("primary thread, return, tid %d\n", gettid());
+  pthread_exit(pretval);
 }

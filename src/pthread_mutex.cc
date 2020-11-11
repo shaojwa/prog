@@ -51,6 +51,7 @@ void* start_routine(void *param) {
 
 
 int main(int argc, char *argv[]) {
+  pthread_mutex_t * pm = new pthread_mutex_t();
   pthread_t tid;
   pthread_mutex_init(&glock, NULL);
   pthread_cond_init(&gcond, NULL);
@@ -60,7 +61,8 @@ int main(int argc, char *argv[]) {
     cout << "usage: " << argv[0] << " <num> " << endl;
     exit(0);
   }
-  int ret = pthread_create(&tid, NULL, start_routine, NULL);
+  int ret = 0;
+  // ret = pthread_create(&tid, NULL, start_routine, NULL);
   if (0 != ret) {
     printf("primary thread, create thread fail.\n");
   }
