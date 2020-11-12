@@ -7,6 +7,7 @@
 #### todo
 
 线程 alternate signal stack 是什么？
+为什么build可执行文件的时候才会检查函数的实现？
 ```
 什么是Trie数，调表。
 
