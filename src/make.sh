@@ -1,7 +1,7 @@
 #!/bin/bash
 
-filename=${1%.*}
-#filename=out
+#filename=${1%.*}
+filename=out
 
 #pay attention to the space between : and -2
 if [ "${1: -2}" == ".c" ];  then
