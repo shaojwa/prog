@@ -1,6 +1,9 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 
+#### aptly
+UNIX guru W. Richard Stevens aptly describes signals as software interrupts.
+
 #### audit
 SUDO gives an audit trail I believe under /var/log/secure. // 审计
 #### argument
