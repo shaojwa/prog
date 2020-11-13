@@ -66,6 +66,9 @@ logged-in users (ref: man shutdown)
 #### mastery
 // 精通
 
+#### natural
+The traditional UNIX signal model is extended to threads in a fairly natural way. 
+
 #### number
 nproc - print the number of processing units available.
 sched_getcpu() returns the number of the CPU on which the calling thread is currently executing.
