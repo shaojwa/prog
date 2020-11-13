@@ -6,12 +6,16 @@ UNIX guru W. Richard Stevens aptly describes signals as software interrupts.
 
 #### audit
 SUDO gives an audit trail I believe under /var/log/secure. // 审计
+
 #### argument
 argument (ref: man shutdown)
+
 #### authentication
 // 认证
+
 #### authority
 // 权威
+
 #### below
 The 'gdb' script provided below can be modified as fits.
 
@@ -54,6 +58,9 @@ This is equivalent to calling pthread_exit(3) with the value
 #### hang
 // 挂起
 
+#### idempotent
+In other words, signal delivery is idempotent.
+
 #### indeterminate
 it is indeterminate which thread—the caller or the new thread—will next execute.
 
@@ -65,9 +72,6 @@ logged-in users (ref: man shutdown)
 
 #### mastery
 // 精通
-
-#### natural
-The traditional UNIX signal model is extended to threads in a fairly natural way. 
 
 #### number
 nproc - print the number of processing units available.
