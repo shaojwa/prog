@@ -1,4 +1,6 @@
-https://www.kernel.org/doc/html/latest/locking/mutex-design.html
+#### 两个参考
+(1) https://www.kernel.org/doc/html/latest/locking/mutex-design.html  
+(2) https://lwn.net/Articles/164802/  
 
 #### mutex引入
 mutex的引入在lwn上也有一些[讨论](https://lwn.net/Articles/166195/)，一开始社区觉得应该集中注意力在解决现在现有的semophore问题的解决，而不是引入一种新的互斥机制。
