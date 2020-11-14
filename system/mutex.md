@@ -21,12 +21,14 @@ mutex的引入在lwn上也有一些[讨论](https://lwn.net/Articles/166195/)，
 #### mutex 的几个性质
 mutex有很重要的一点是，某个线程lock，就得由那个线程unlock。
 
-#### 什么时候用 mutex
+#### 什么时候用mutex
+除非严格的mutex语义不适用，或者临界去不想通过锁去共享，一般都应该选择mutex而不是其他锁原语。
 
 #### mutex 的实现
 (1) 有一个包含三种状态的原子计数器，根据计数器的不同状态，有三种方式可以获取lock，fastpath/midpath/slowpath。
 
-#### pthread_mutex_lock 和 mutex_lock
+#### mutex_lock() 和 pthread_mutex_lock()
+mutex_lock是内核接口，只能在内核中用。而pthread_mutex_lock()是用户态接口。
 
 #### 和semaphore的区别
 使用场景不同，mutex解决的是某个资源只能让一个线程访问。semaphore是控制资源的产生和消费，让多个线程可以配合，但并不是为让资源独占使用。
