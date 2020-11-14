@@ -26,7 +26,7 @@ Making a thread detached is useful for some types of daemon threads whose exit s
 // 初略的，大概的
 
 #### collapse
-collapse all    // 折叠所有
+collapse all
 
 #### contrast
 in contrast to 0, which gets you to the beginning, regardless of whitespace or not.
@@ -52,17 +52,25 @@ This is equivalent to calling pthread_exit(3) with the value
 #### expand all
 // 展开所有  
 
+#### fairly
+There was some fairly strong pushback against the mutex patch after last week's article was written.
+
 #### heuristic
 // 启发式的
 
 #### hang
 // 挂起
 
+
+
 #### idempotent
 In other words, signal delivery is idempotent.
 
 #### indeterminate
 it is indeterminate which thread—the caller or the new thread—will next execute.
+
+#### incredibly 
+it is simply incredibly broken.
 
 #### IIRC
 if I remember correctly
@@ -82,6 +90,9 @@ it  is not possible to join with the thread in order to obtain its exit status.
 
 #### obtain
 it  is not possible to join with the thread in order to obtain its exit status. 
+
+#### point
+The discussion did not stop at that point。
 
 #### possible
 it  is not possible to join with the thread in order to obtain its exit status. 
