@@ -1,5 +1,5 @@
 #### mutex引入
-mutex的引入在[lwn力有讨论](https://lwn.net/Articles/166195/)有点说明，一开始社区觉得应该集中注意力在解决现在现有的semophore问题的解决，而不是引入一种新的互斥机制。
+mutex的引入在lwn上也有一些[讨论](https://lwn.net/Articles/166195/)，一开始社区觉得应该集中注意力在解决现在现有的semophore问题的解决，而不是引入一种新的互斥机制。
 据说，原先没有mutex的时候，90的的用户用semophore来实现mutex。其实内核文档(Documentation/mutex-design.txt)也非常值得一读。
 
 #### mutex的几个性质
