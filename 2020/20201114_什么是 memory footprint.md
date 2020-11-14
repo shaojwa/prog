@@ -1,1 +1,2 @@
 Memory footprint refers to the amount of main memory that a program uses or references while running.
+This includes all sorts of active memory regions like code, static data sections (both initialized and uninitialized), heap, as well as all the stacks, plus memory required to hold any additional data structures, such as symbol tables, constant tables, debugging structures, open files, etc, that the program ever needs while executing and will be loaded at least once during the entire run.
