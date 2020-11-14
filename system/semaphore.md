@@ -5,7 +5,7 @@ https://www.cnblogs.com/linengier/p/9399880.html
 https://dlonng.com/posts/semaphore
 #### 查看信号量的命令
 ```
-#### ipcs -s
+ipcs -s
 ```
 
 #### 和 mutex的区别
