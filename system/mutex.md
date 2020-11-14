@@ -1,4 +1,8 @@
-### mutex的几个性质
+#### mutex引入
+mutex的引入在[这里](https://lwn.net/Articles/166195/)有点说明，一开始社区觉得应该集中注意力在解决现在现有的semophore问题的解决，而不是引入一种新的互斥机制。
+据说，原先没有mutex的时候，90的的用户用semophore来实现mutex。
+
+#### mutex的几个性质
 
 mutex有很重要的一点是，某个线程lock，就得由那个线程unlock。
 
