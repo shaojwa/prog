@@ -1,4 +1,15 @@
 https://www.cnblogs.com/linengier/p/9399880.html
+#### 信号量使用场景
+
+#### 内核定义
+```
+/* Please don't access any members of this structure directly */
+struct semaphore {
+        raw_spinlock_t lock;
+        unsigned int count;
+        struct list_head wait_list;
+};
+```
 
 #### 使用的方式
 有sem_post，sem_wail，semget，semctl，semop等一系列接口可以用，是libc对相应系统调用分封装。
