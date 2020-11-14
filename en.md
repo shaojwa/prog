@@ -100,6 +100,9 @@ it  is not possible to join with the thread in order to obtain its exit status.
 #### redundant
 // 冗余的
 
+#### refine
+Ingo has continued to refine this patch set, with frequent releases;
+
 #### relinquish
 // 被迫放弃
 
