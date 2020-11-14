@@ -1,6 +1,6 @@
-https://docs.oracle.com/cd/E19455-01/806-5257/6je9h033a/index.html
-
-https://www.linuxjournal.com/article/3985
+#### 参考资料
+(1) https://docs.oracle.com/cd/E19455-01/806-5257/6je9h033a/index.html  
+(2) https://www.linuxjournal.com/article/3985  
 
 #### 分两大类
 Signals are divided into two categories: traps and exceptions (synchronously generated signals) and interrupts (asynchronously generated signals).
