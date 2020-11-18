@@ -10,6 +10,8 @@
 同步信号和异步信号需要学习
 线程 alternate signal stack 是什么？
 为什么build可执行文件的时候才会检查函数的实现？
+understanding the python gil
+c++中的右值引用是怎么回事？
 
 什么是Trie数，跳表。
 
