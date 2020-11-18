@@ -11,10 +11,8 @@ SUDO gives an audit trail I believe under /var/log/secure. // 审计
 argument (ref: man shutdown)
 
 #### authentication
-// 认证
 
 #### authority
-// 权威
 
 #### below
 The 'gdb' script provided below can be modified as fits.
@@ -23,7 +21,6 @@ The 'gdb' script provided below can be modified as fits.
 Making a thread detached is useful for some types of daemon threads whose exit status the application does not need to care  about.
 
 #### crude
-// 初略的，大概的
 
 #### collapse
 collapse all
@@ -50,18 +47,13 @@ Can we eliminate such dependencies?
 This is equivalent to calling pthread_exit(3) with the value
 
 #### expand all
-// 展开所有  
 
 #### fairly
 There was some fairly strong pushback against the mutex patch after last week's article was written.
 
 #### heuristic
-// 启发式的
 
 #### hang
-// 挂起
-
-
 
 #### idempotent
 In other words, signal delivery is idempotent.
@@ -79,8 +71,8 @@ if I remember correctly
 logged-in users (ref: man shutdown)   
 
 #### mastery
-// 精通
-
+#### meant
+Note that these instructions are meant for developers who are compiling the code for development and testing.
 #### number
 nproc - print the number of processing units available.
 sched_getcpu() returns the number of the CPU on which the calling thread is currently executing.
@@ -98,13 +90,11 @@ The discussion did not stop at that point。
 it  is not possible to join with the thread in order to obtain its exit status. 
 
 #### redundant
-// 冗余的
 
 #### refine
 Ingo has continued to refine this patch set, with frequent releases;
 
 #### relinquish
-// 被迫放弃
 
 #### respect
 
