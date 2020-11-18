@@ -5,7 +5,7 @@ https://wikidiff.com/dispatch/deliver
 UNIX guru W. Richard Stevens aptly describes signals as software interrupts.
 
 #### audit
-SUDO gives an audit trail I believe under /var/log/secure. // 审计
+SUDO gives an audit trail I believe under /var/log/secure.
 
 #### argument
 argument (ref: man shutdown)
