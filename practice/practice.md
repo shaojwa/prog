@@ -1,6 +1,12 @@
 #### 函数设计
 1. 底层函数设计时，没有返回值很正常，没有问题，设计时也可以往这个方向设计。
 
+#### new 返回值不需要校验是否为null
+```
+// start mds
+  mds = new MDSDaemon(g_conf()->name.get_id().c_str(), msgr, &mc, ctxpool);
+```
+
 #### 异常处理
 1. 没必要的异常处理去掉，没必要的assert去掉。
 
