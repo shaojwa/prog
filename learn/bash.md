@@ -1,19 +1,19 @@
-#### 判断目录是否存在
+#### checking directory existance
 ```
 if [[ ! -d ${outdir}/${program} ]]; then
     mkdir -p ${outdir}/${program}
 fi
 ```
 
-#### 判断字串是否为空
+#### checking string empty or not
 ```
 if [[ -n "$pid" ]] then
   kill -9 $pid
 fi
 ```
 
-#### 正则匹配
-正则表达式用变量来存储，不要直接用字串
+#### regular expression using
+using var to keep the regex without using it directly
 ```
 pattern="\b${prog}\b"
 # if [[ ! "${programs[@]}" =~ \b${prog}\b ]]; then ## NOT work
