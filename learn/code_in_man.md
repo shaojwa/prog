@@ -1,4 +1,4 @@
-man中的源码实例示例：
+code sample in man page：
 ```
 man pthread_create
 man clone
