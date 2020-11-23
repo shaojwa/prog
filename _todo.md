@@ -1,4 +1,21 @@
+1. 有没有更好的更实时的计算框架？（专访黄东旭）
+1. 两条路线，一条学术路线去扎实的做理论。另一条系统架构的路线，包括分布式存储和计算框架。（专访黄东旭）
+1. 另外一些比较偏实际的就是积极的参与开源社区，而且要和社区的人主动沟通起来。（专访黄东旭）
+1. 还有一点是好好学英语，这个非常重要，非常重要，非常重要！（专访黄东旭）
+1. 现在很火的 Hadoop 是 Google 02 ~ 06 年的几篇论文；
+1. 很火的容器技术的核心 cgroup 其实好多年前就已经进入了 linux 内核.
+1. https://www.52cs.com/archives/story/前辈之路
 1. decode接口有没有针对char指针的输出进行处理？
+
+1. lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
+1. 单例中资源的释放
+1. 同步信号和异步信号需要学习
+1. 线程 alternate signal stack 是什么？
+1. 为什么build可执行文件的时候才会检查函数的实现？
+1. understanding the python gil
+1. c++中的右值引用是怎么回事？
+1. 什么是Trie数，跳表。
+
 1. 想用一套框架来处理不同的batch和task，那么自然，接口中都是用的基类指针。
 但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
 batch中的不同task又怎么在框架内构造？不同的派生task，派生batch必然需要有自己的特定接口吧
@@ -11,7 +28,6 @@ int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
 1. 比较时常量宏写等号左边还是右边。
 1. ceph中如果嵌套比较深，会不会倾向用if把特例先continue掉，这样减少嵌套深度。
 1. 想一个string 到 int 的hash比较简单的算法。
-1. `scl enable devtoolset-8 bash`是什么用法？
 
 1. 接口函数和工作函数什么时候分离？工作函数被调用较多，或者接口函数需要处理锁操作的时候。
 1. 模块处于STOPPED状态，无法处理请求，接口该如何返回错误码？
@@ -24,23 +40,6 @@ int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
 1. 模块状态机需要分NONE，INIT，ACTIVE等多个状态么？是否尽可能简单比较好？
 1. 先设置状态还是，等所有操作之后再设置状态，比如STOP模块的时候？？
 
-```
-有没有更好的更实时的计算框架？（专访黄东旭）
-两条路线，一条学术路线去扎实的做理论。另一条系统架构的路线，包括分布式存储和计算框架。（专访黄东旭）
-另外一些比较偏实际的就是积极的参与开源社区，而且要和社区的人主动沟通起来。（专访黄东旭）
-还有一点是好好学英语，这个非常重要，非常重要，非常重要！（专访黄东旭）
-现在很火的 Hadoop 是 Google 02 ~ 06 年的几篇论文；
-很火的容器技术的核心 cgroup 其实好多年前就已经进入了 linux 内核.
-https://www.52cs.com/archives/story/前辈之路
-
-同步信号和异步信号需要学习
-线程 alternate signal stack 是什么？
-为什么build可执行文件的时候才会检查函数的实现？
-understanding the python gil
-c++中的右值引用是怎么回事？
-
-什么是Trie数，跳表。
-
 20200806
 如果程序启动时，各个模块有初始化依赖，就会涉及到先后顺序的问题，此时怎么做，都先用默认构造函数构造，然后调用初始化接口来做么？
 
@@ -52,34 +51,23 @@ pthread_spin_lock了解一下
 https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
 paire vs struct-with-2-fields
 https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using-a-struct-with-two-fields-and-a-pair
-```
 
-20200710 flock 了解一下 
-```
-https://stackoverflow.com/questions/22486651/why-does-flock-use-a-descriptor-or-file
-/usr/src/kernel4.4.0/Documentation/filesystems/locks.txt lock相关东西了解一下
-```
-```
-Algorithm::Diff::sdiff() 算法了解
-```
+1. 20200710 flock https://stackoverflow.com/questions/22486651/why-does-flock-use-a-descriptor-or-file
+1. locks 了解一下 /usr/src/kernel4.4.0/Documentation/filesystems/locks.txt lock
+1. Algorithm::Diff::sdiff() 算法了解
+
 20200706
-```
-lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
-单例中资源的释放
-```
 
-```
-菱形继承
-WHR算法
-何解决C代码中的double直接用等号比较问题
-为什么二进制文件运行后允许删除但不允许覆盖
-std::map的操作线程安全么？
-微服务化架构设计了解一下
-kdump了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-kdump1/index.html
-SLUB 了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
-oom和oops机制了解一下：oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmcore的机制
-cond_wait占用时间片么
-```
+1. 菱形继承
+1. WHR算法
+1. 何解决C代码中的double直接用等号比较问题
+1. 为什么二进制文件运行后允许删除但不允许覆盖
+1. std::map的操作线程安全么？
+1. 微服务化架构设计了解一下
+1. kdump了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-kdump1/index.html
+1. SLUB 了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
+1. oom和oops机制了解一下：oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmcore的机制
+1. cond_wait占用时间片么
 1.  O_PATH 参数是什么作用
 1. open的时候有O_NOFOLLOW标记时，如果文件存在且是软链接，那么就返回失败。
 1. 因为follow的时候就可能循环，软链接指向另外一个软链接。
