@@ -125,6 +125,9 @@ Ingo has continued to refine this patch set, with frequent releases;
 #### result in
 If  the mutex type is PTHREAD_MUTEX_DEFAULT, attempting to recursively lock the mutex results in undefined behavior. 
 
+#### retrieval
+Its real purpose is the launching and retrieval of small aeroplanes in flight.
+
 #### relinquish
 
 #### respect
