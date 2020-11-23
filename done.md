@@ -15,3 +15,4 @@
 1. 类中成员是引用类型是否支持？当然支持，而且需要在构造函数中完成初始化。
 1. 枚举型的必要性到底有多少？ ceph中似乎很少用，用的比较多的是定义宏，参数类型用int。
 1. `scl enable devtoolset-8 bash`是什么用法？(20201123)
+1. learning lockdep (/usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt)
