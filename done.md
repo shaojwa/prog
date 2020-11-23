@@ -5,4 +5,5 @@
 1. 如何在构造map是初始化元素(done)
 1. int返回值是否为0怎么写(done)
 1. new之后要不要校验返回值是否为null(done)
-1. Mutex中的Lock/Unlock是void类型，而ptherad_mutex_lock是有返回值的，怎么做这个一层屏蔽转换？(done) [2020111901](2020/2020111901.md) 
+1. Mutex中的Lock/Unlock是void类型，而ptherad_mutex_lock是有返回值的，怎么做这个一层屏蔽转换？(20201119)
+1. 关于大括号的初始化语法(20201123)
