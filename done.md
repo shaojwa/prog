@@ -16,3 +16,5 @@
 1. 枚举型的必要性到底有多少？ ceph中似乎很少用，用的比较多的是定义宏，参数类型用int。
 1. `scl enable devtoolset-8 bash`是什么用法？(20201123)
 1. learning lockdep (/usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt)
+1. 什么是Trie树（20201123）
+1. 什么是跳表（20201123）
