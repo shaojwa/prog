@@ -18,6 +18,7 @@
 1. 想用一套框架来处理不同的batch和task，那么自然，接口中都是用的基类指针。
 但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
 batch中的不同task又怎么在框架内构造？不同的派生task，派生batch必然需要有自己的特定接口吧
+
 1. libc里已经有strtol()，但是ceph中又实现 strict_strtol() 系列函数将string转为整数，为什么要新实现一个？
 ``` 
 int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
@@ -40,10 +41,10 @@ int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
 1. 先设置状态还是，等所有操作之后再设置状态，比如STOP模块的时候？？
 
 20200806
-如果程序启动时，各个模块有初始化依赖，就会涉及到先后顺序的问题，此时怎么做，都先用默认构造函数构造，然后调用初始化接口来做么？
+1. 如果程序启动时，各个模块有初始化依赖，就会涉及到先后顺序的问题，此时怎么做，都先用默认构造函数构造，然后调用初始化接口来做么？
 
 20200728
-Linux Kernel中AEP的现状和发展
+1. Linux Kernel中AEP的现状和发展
 
 20200714
 pthread_spin_lock了解一下
@@ -109,17 +110,16 @@ https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using
 1. iopath结合图理解
 
 // std
-std::unordered_map;
-std::unordered_multimap;
-std::hash (std::bitset)
-move也会抛出异常，所以不是所有的类型都是movable
+1. std::unordered_map;
+1. std::unordered_multimap;
+1. std::hash (std::bitset)
+1. move也会抛出异常，所以不是所有的类型都是movable
 
-// acm
 1. 信心上限树是什么(UCT) 是什么东西？
 1. 1234b2有其他算法需要了解下
 1. 红黑树实现：https://chortle.ccsu.edu/AssemblyTutorial/   http://kerneltrap.org/node/517
 
-5.5.4 Thread-Specific Breakpoints
+5.5.4 Thread-Specific Breakpoints  
 https://sourceware.org/gdb/onlinedocs/gdb/Non_002dStop-Mode.html
 https://sourceware.org/gdb/onlinedocs/gdb/Asynchronous-and-non_002dstop-modes.html
 https://stackoverflow.com/questions/19181834/what-is-the-concept-of-vruntime-in-cfs
