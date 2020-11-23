@@ -1,5 +1,7 @@
+```
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
+```
 
 #### acquire
 the scheduling policy shall determine which thread shall acquire the mutex.
