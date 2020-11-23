@@ -6,7 +6,6 @@
 1. 很火的容器技术的核心 cgroup 其实好多年前就已经进入了 linux 内核.
 1. https://www.52cs.com/archives/story/前辈之路
 1. decode接口有没有针对char指针的输出进行处理？
-
 1. lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
 1. 单例中资源的释放
 1. 同步信号和异步信号需要学习
@@ -14,11 +13,9 @@
 1. 为什么build可执行文件的时候才会检查函数的实现？
 1. understanding the python gil
 1. c++中的右值引用是怎么回事？
-
 1. 想用一套框架来处理不同的batch和task，那么自然，接口中都是用的基类指针。
 但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
 batch中的不同task又怎么在框架内构造？不同的派生task，派生batch必然需要有自己的特定接口吧
-
 1. libc里已经有strtol()，但是ceph中又实现 strict_strtol() 系列函数将string转为整数，为什么要新实现一个？
 ``` 
 int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
@@ -28,10 +25,8 @@ int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
 1. 比较时常量宏写等号左边还是右边。
 1. ceph中如果嵌套比较深，会不会倾向用if把特例先continue掉，这样减少嵌套深度。
 1. 想一个string 到 int 的hash比较简单的算法。
-
 1. 接口函数和工作函数什么时候分离？工作函数被调用较多，或者接口函数需要处理锁操作的时候。
 1. 模块处于STOPPED状态，无法处理请求，接口该如何返回错误码？
-
 1. 一个指针数组空间的释放怎么实现最好？
 1. 保护状态的小锁是否有必要？比如rcache_state
 1. 模块对外接口中，状态判断没有必要么？
@@ -39,25 +34,11 @@ int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
 1. 一个外部接口调用另外一个外部接口，两个接口都有需要加锁的场景，怎么设计？ `if(mutex.is_locked_by_me()) { mutex.unlock(); } `
 1. 模块状态机需要分NONE，INIT，ACTIVE等多个状态么？是否尽可能简单比较好？
 1. 先设置状态还是，等所有操作之后再设置状态，比如STOP模块的时候？？
-
-20200806
-1. 如果程序启动时，各个模块有初始化依赖，就会涉及到先后顺序的问题，此时怎么做，都先用默认构造函数构造，然后调用初始化接口来做么？
-
-20200728
-1. Linux Kernel中AEP的现状和发展
-
-20200714
-pthread_spin_lock了解一下
-https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
-paire vs struct-with-2-fields
-https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using-a-struct-with-two-fields-and-a-pair
-
+1. (20200806)如果程序启动时，各个模块有初始化依赖，就会涉及到先后顺序的问题，此时怎么做，都先用默认构造函数构造，然后调用初始化接口来做么？
+1. (20200728)Linux Kernel中AEP的现状和发展
 1. 20200710 flock https://stackoverflow.com/questions/22486651/why-does-flock-use-a-descriptor-or-file
 1. locks 了解一下 /usr/src/kernel4.4.0/Documentation/filesystems/locks.txt lock
 1. Algorithm::Diff::sdiff() 算法了解
-
-20200706
-
 1. 菱形继承
 1. WHR算法
 1. 何解决C代码中的double直接用等号比较问题
@@ -108,13 +89,10 @@ https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using
 1. linux 系统编程p55
 1. 原生编程规范 是什么意思？
 1. iopath结合图理解
-
-// std
 1. std::unordered_map;
 1. std::unordered_multimap;
 1. std::hash (std::bitset)
 1. move也会抛出异常，所以不是所有的类型都是movable
-
 1. 信心上限树是什么(UCT) 是什么东西？
 1. 1234b2有其他算法需要了解下
 1. 红黑树实现：https://chortle.ccsu.edu/AssemblyTutorial/   http://kerneltrap.org/node/517
@@ -123,3 +101,9 @@ https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using
 https://sourceware.org/gdb/onlinedocs/gdb/Non_002dStop-Mode.html
 https://sourceware.org/gdb/onlinedocs/gdb/Asynchronous-and-non_002dstop-modes.html
 https://stackoverflow.com/questions/19181834/what-is-the-concept-of-vruntime-in-cfs
+
+20200714
+pthread_spin_lock了解一下
+https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
+paire vs struct-with-2-fields
+https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using-a-struct-with-two-fields-and-a-pair
