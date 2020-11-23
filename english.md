@@ -29,6 +29,9 @@ Making a thread detached is useful for some types of daemon threads whose exit s
 
 #### crude
 
+#### coin (=create)
+The term trie was coined two years later by Edward Fredkin
+
 #### collapse
 collapse all
 
