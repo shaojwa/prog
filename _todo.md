@@ -1,5 +1,8 @@
-1. gdb把实例显示成函数
 1. gdb系统学习 https://sourceware.org/gdb/current/onlinedocs/gdb/
+1. lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
+1. 同步信号和异步信号需要学习
+1. 为什么build可执行文件的时候才会检查函数的实现？
+1. gdb把实例显示成函数
 1. 什么是perfect/cuckoo hashing？
 1. 什么是deterministic acyclic finite state automaton (DAFSA)
 1. 有没有更好的更实时的计算框架？（专访黄东旭）
@@ -7,21 +10,16 @@
 1. 另外一些比较偏实际的就是积极的参与开源社区，而且要和社区的人主动沟通起来。（专访黄东旭）
 1. 还有一点是好好学英语，这个非常重要，非常重要，非常重要！（专访黄东旭）
 1. 现在很火的 Hadoop 是 Google 02 ~ 06 年的几篇论文；
-1. 很火的容器技术的核心 cgroup 其实好多年前就已经进入了 linux 内核.
+1. 很火的容器技术的核心 cgroup 其实好多年前就已经进入了linux内核。
 1. https://www.52cs.com/archives/story/前辈之路
 1. decode接口有没有针对char指针的输出进行处理？
-1. lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
 1. 单例中资源的释放
-1. 同步信号和异步信号需要学习
 1. 线程 alternate signal stack 是什么？
-1. 为什么build可执行文件的时候才会检查函数的实现？
 1. understanding the python gil
 1. c++中的右值引用是怎么回事？
 1. libc里已经有strtol()，但是ceph中又实现 strict_strtol() 系列函数将string转为整数，为什么要新实现一个？
->int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
+  int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
 1. 试试用指针的引用。
-1. iterator的命名，是it_map还是map_it。
-1. 比较时常量宏写等号左边还是右边。
 1. ceph中如果嵌套比较深，会不会倾向用if把特例先continue掉，这样减少嵌套深度。
 1. 想一个string 到 int 的hash比较简单的算法。
 1. 接口函数和工作函数什么时候分离？工作函数被调用较多，或者接口函数需要处理锁操作的时候。
@@ -48,7 +46,7 @@
 1. SLUB 了解一下：https://www.ibm.com/developerworks/cn/linux/l-cn-slub/index.html
 1. oom和oops机制了解一下：oom是内存不足，杀死进程的机制。 oops是节点崩溃重启生成vmcore的机制
 1. cond_wait占用时间片么
-1.  O_PATH 参数是什么作用
+1. O_PATH 参数是什么作用
 1. open的时候有O_NOFOLLOW标记时，如果文件存在且是软链接，那么就返回失败。
 1. 因为follow的时候就可能循环，软链接指向另外一个软链接。
 1. 在linux下，如果O_NOFOLLOW的同时，如果有O_PATH时，并不会直接返回ELOOP，而是
@@ -96,13 +94,10 @@
 1. 1234b2有其他算法需要了解下
 1. 红黑树实现：https://chortle.ccsu.edu/AssemblyTutorial/   http://kerneltrap.org/node/517
 1. 5.5.4 Thread-Specific Breakpoints  
->https://sourceware.org/gdb/onlinedocs/gdb/Non_002dStop-Mode.html
->https://sourceware.org/gdb/onlinedocs/gdb/Asynchronous-and-non_002dstop-modes.html
->https://stackoverflow.com/questions/19181834/what-is-the-concept-of-vruntime-in-cfs
-
+  https://sourceware.org/gdb/onlinedocs/gdb/Non_002dStop-Mode.html
+  https://sourceware.org/gdb/onlinedocs/gdb/Asynchronous-and-non_002dstop-modes.html
+  https://stackoverflow.com/questions/19181834/what-is-the-concept-of-vruntime-in-cfs
 1. 20200714 pthread_spin_lock了解一下 https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
 1. paire vs struct-with-2-fields https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using-a-struct-with-two-fields-and-a-pair
-
-1. 想用一套框架来处理不同的batch和task，那么自然，接口中都是用的基类指针。
-但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
+1. 想用一套框架来处理不同的batch和task，那么自然，接口中都是用的基类指针。但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
 batch中的不同task又怎么在框架内构造？不同的派生task，派生batch必然需要有自己的特定接口吧
