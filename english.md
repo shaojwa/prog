@@ -111,6 +111,9 @@ it  is not possible to join with the thread in order to obtain its exit status.
 #### obtain
 it  is not possible to join with the thread in order to obtain its exit status. 
 
+#### permitted
+Because a range of child nodes is permitted.
+
 #### point
 The discussion did not stop at that point。
 
