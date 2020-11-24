@@ -29,13 +29,21 @@ user-defined -- User-defined commands
 #### set args
 
 ## breakpoints
-#### break
+#### setting breakpoint
 ```
 break filename:linenum
 break filename:function
 ```
 
 #### rbreak
+```
+rbreak DMTest::WriteObj*
+```
+
+#### delete breakpoint
+```
+delete <num>
+```
 
 #### print class
 print dentry infos
