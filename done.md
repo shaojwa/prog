@@ -18,3 +18,5 @@
 1. learning lockdep (/usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt)
 1. 什么是Trie树（20201123）
 1. 什么是跳表（20201123）
+1. iterator的命名，是it_map还是map_it。(20201124)
+1. 比较时常量宏写等号左边还是右边。(20201124)
