@@ -1,4 +1,5 @@
 1. gdb把实例显示成函数
+1. gdb系统学习 https://sourceware.org/gdb/current/onlinedocs/gdb/
 1. 什么是perfect/cuckoo hashing？
 1. 什么是deterministic acyclic finite state automaton (DAFSA)
 1. 有没有更好的更实时的计算框架？（专访黄东旭）
@@ -16,13 +17,8 @@
 1. 为什么build可执行文件的时候才会检查函数的实现？
 1. understanding the python gil
 1. c++中的右值引用是怎么回事？
-1. 想用一套框架来处理不同的batch和task，那么自然，接口中都是用的基类指针。
-但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
-batch中的不同task又怎么在框架内构造？不同的派生task，派生batch必然需要有自己的特定接口吧
 1. libc里已经有strtol()，但是ceph中又实现 strict_strtol() 系列函数将string转为整数，为什么要新实现一个？
-``` 
-int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
-```
+  int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
 1. 试试用指针的引用。
 1. iterator的命名，是it_map还是map_it。
 1. 比较时常量宏写等号左边还是右边。
@@ -99,14 +95,14 @@ int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
 1. 信心上限树是什么(UCT) 是什么东西？
 1. 1234b2有其他算法需要了解下
 1. 红黑树实现：https://chortle.ccsu.edu/AssemblyTutorial/   http://kerneltrap.org/node/517
+1. 5.5.4 Thread-Specific Breakpoints  
+    https://sourceware.org/gdb/onlinedocs/gdb/Non_002dStop-Mode.html
+    https://sourceware.org/gdb/onlinedocs/gdb/Asynchronous-and-non_002dstop-modes.html
+    https://stackoverflow.com/questions/19181834/what-is-the-concept-of-vruntime-in-cfs
 
-5.5.4 Thread-Specific Breakpoints  
-https://sourceware.org/gdb/onlinedocs/gdb/Non_002dStop-Mode.html
-https://sourceware.org/gdb/onlinedocs/gdb/Asynchronous-and-non_002dstop-modes.html
-https://stackoverflow.com/questions/19181834/what-is-the-concept-of-vruntime-in-cfs
+1. 20200714 pthread_spin_lock了解一下 https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
+1. paire vs struct-with-2-fields https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using-a-struct-with-two-fields-and-a-pair
 
-20200714
-pthread_spin_lock了解一下
-https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
-paire vs struct-with-2-fields
-https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using-a-struct-with-two-fields-and-a-pair
+1. 想用一套框架来处理不同的batch和task，那么自然，接口中都是用的基类指针。
+但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
+batch中的不同task又怎么在框架内构造？不同的派生task，派生batch必然需要有自己的特定接口吧
