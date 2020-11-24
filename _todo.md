@@ -1,3 +1,4 @@
+1. gdb把实例显示成函数
 1. 什么是perfect/cuckoo hashing？
 1. 什么是deterministic acyclic finite state automaton (DAFSA)
 1. 有没有更好的更实时的计算框架？（专访黄东旭）
