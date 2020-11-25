@@ -1,3 +1,4 @@
+1. linux中的sparse文件了解一下。
 1. gdb系统学习 https://sourceware.org/gdb/current/onlinedocs/gdb/
 1. lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
 1. 同步信号和异步信号需要学习
