@@ -2,8 +2,8 @@
 using namespace std;
 
 
-struct state {
-  int age;
+struct state_t {
+  int num = 0;
 };
 
 class Base {
@@ -14,16 +14,16 @@ class Base {
     Base() {
       cout << "Base::Base()" << endl;
     }
-    void dump(state *state) {
+    void dump(state_t *state) {
       cout << age << endl;
     }
-    int age;
+    int age = 0;
 };
 
 int main (int argc, char * argv[])
 {
   Base b;
-  state s;
+  state_t s;
   b.dump(&s);
   return 0;
 }
