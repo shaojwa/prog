@@ -3,7 +3,10 @@ using namespace std;
 
 
 struct state_t {
-  int num = 0;
+  int num = 1;
+  void dump() {
+	  cout << num << endl;
+  }
 };
 
 class Base {
@@ -17,7 +20,7 @@ class Base {
     void dump(state_t *state) {
       cout << age << endl;
     }
-    int age = 0;
+    int age = -1;
 };
 
 int main (int argc, char * argv[])
