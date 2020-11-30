@@ -1,0 +1,55 @@
+今天碰到一个错误：
+```
+error: no match for ‘operator=’ (operand types are ‘dm_data_oper_t’ and ‘<brace-enclosed initializer list>’)
+no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘const dm_data_oper_t&’
+no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘dm_data_oper_t&&’
+```
+
+代码是：
+```
+oper = {
+  oid,
+  bucket_id,
+  second.off,
+  second.len,
+  log_seq,
+  m->get_snap_seq(),
+  m->get_snaps(),
+  truncate_size,
+  truncate_seq,
+  size,
+  mtime
+}
+```
+原因是把:
+```
+dm_data_oper_t(
+  object_t obj_id_,
+  uint16 bucket_id_,
+  uint64 offset_,
+  uint64 length_,
+  uint64 log_seq_,
+  snapid_t snap_seq_,
+  std::vector<snapid_t> snaps_,
+  uint64 truncate_size_,
+  uint64 truncate_seq_,
+  uint64 size_,
+  utime_t mtime_):()
+``` 
+改成：
+```
+dm_data_oper_t(
+  object_t &obj_id_,
+  uint16 bucket_id_,
+  uint64 offset_,
+  uint64 length_,
+  uint64 log_seq_,
+  snapid_t &snap_seq_,
+  std::vector<snapid_t> &snaps_,
+  uint64 truncate_size_,
+  uint64 truncate_seq_,
+  uint64 size_,
+  utime_t& mtime_):{}
+``` 
+1. 其实原因是，oper的初始化列表中，调用构造函数时，原先是实例，所以从事可以构造成功，不关实参数是什么，都是可以构造出形参数。
+2. 形参改成引用之后，却没有加const，而实参有若干参数返回的是const &，比如 m->get_snap_seq();所以所以构造不出对象，进而无法调用默认的operator=()。
