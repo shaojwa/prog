@@ -1,3 +1,4 @@
+1. noexcept 修饰符学习一下。
 1. https://www.stroustrup.com/
 1. the best ref of c++ https://isocpp.github.io/CppCoreGuidelines/
 1. c++中的bind机制了解一下，以及类似的lambda表达式。
