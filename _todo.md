@@ -1,7 +1,7 @@
 1. noexcept 修饰符学习一下。
 1. https://www.stroustrup.com/
 1. the best ref of c++ https://isocpp.github.io/CppCoreGuidelines/
-1. c++中的bind机制了解一下，以及类似的lambda表达式。
+1. c++中的bind机制了解一下，以及类似的lambda表达式。（20201202）
 1. linux中的sparse文件了解一下。
 1. gdb系统学习 https://sourceware.org/gdb/current/onlinedocs/gdb/
 1. lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
