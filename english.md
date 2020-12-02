@@ -137,6 +137,9 @@ Its real purpose is the launching and retrieval of small aeroplanes in flight.
 
 #### redundant
 
+#### restrict
+Lists the active jobs.  JOBSPEC restricts output to that job.
+
 #### speculation
 value speculation.
 
@@ -153,6 +156,9 @@ Unless real-time scheduling  policies  are  being employed.
 
 #### violation
 This is in violation of the POSIX threads specification
+
+#### without
+Without options, the status of all active jobs is displayed.
 
 #### wall
 wall message: the mssage sent by command wall 
