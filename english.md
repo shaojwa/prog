@@ -2,6 +2,8 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 ```
+#### multi-noun 
+runtime locking correctness validator
 
 #### acquire
 the scheduling policy shall determine which thread shall acquire the mutex.
@@ -29,7 +31,8 @@ The 'gdb' script provided below can be modified as fits.
 #### care
 Making a thread detached is useful for some types of daemon threads whose exit status the application does not need to care  about.
 
-#### crude
+#### concurrent
+ mutex is useful for protecting shared data structures from concurrent modifications
 
 #### coin (=create)
 The term trie was coined two years later by Edward Fredkin
@@ -43,11 +46,16 @@ consult the corresponding Linux manual page for details of Linux behavior
 #### contrast
 in contrast to 0, which gets you to the beginning, regardless of whitespace or not.
 
+#### crude
+
 #### default
 By default, on RedHat based distributions like CentOS and Fedora.
 
 #### differ
 The Linux implementation of this interface may differ.
+
+#### additions
+started by Ingo Molnar, additions by Arjan van de Ven
 
 #### determine
 the scheduling policy shall determine which thread shall acquire the mutex.
@@ -153,6 +161,9 @@ SUDO gives an audit trail I believe under /var/log/secure.
 Unless real-time scheduling  policies  are  being employed.
  
 #### vertex
+
+#### violate
+The validator detects and reports lock usage that violate these single-lock state rules.
 
 #### violation
 This is in violation of the POSIX threads specification
