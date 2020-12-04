@@ -7,7 +7,7 @@ In ISO C99 you can give the elements in any order, specifying the array indices 
 
 If the value in it has side effects, the side effects happen only once, not for each initialized field by the range initializer.
 
-#### waht is side-effects-once 
+#### side-effects-once 
 ```
 #include <stdio.h>
 // designated inits only supported by gcc not g++
