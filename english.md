@@ -2,8 +2,15 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 ```
+
+#### require vs acquire
+this deadlock requires each thread to acquire its lock at exactly the wrong time.
+ 
 #### multi-noun 
 runtime locking correctness validator
+
+#### adhere
+This situation can be avoided: if both threads adhere to a rule stating that A must always be acquired before B,
 
 #### acquire
 the scheduling policy shall determine which thread shall acquire the mutex.
@@ -36,6 +43,9 @@ Making a thread detached is useful for some types of daemon threads whose exit s
 
 #### coin (=create)
 The term trie was coined two years later by Edward Fredkin
+
+#### code of practice
+All members of the association adhere to a strict code of practice. 
 
 #### collapse
 collapse all
@@ -124,9 +134,13 @@ Because a range of child nodes is permitted.
 
 #### point
 The discussion did not stop at that point。
+Things may not come to this point often at all;
 
 #### possible
 it  is not possible to join with the thread in order to obtain its exit status. 
+
+#### production
+it is not an option that one would enable on a production system.
 
 #### redundant
 
