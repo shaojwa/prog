@@ -27,29 +27,30 @@
 #### 高效内存实现版
 只用2N大小的数组，如果二叉树是中序遍历，
 
-#### 什么是欧拉遍历
-
-走过的每一个节点都记下来，类似先序遍历
-
-#### 先序遍历（pre-order tranversal）
-
-先根，然后左子树，然后右子树。
+#### Euler tour traversal
+pre-order traversal
 
 #### 线段树的中序版本
 中序版本的线段树，数组中的每一个元素都是被使用的。
 
-#### 线段树的高级版本
+## Advanced versions of Segment Trees
+### More complex queries
+#### Finding the maximum
+change the function build and update.
+#### Finding the maximum and the number of times it appears
+##### Compute the greatest common divisor / least common multiple
+```
+p[i] = GCD(p[2*i], p[2*i+1])
+p[i] = LCM(p[2*i], p[2*i+1])
+```
+#### Counting the number of zeros, searching for the k-th zero
+```
+find_kth(v) = k < v[2*p]? find_kth(2v) : find_k-nth(2v+1)
+```
+#### Searching for an array prefix with a given amount
+#### Searching for the first element greater than a given amount
+#### Finding subsegments with the maximal sum
 
-#### 查找最大最小值
-
-#### 计算最大公约数最小公倍数
-
-#### 计算0的个数以及计算第几个0
-
-计算0的个数是简单的，关键是计算第k个0如何实现？
-
-
-
-## 练习题
+## Practice Problems
 
 zoj2859，hdu1166，hdu1754
