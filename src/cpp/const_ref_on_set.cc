@@ -43,7 +43,8 @@ int main () {
   for (set<Dog>::iterator it = s.begin(); it != s.end();  ++it) {
     cout << it->age << endl;
   }
-  for (const Dog &it: s) {
+  for (auto &it: s) {
+    cout << typeid(it).name() << endl;
     // it.age = 4;
   }
   for (set<Dog>::iterator it = s.begin(); it != s.end();  ++it) {
