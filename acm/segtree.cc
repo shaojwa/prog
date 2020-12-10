@@ -1,39 +1,57 @@
 #include <iostream>
 using namespace std;
 
-const uint32_t NMAX = 1000;
+const int NMAX = 1000;
 int a[NMAX], t[4 * NMAX];
-uint32_t n;
+int n;
 
-void build(int32_t a[], uint32_t tl, uint32_t tr, int32_t t[], uint32_t v) {
+void build(int a[], int tl, int tr, int t[], int v) {
   if (tl == tr) {
     t[v] = a[tl];
     return;
   }
-  uint32_t m = (tl + tr ) / 2;
+  int m = (tl + tr ) / 2;
   build(a, tl, m, t, 2 * v + 1);
   build(a, m + 1, tr, t, 2 * v + 2);
   t[v] = t[2 * v + 1] + t[2 * v + 2];
 }
 
-int32_t query(int32_t t[], uint32_t v, uint32_t tl, uint32_t tr, uint32_t l, uint32_t r) {
+int query(int t[], int v, int tl, int tr, int l, int r) {
   // cout << v << ", " << tl << ", " << tr << ", " << l << ", " << r << endl;
   if (tl == l && tr == r) {
     return t[v];
   }
-  uint32_t m = (tl + tr) / 2;
+  int m = (tl + tr) / 2;
   if (l > m) {
     return query(t, 2 * v + 2, m + 1, tr, l, r);
   } else if (r <= m) {
     return query(t, 2 * v + 1, tl, m, l, r);
   } else {
-    return query(t, 2 * v + 1, tl , m, l, m) + query(t, 2 * v + 2, m + 1, tr, m + 1, r);
+    return (query(t, 2 * v + 1, tl , m, l, m) +
+      query(t, 2 * v + 2, m + 1, tr, m + 1, r));
   }
 }
 
-uint32_t from, to;
+
+// return the index of the range
+int find_kth(int v, int tl, int tr, int k) {
+  if (st[v] < k) {
+    return -1;
+  }
+  if (tl == tr) {
+    return tl;
+  }
+  int tm = (tl + tr)/2;
+  if (k > st[v*2]) {
+    find_kth(v*2+1, tm+1, tr , k - st[v*2]);
+  } else {
+    find_kth(v*2, tl, tm, k);
+  }
+}
 
 int main() {
+  int from, to;
+
   cout << "input n: " << endl;
   cin >> n;
   for (int i = 0; i < n; i++) {
@@ -49,7 +67,8 @@ int main() {
     if (from == 0 && to == 0) {
       break;
     }
-    cout << "sum of " << from << "-" << to << " is:" << query(t, 0, 0, n - 1, from, to) << endl;
+    cout << "sum of " << from << "-" << to << " is:"
+      << query(t, 0, 0, n - 1, from, to) << endl;
   }
   return 0;
 }
