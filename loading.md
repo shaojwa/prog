@@ -11,7 +11,6 @@ readelf -d cephfs.so
 ```
 
 3. 如果需要查看ELF中的符号问题用nm
-
 ```
 nm cephfs.so  | grep openv
 ```
