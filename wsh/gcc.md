@@ -17,7 +17,7 @@ The "overall options" allow you to stop this process at an intermediate stage.
 the -c option says not to run the linker. Then the output consists of object files output by the assembler.
 
 #### linker option
--static -shared
+-static -shared, so building .so or .a is also linker-needed.
 
 #### Compiling C++ Programs
 gcc will recognizes c++ source files but not add the c++ library,
