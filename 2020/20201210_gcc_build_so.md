@@ -11,7 +11,8 @@ using gcc to build:
 file type
 ```
 [wsh@dev ~/wsh/prog/src/cpp]$ file inline.so
-inline.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=45b2e30883f60223e138cc2e9ffa3966446dde50, not stripped
+inline.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), 
+dynamically linked, BuildID[sha1]=45b2e30883f60223e138cc2e9ffa3966446dde50, not stripped
 ```
 
 #### why -shared
@@ -22,10 +23,13 @@ inline.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically l
 #### why fPIC
 ```
 [wsh@dev ~/wsh/prog/src/cpp]$ gcc -shared -o inline.so inline_foo.cc inline_bar.cc
-/usr/bin/ld: /tmp/cceZMvHm.o: relocation R_X86_64_32 against `.rodata' can not be used when making a shared object; recompile with -fPIC
-/usr/bin/ld: /tmp/ccarUXbo.o: relocation R_X86_64_32 against `.rodata' can not be used when making a shared object; recompile with -fPIC
+/usr/bin/ld: /tmp/cceZMvHm.o: relocation R_X86_64_32 against `.rodata' 
+can not be used when making a shared object; recompile with -fPIC
+/usr/bin/ld: /tmp/ccarUXbo.o: relocation R_X86_64_32 against `.rodata' 
+can not be used when making a shared object; recompile with -fPIC
 /usr/bin/ld: final link failed: Nonrepresentable section on output
 collect2: error: ld returned 1 exit status
+```
 
 #### func symbol
 ```
@@ -78,4 +82,20 @@ inline_foo.o:
 [wsh@dev ~/wsh/prog/src/cpp]$ nm inline.a | grep bar
 inline_bar.o:
 0000000000000000 T _Z3barv
+```
+#### two identical symbol in static lib 
+```
+[wsh@dev ~/wsh/prog/src/cpp]$ nm inline.a | grep get_name
+0000000000000000 T _ZN3Dog8get_nameEv
+0000000000000000 T _ZN3Dog8get_nameEv
+```
+but this case can not be allowed in shared lib because the shared-lib is linked
+
+#### inline function is weak
+```
+[wsh@dev ~/wsh/prog/src/cpp]$ nm inline.a | grep get_name
+0000000000000000 W _ZN3Dog8get_nameEv
+0000000000000000 W _ZN3Dog8get_nameEv
+[wsh@dev ~/wsh/prog/src/cpp]$ nm inline.so | grep get_name
+0000000000000bca W _ZN3Dog8get_nameEv
 ```
