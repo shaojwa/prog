@@ -1,3 +1,9 @@
+#### 变量位置
+在变量真正需要使用时再定义，不要让定义和使用离太远，这样其初值更有意义。
+
+#### 函数返回值直接返回0表示成功是否合适
+个人觉返回0而不是用专门的宏表示是合适的。
+
 #### 类或者结构体中，数据成员在前，函数成员在后。
 #### 枚举型每个类型是否都要显示指定值
 #### 函数尽量不用返回值
@@ -15,7 +21,14 @@ class MDSSocketHook *asok_hook = nullptr;
 ```
 
 #### 判断值是否为0的方式
-用!取反获取判断。
+ceph中AsyncConnection.cc中的写法都是最简单的写法，不用等于和不等于：
+```
+unsigned middle_len = current_header.middle_len;
+if (middle_len) {
+}
+if (!middle.length())
+}
+```
 
 #### 构造函数初始化列表可以直接用this
 构造函数中可以用this指针构造成成员，也可以用new来分配内存给成员，参考MDSRank::MDSRank：
