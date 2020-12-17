@@ -7,6 +7,4 @@
 ```
 #### trival or non-trival
 objects with trivial destructors don't require a delete-expression and may be disposed of by simply deallocating their storage.
-
-#### 
 The destructor defined with = default is trivial in this case.
