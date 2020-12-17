@@ -1,4 +1,17 @@
-#### 使用状态的任何时候都可以考虑是否可以用位段bit-field
+#### 任何时用到状态都可以考虑位段bit-field
+```
+union obj_state_t {
+  struct {
+  uint8 clean:1;
+  uint8 dirty:1;
+  uint8 filling:1;
+  uint8 destage:1;
+  };
+  uint8 val;
+  obj_state_t(uint8 v = 0 ): val(v) {}
+  operator uint32() const { return uint32(val); }
+};
+```
 
 #### 类中的回溯指针是否应该优先定义
 #### class中的成员顺序需要仔细安排么
