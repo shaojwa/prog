@@ -43,13 +43,16 @@ Implicitly-declared destructor，有两个特点：
 1. 类中所有的非静态成员都有trivial析构函数
 trivial析构函数不会采取什么行动，不需要delete表达式，只是简单的释放他们的存储空间。
 
+https://www.codesynthesis.com/~boris/blog/2012/04/04/when-provide-empty-destructor/
+* In other words, a trivial destructor doesn’t need to execute any instructions and, as a result, doesn’t need to be called, or even exist in the program text.
+
 ####  显示定义的析构函数
 Implicitly-defined destructor，隐式申明的析构函数如果没有被delete，那么它就会被隐式定义。
 
 #### 析构顺序
-1. 先调用析构函数
-1. 然后调用成员的析构函数
-1. 然后调用直属非虚子类的析构函数
+1. 先执行当前类中的析构函数中的自定义代码
+1. 然后在析构函数中调用类中成员的析构函数
+1. 最后在析构函数中调用直属子类中的析构函数
 
 #### 虚析构
 #### 纯虚析构
