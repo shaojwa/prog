@@ -53,3 +53,7 @@ Implicitly-defined destructor，隐式申明的析构函数如果没有被delete
 
 #### 虚析构
 #### 纯虚析构
+
+#### 什么时候需要提供空的析构函数
+https://www.codesynthesis.com/~boris/blog/2012/04/04/when-provide-empty-destructor/
+如果我自定义了一个空类，那么派生类就一定会生成一个析构函数的定义。
