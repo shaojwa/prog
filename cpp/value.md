@@ -10,7 +10,7 @@
 (2) 比如字面值，这肯定是右值，但是也许不只是右值。
 那么，const 类型的变量算什么，contexptr 表达式算什么，临时匿名值，比如临时构造传入函数的实参数算什么？ 我们来细细分类。
 
-##### 一开始，我们想到的就是左右
+#### 一开始，我们想到的就是左右
 所以简单来说就是，值分左右，但是这个左右分类可以完全穷尽，但是无法相互独立，所以才有需要能相互独立的分类。
 
 #### 相互独立的分类，primary categories
@@ -25,5 +25,5 @@
 #### types
 * nameless temporaries
 
-#### life extended by binding
+#### 生命期的扩展
 temporaries whose life was extended by binding to a reference
