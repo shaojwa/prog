@@ -1,3 +1,7 @@
+## lowercase or uppercase symbol
+If lowercase, the symbol is usually local; if uppercase, the symbol is global (external). 
+There are however a few lowercase symbols that are shown for special global symbols ("u", "v" and "w").
+
 ## 4 stage
 When you invoke GCC, it normally does:
 1. preprocessing
