@@ -3,7 +3,7 @@ When you invoke GCC, it normally does:
 1. preprocessing
 1. compilation
 1. assembly
-1. linking. 
+1. linking
 
 so there are 4 workers:
 1. preprocessor
@@ -32,6 +32,8 @@ This manual documents only one of these two forms, whichever one is not the defa
 1. does not matter for the most part
 1. does matter for several options of the smae kind
 
+#### overall  options
+1. one of the options -c, -S, or -E to say where gcc is to stop. 
 
 #### linker option
 -static -shared, so building .so or .a is also linker-needed.
