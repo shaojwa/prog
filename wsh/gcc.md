@@ -4,6 +4,7 @@ When you invoke GCC, it normally does:
 1. compilation
 1. assembly
 1. linking. 
+
 so there are 4 workers:
 1. preprocessor
 1. compiler
