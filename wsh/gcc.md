@@ -12,7 +12,6 @@ so there are 4 workers:
 1. linker
 
 ## option types
-
 1. overall options
 1. language options
 1. warning options
@@ -33,14 +32,19 @@ This manual documents only one of these two forms, whichever one is not the defa
 
 ## overall  options
 1. one of the options -c, -S, or -E to say where gcc is to stop. 
-
+1. --help=optimizers
 ## linker option
 -static -shared, so building .so or .a is also linker-needed.
 
 ## Compiling C++ Programs
 gcc will recognizes c++ source files but not add the c++ library,
 but g++ is a program that calls GCC and automatically specifies linking against the C++ library
-## help
-```
---help=optimizers
-```
+## Options Controlling C++ Dialect
+
+
+## Options for Debugging Your Program or GCC
+## Options That Control Optimization
+## Machine Dependent Options
+1. GNU/Linux Options, -mglibc
+## Options for Code Generation Conventions
+## ENVIRONMENT
