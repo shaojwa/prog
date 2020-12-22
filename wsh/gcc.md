@@ -1,11 +1,9 @@
-#### big 4
+#### 4 phases
 When you invoke GCC, it normally does preprocessing, compilation, assembly and linking. 
 so there are 4 worker: preprocessor, compiler, assembler, linking.
 
 #### big 2
 compile and linking
-
-
 
 #### option order
 For the most part, the order you use doesn't matter.  Order does matter when you use several options of the
