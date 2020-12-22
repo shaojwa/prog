@@ -1,4 +1,4 @@
-#### 4 stage
+## 4 stage
 When you invoke GCC, it normally does:
 1. preprocessing
 1. compilation
@@ -11,7 +11,7 @@ so there are 4 workers:
 1. assembler
 1. linker
 
-#### option types
+## option types
 
 1. overall options
 1. language options
@@ -27,17 +27,20 @@ so there are 4 workers:
 
 This manual documents only one of these two forms, whichever one is not the default.
 
-
-#### option order
+## option order
 1. does not matter for the most part
 1. does matter for several options of the smae kind
 
-#### overall  options
+## overall  options
 1. one of the options -c, -S, or -E to say where gcc is to stop. 
 
-#### linker option
+## linker option
 -static -shared, so building .so or .a is also linker-needed.
 
-#### Compiling C++ Programs
+## Compiling C++ Programs
 gcc will recognizes c++ source files but not add the c++ library,
 but g++ is a program that calls GCC and automatically specifies linking against the C++ library
+## help
+```
+--help=optimizers
+```
