@@ -12,14 +12,6 @@ rbreak DMTest::WriteObj*
 delete 4
 ```
 
-## status
-```
-info addr obj_locate_snap
-info symbol 0x7f5b6879750c 
-info thread
-info reg rdi
-```
-
 ## data
 ```
 p ((Inode*)0x7f183001cb70)->ll_ref
@@ -27,6 +19,20 @@ p ((Inode*)0x7f183001cb70)->_ref
 p *(Dentry*)0x7f183001e400
 disass
 set args
+```
+
+## stack
+```
+bt
+frame
+```
+
+## status
+```
+info addr obj_locate_snap
+info symbol 0x7f5b6879750c 
+info thread
+info reg rdi
 ```
 
 ## running
