@@ -18,6 +18,7 @@ p ((Inode*)0x7f183001cb70)->ll_ref
 p ((Inode*)0x7f183001cb70)->_ref
 p *(Dentry*)0x7f183001e400
 disass
+disass /m server::handle_readdir
 set args
 ```
 
@@ -33,6 +34,7 @@ info addr obj_locate_snap
 info symbol 0x7f5b6879750c 
 info thread
 info reg rdi
+info vtbl this
 ```
 
 ## running
