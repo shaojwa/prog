@@ -17,9 +17,16 @@ delete 4
 p ((Inode*)0x7f183001cb70)->ll_ref
 p ((Inode*)0x7f183001cb70)->_ref
 p *(Dentry*)0x7f183001e400
+p $rdi
+p /x $rdi
+p /d $rdi
+p /u $rdi
+p /o $rdi
+p /t $rdi
 disass
 disass /m server::handle_readdir
 set args
+x $rdi
 ```
 
 ## stack
