@@ -38,7 +38,7 @@ ni(nexti)
 r(run)
 s(step)
 si(stepi)
-thread
+thread 4
 thread apply
 thread find
 ```
