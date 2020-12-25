@@ -1,3 +1,6 @@
+
+// why tmp variable can not be const referenced
+
 #include <iostream>
 #include <unistd.h>
 
