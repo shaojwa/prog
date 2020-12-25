@@ -1,15 +1,31 @@
 1. https://sourceware.org/gdb/current/onlinedocs/gdb/
 1. https://www.gnu.org/software/gdb/
 
+## breakpoints (Making program stop at certain points)
+1. break filename:linenum
+1. break filename:function
+1. rbreak DMTest::WriteObj*
+1. delete 4
 
-## get help
-```
-Type "help" followed by a class name for a list of commands in that class.
-Type "help all" for the list of all commands.
-Type "help" followed by command name for full documentation.
-Type "apropos word" to search for commands related to "word".
-```
+## status (Status inquiries)
+1. info addr obj_locate_snap 
+1. info symbol 0x7f5b6879750c 
+1. info thread
 
+## data (Examining data)
+1. p ((Inode*)0x7f183001cb70)->ll_ref
+1. p ((Inode*)0x7f183001cb70)->_ref
+1. p *(Dentry*)0x7f183001e400
+1. disass
+
+## running
+1. set args
+
+
+
+## issues and tips
+1. using <tab> to break a template-function
+  
 ## class of commands
 ```
 aliases -- Aliases of other commands
@@ -25,49 +41,11 @@ support -- Support facilities
 tracepoints -- Tracing of program execution without stopping the program
 user-defined -- User-defined commands
 ```
-
-## breakpoints
-#### setting breakpoint
+  
+## get help
 ```
-break filename:linenum
-break filename:function
+Type "help" followed by a class name for a list of commands in that class.
+Type "help all" for the list of all commands.
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
 ```
-
-#### rbreak
-```
-rbreak DMTest::WriteObj*
-```
-
-#### delete breakpoint
-```
-delete <num>
-```
-
-## running
-#### set args
-
-
-## data
-#### disass
-
-#### print class
-print dentry infos
-```
-p *(Dentry*)0x7f183001e400
-```
-
-#### print class field
-```
-(gdb) p ((Inode*)0x7f183001cb70)->ll_ref
-$6 = 0
-(gdb) p ((Inode*)0x7f183001cb70)->_ref
-$7 = 1
-```
-print Dentry.ref
-```
-p ((Dentry*)0x7f183001e400)->ref
-$8 = 0
-```
-
-#### issues and tips
-1. using <tab> to break a template-function
