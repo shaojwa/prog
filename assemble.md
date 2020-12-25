@@ -1,13 +1,20 @@
-```
-pushq   %rbp
-```
-入栈
+http://asm.sourceforge.net/articles/linasm.html
 
 ```
-movq    %rsp, %rbp
+// push rbp ti stack
+push   %rbp 
 ```
-栈顶指针(rsp)放到(rbp)
 
 ```
-subq    $32, %rsp
+// LEA (load effective address)
+lea    -20(%rbp), %rax 
+```
+
+```
+// move rsp to rbp
+mov    %rsp, %rbp 
+```
+
+```
+sub   $32, %rsp
 ```
