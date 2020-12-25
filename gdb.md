@@ -2,7 +2,7 @@
 1. https://www.gnu.org/software/gdb/
 
 
-#### get help
+## get help
 ```
 Type "help" followed by a class name for a list of commands in that class.
 Type "help all" for the list of all commands.
@@ -10,7 +10,7 @@ Type "help" followed by command name for full documentation.
 Type "apropos word" to search for commands related to "word".
 ```
 
-#### class of commands
+## class of commands
 ```
 aliases -- Aliases of other commands
 breakpoints -- Making program stop at certain points
@@ -25,8 +25,6 @@ support -- Support facilities
 tracepoints -- Tracing of program execution without stopping the program
 user-defined -- User-defined commands
 ```
-## running
-#### set args
 
 ## breakpoints
 #### setting breakpoint
@@ -44,6 +42,13 @@ rbreak DMTest::WriteObj*
 ```
 delete <num>
 ```
+
+## running
+#### set args
+
+
+## data
+#### disass
 
 #### print class
 print dentry infos
