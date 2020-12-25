@@ -15,9 +15,9 @@ delete 4
 ## status
 ```
 info addr obj_locate_snap
-info reg rdi
 info symbol 0x7f5b6879750c 
 info thread
+info reg rdi
 ```
 
 ## data
@@ -43,7 +43,6 @@ thread apply
 thread find
 ```
 
- 
 ## class of commands
 ```
 aliases -- Aliases of other commands
