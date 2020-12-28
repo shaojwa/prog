@@ -8,3 +8,7 @@ void dm_hash_node_t::hn_release_obj(dm_user_obj_t const *user_obj)
 ```
 void dm_hash_node_t::hn_release_obj(dm_user_obj_t * const user_obj)
 ```
+如果赋值那么报错：
+```
+error: assignment of read-only parameter ‘user_obj’
+```
