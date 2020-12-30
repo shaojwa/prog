@@ -4,9 +4,16 @@
 ## tips
 1. using <tab> to break a template-function
 1. disass /m main
-1. l
-1. si
+1. disass $rip-10,$rip+10
+1. layout asm
+1. layout src
 1. x/i $rip
+  
+#####
+```
+set  disassemble-next-line on
+show disassemble-next-line
+```
 
 ## breakpoints
 ```
