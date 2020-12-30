@@ -3,6 +3,10 @@
 
 ## tips
 1. using <tab> to break a template-function
+1. disass /m main
+1. l
+1. si
+1. x/i $rip
 
 ## breakpoints
 ```
@@ -27,6 +31,8 @@ disass
 disass /m server::handle_readdir
 set args
 x $rdi
+x/i $rip
+display/i $rip
 ```
 
 ## stack
