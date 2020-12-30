@@ -1,3 +1,5 @@
+1. https://www.oschina.net/translate/what-every-programmer-should-know-about-cpu-cache-part2?print
+1. cache-line了解一下
 1. linux 下精确计时有什么好办法(std::chrono::milliseconds)
 1. linux dcache hash算法学习一下(ceph_str_hash_linux)
 1. https://cdn.kernel.org/pub/linux/kernel/people/marcelo/linux-2.4/include/linux/dcache.h
