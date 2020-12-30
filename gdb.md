@@ -58,6 +58,8 @@ n(next)
 ni(nexti)
 r(run)
 s(step)
+rn(reverse-next) Target multi-thread does not support this command
+rs(reverse-step) Target multi-thread does not support this command
 si(stepi)
 thread 4
 thread apply
