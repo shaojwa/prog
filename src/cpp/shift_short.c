@@ -1,9 +1,10 @@
 #include <stdio.h>
 int main() {
-    short a = 1;
-    short b = 1; 
-    printf("sizeof(short) is %lu\n", sizeof(a));
-    printf("sizeof(shift) is %lu\n", sizeof(a << 1));
-    printf("sizeof(shift) is %lu\n", sizeof(a << b));
+    short n = 1;
+    printf("%lu\n", sizeof(n));
+    printf("%lu\n", sizeof(n << 0));
+    char c = 1;
+    printf("%lu\n", c << 16);
+    printf("%lu\n", sizeof(c << 16));
     return 0;
 }
