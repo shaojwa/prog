@@ -1,4 +1,12 @@
 http://asm.sourceforge.net/articles/linasm.html
+https://gist.github.com/mishurov/6bcf04df329973c15044
+
+
+```
+// move rsp to rbp
+mov    %rsp, %rbp 
+```
+
 
 ```
 // push rbp ti stack
@@ -11,10 +19,6 @@ push   %rbp
 lea    -20(%rbp), %rax 
 ```
 
-```
-// move rsp to rbp
-mov    %rsp, %rbp 
-```
 
 ```
 sub   $32, %rsp
