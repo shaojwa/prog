@@ -1,3 +1,6 @@
+1. linux 下精确计时有什么好办法(std::chrono::milliseconds)
+1. linux dcache hash算法学习一下(ceph_str_hash_linux)
+1. https://cdn.kernel.org/pub/linux/kernel/people/marcelo/linux-2.4/include/linux/dcache.h
 1. C++11 中for循环的三种写法，哪种更好
 1. 浏览文件时less比vim好在什么地方
 1. https://en.cppreference.com/w/cpp/language/dependent_name (20201217)
