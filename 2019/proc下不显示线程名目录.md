@@ -7,29 +7,19 @@
 
 
 ```
-
 if (!iter.task || !has_group_leader_pid(iter.task)) {
-
-			iter.tgid += 1;
-
-			goto retry;
-
+  iter.tgid += 1;
+  goto retry;
 }
-
 ```
 
 查看has_group_leader_pid(iter.task)的代码就知道原因：
 
 ```
-
 static inline bool has_group_leader_pid(struct task_struct *p)
-
 {
-
-	return task_pid(p) == task_tgid(p);
-
+  return task_pid(p) == task_tgid(p);
 }
 
 ```
-
 tgid就是thread group id的意思，就是通过看task中的tgid（线程所在的进程id）是否等于pid（线程的id号）。
