@@ -65,3 +65,21 @@ public:
 };
 typedef boost::intrusive::list<rcache_object_t> blist_obj_t;
 ```
+
+#### ceph 用例
+```
+switch (b->cache_private) {
+case BUFFER_WARM_IN:
+  warm_in.erase(warm_in.iterator_to(*b));
+  break;
+case BUFFER_WARM_OUT:
+  warm_out.erase(warm_out.iterator_to(*b));
+  break;
+case BUFFER_HOT:
+  hot.erase(hot.iterator_to(*b));
+  break;
+default:
+  ceph_abort_msg("bad cache_private");
+}
+num = hot.size() + warm_in.size();
+```
