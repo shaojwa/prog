@@ -2,8 +2,11 @@
 2. https://gist.github.com/mishurov/6bcf04df329973c15044
 1. http://www.x86-64.org/documentation/abi.pdf
 
-#### Opcode 
-操作码
+## Opcode 
+##### Instruction Code Format (IA-32)
+- Optional instruction prefix
+- Operational code
+- Optional modifier(s) - Optional data element(s)
 
 #### 指令码格式
 ```
