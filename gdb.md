@@ -8,6 +8,7 @@
 1. layout asm
 1. layout src
 1. x/i $rip
+1. show locals: info locals
   
 #####
 ```
@@ -55,6 +56,7 @@ info symbol 0x7f5b6879750c
 info thread
 info reg rdi
 info vtbl this
+info locals
 ```
 
 ## running
