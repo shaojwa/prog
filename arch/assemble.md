@@ -1,5 +1,6 @@
 1. http://asm.sourceforge.net/articles/linasm.html
 2. https://gist.github.com/mishurov/6bcf04df329973c15044
+1. http://www.x86-64.org/documentation/abi.pdf
 
 #### Opcode 
 操作码
@@ -28,14 +29,14 @@
 ## 寄存器
 #### 通用寄存器
 8个寄存器用来存储工作数据
-1. RAX，累加器，操作数，结果数据。
-1. RBX，指向数据段的数据。
-1. RCX，字串或者循环操作计数。
-1. RDX，IO指针
-1. RDI，字串操作的目标地址
-1. RSI，字串操作的source地址。
-1. RSP，栈顶指针。
-1. RBP，栈底指针。
+1. %rax，累加器，操作数，结果数据。
+1. %rbx，常常作为函数调用的第3个参数，有时候也作为指向数据段地址。
+1. %rcx，常常作为函数调用的第4个参数，字串或者循环操作计数。
+1. %rdx，IO指针
+1. %rdi，常常作为函数调用的第1个参数，同时也会做字串操作的目标地址。
+1. %rsi，常常作为函数调用的第2个参数，字串操作的source地址。
+1. %rbp，栈底指针。
+1. %rsp，栈顶指针。
 
 #### 段寄存器
 6个16位的寄存器用来处理内存访问
@@ -108,3 +109,9 @@ lea    -20(%rbp), %rax
 ```
 sub   $32, %rsp
 ```
+
+#### argument placement
+Linux (and Windows) x86-64 calling conventionhas the first few arguments noton the stack, but in registers instead
+See http://www.x86-64.org/documentation/abi.pdf (page 20), Specifically:
+If the class is MEMORY, pass the argument on the stack.
+If the class is INTEGER, the next available register of the sequence %rdi, %rsi, %rdx, %rcx, %r8 and %r9 is used.
