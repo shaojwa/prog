@@ -1,5 +1,5 @@
-http://asm.sourceforge.net/articles/linasm.html
-https://gist.github.com/mishurov/6bcf04df329973c15044
+1. http://asm.sourceforge.net/articles/linasm.html
+2. https://gist.github.com/mishurov/6bcf04df329973c15044
 
 #### Opcode 
 操作码
@@ -94,7 +94,6 @@ DF flag
 mov    %rsp, %rbp 
 ```
 
-
 ```
 // push rbp ti stack
 push   %rbp 
@@ -105,7 +104,6 @@ push   %rbp
 // https://stackoverflow.com/questions/1658294/whats-the-purpose-of-the-lea-instruction
 lea    -20(%rbp), %rax 
 ```
-
 
 ```
 sub   $32, %rsp
