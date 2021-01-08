@@ -6,12 +6,8 @@
 ##### Instruction Code Format (IA-32)
 - Optional instruction prefix
 - Operational code
-- Optional modifier(s) - Optional data element(s)
-
-#### 指令码格式
-```
-[Optional instruction prefix] Operational-code [Optional modifier(s)] [Optional data element(s)]
-```
+- Optional modifier(s)
+- Optional data element(s)
 
 ## 处理器中的主要组件
 #### 控制单元
@@ -29,17 +25,24 @@
 1. 复杂整数运算 （乘法）
 1. 浮点运算
 
-## 寄存器
-#### 通用寄存器
-8个寄存器用来存储工作数据
-1. %rax，累加器，操作数，结果数据。
-1. %rbx，常常作为函数调用的第3个参数，有时候也作为指向数据段地址。
-1. %rcx，常常作为函数调用的第4个参数，字串或者循环操作计数。
-1. %rdx，IO指针
-1. %rdi，常常作为函数调用的第1个参数，同时也会做字串操作的目标地址。
-1. %rsi，常常作为函数调用的第2个参数，字串操作的source地址。
-1. %rbp，栈底指针。
-1. %rsp，栈顶指针。
+## registers
+#### general-purpose registers
+1. %rax，1st return register, number of vecrtor regeister used.
+1. %rbx，callee-saved register, base pointer.
+1. %rcx，pass 4th argument to function.
+1. %rdx，pass 3rd argument to function，2nd return register
+1. %rsi，used to pass 2th argument to function1.
+1. %rdi，used to pass 1th argument to function.
+1. %rsp，stack pointer.
+1. %rbp，callee-saved register, frame pointer.
+1. %r8, used to pass 5th argument to function
+1. %r9, used to pass 6th argument to function
+1. %r10, used to pass 5th argument to function
+1. %r11, used to pass 5th argument to function
+1. %r12, used to pass 5th argument to function
+1. %r13, used to pass 5th argument to function
+1. %r14, used to pass 5th argument to function
+1. %r15, used to pass 5th argument to function
 
 #### 段寄存器
 6个16位的寄存器用来处理内存访问
