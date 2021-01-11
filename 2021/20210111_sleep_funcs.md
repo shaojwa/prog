@@ -1,3 +1,4 @@
+其实，因为系统计时器的原因，就算是调用纳秒级的接口clock_nanosleep，其实也没法真的达到那样的精度。
 ## sleep
 ## usleep
 ## nanosleep
