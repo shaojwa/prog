@@ -13,6 +13,7 @@
 1. info args
   
 #### hooks
+https://sourceware.org/gdb/current/onlinedocs/gdb/Hooks.html
 ```
 # put this into ~/.gdbinit:
 define hook-next
