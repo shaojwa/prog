@@ -8,7 +8,17 @@
 1. layout asm
 1. layout src
 1. x/i $rip
-1. show locals: info locals
+1. info locals
+1. info variables
+1. info args
+  
+#### hooks
+```
+# put this into ~/.gdbinit:
+define hook-next
+  info locals
+end
+```
   
 #####
 ```
