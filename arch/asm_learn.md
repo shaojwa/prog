@@ -12,3 +12,13 @@ mov add ret sub
 ```
 
 #### lesson 3
+att memroy access：
+```
+0x34a8(%rdx),%rdx
+```
+-. xchg
+-. nop
+
+
+####  lession 4
+
