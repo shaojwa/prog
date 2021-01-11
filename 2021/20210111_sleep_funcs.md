@@ -9,5 +9,9 @@
 (4)nanosleep针对CLOCK_REALTIME进行计时，但是linux是用CLOCK_MONOTONIC计时，这也许不是个问题，因为POSIX.1指定说clock_settime不能。
 
 ## clock_nanosleep
-
 相比nanosleep，clock_nanosleep提供更多的clock_id和flag可选，可以指定绝对时间睡眠，这能很好解决nanosleep的一个问题。
+
+## select
+如果要考虑对于较早的unix系统的可移植性，那么select可能是很好的办法，但是这种场景现在越来越少。
+之所以用select是因为sleep睡眠的时间粒度太大，而usleep又并不是在每个系统上都有，加上nanosleep并没有实现。
+如果要对现在的程序编程，用nanosleep足够好，再不行用clock_nanosleep，所以用select的场景越来越少。
