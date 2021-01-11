@@ -16,9 +16,7 @@ att memroy access：
 ```
 0x34a8(%rdx),%rdx
 ```
--. xchg
--. nop
-
+- xchg
+- nop
 
 ####  lession 4
-
