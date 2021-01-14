@@ -11,6 +11,12 @@
 1. info locals
 1. info variables
 1. info args
+
+#### run with args
+```
+gdb /bin/dcache-dm-test
+(gdb) r --gtest_filter=mdtest.command_line
+```
   
 #### hooks
 https://sourceware.org/gdb/current/onlinedocs/gdb/Hooks.html
