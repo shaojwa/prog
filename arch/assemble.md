@@ -35,7 +35,7 @@
 1. %rdx, pass 3rd argument to function，2nd return register
 1. %rsi, used to pass 2th argument to function1.
 1. %rdi, used to pass 1th argument to function.
-1. %rsp, stack pointer.
+1. %rsp, stack pointer, it is used
 1. %rbp, callee-saved register, frame pointer.
 1. %r8, used to pass 5th argument to function
 1. %r9, used to pass 6th argument to function
@@ -45,9 +45,6 @@
 1. %r13
 1. %r14
 1. %r15
-
-#### esp
-to the next valid mem address where the next push to place
 
 #### Segments
 6个16位的寄存器用来处理内存访问
