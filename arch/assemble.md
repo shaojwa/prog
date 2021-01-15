@@ -96,14 +96,22 @@ DF flag
 1. 虚拟中断等待标记。
 1. 认证标记。
 
-## AT&T 语法
-#### move data
+## AT&T Assembly Syntax
+http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 
+#### Data Movement Instructions
+move
 ```
-// move rsp to rbp
-mov    %rsp, %rbp 
+move [data] [addess]
+Syntax
+mov <reg>, <reg>
+mov <reg>, <mem>
+mov <mem>, <reg>
+mov <con>, <reg>
+mov <con>, <mem>
 ```
 
+push
 ```
 // push rbp ti stack
 push   %rbp 
