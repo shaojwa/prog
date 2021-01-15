@@ -1,6 +1,8 @@
 1. http://asm.sourceforge.net/articles/linasm.html
-2. https://gist.github.com/mishurov/6bcf04df329973c15044
+1. https://gist.github.com/mishurov/6bcf04df329973c15044
+1. http://abcdxyzk.github.io/blog/2012/11/23/assembly-args/
 1. http://www.x86-64.org/documentation/abi.pdf
+1. http://asm.0x233.com/run
 
 ## Opcode 
 #### Instruction Code Format (IA-32)
@@ -119,3 +121,26 @@ Linux (and Windows) x86-64 calling conventionhas the first few arguments noton t
 See http://www.x86-64.org/documentation/abi.pdf (page 20), Specifically:
 If the class is MEMORY, pass the argument on the stack.
 If the class is INTEGER, the next available register of the sequence %rdi, %rsi, %rdx, %rcx, %r8 and %r9 is used.
+
+
+#### lesson 1
+https://zhuanlan.zhihu.com/p/23618489
+```
+$ nasm -f elf first.asm -o first.o
+$ gcc -m32 first.o -o first
+```
+http://asm.0x233.com/run
+
+#### lession 2
+```
+mov add ret sub
+```
+
+#### lesson 3
+att memroy access：
+```
+0x34a8(%rdx),%rdx
+```
+- xchg
+- nop
+####  lession 4
