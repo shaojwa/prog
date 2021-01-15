@@ -46,6 +46,9 @@
 1. %r14
 1. %r15
 
+#### esp
+to the next valid mem address where the next push to place
+
 #### Segments
 6个16位的寄存器用来处理内存访问
 1. 扁平内存模型
@@ -143,4 +146,4 @@ att memroy access：
 ```
 - xchg
 - nop
-####  lession 4
+#### lession 4
