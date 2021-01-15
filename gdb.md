@@ -3,6 +3,7 @@
 
 ## tips
 1. using <tab> to break a template-function
+1. break *0x0000000000400448
 1. disass /m main
 1. disass $rip-10,$rip+10
 1. layout asm
@@ -11,6 +12,7 @@
 1. info locals
 1. info variables
 1. info args
+
 
 #### run with args
 ```
@@ -38,6 +40,7 @@ show disassemble-next-line
 break filename:linenum
 break filename:function
 rbreak DMTest::WriteObj*
+break *0x0000000000400448
 delete 4
 ```
 
