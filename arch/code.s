@@ -23,33 +23,37 @@ int main() {
 ```
 assemble:
 ```
+0x0000000000400740:    pushq  0x2008c2(%rip)        # 0x601008
+0x0000000000400746:    jmpq   *0x2008c4(%rip)       # 0x601010      
+0x0000000000400760 <+0>:     jmpq   *0x2008ba(%rip)    //  value of 0x601020 is 400766
+0x0000000000400766 <+6>:     pushq  $0x1               //
+0x000000000040076b <+11>:    jmpq   0x400740           //
+              
+              
 Dump of assembler code for function main():
-  0x0000000000400959 <+0>:     push   %rbp                 // enter function, saving
-  0x000000000040095a <+1>:     mov    %rsp,%rbp            // rbp = rsp, the new frame
-  0x000000000040095d <+4>:     push   %rbx                 // rbx ???
-  0x000000000040095e <+5>:     sub    $0x28,%rsp           // rsp = rsp-0x28, stack size is 0x28
-  0x0000000000400962 <+9>:     lea    -0x30(%rbp),%rax     // rax = rbp-0x30, now rax = rsp
-  0x0000000000400966 <+13>:    mov    %rax,%rdi            // rdi = rax
+  0x0000000000400959 <+0>:     push   %rbp                      // enter function, saving
+  0x000000000040095a <+1>:     mov    %rsp,%rbp                 // rbp = rsp, the new frame
+  0x000000000040095d <+4>:     push   %rbx                      // rbx ???
+  0x000000000040095e <+5>:     sub    $0x28,%rsp                // rsp = rsp-0x28, stack size is 0x28
+  0x0000000000400962 <+9>:     lea    -0x30(%rbp),%rax          // rax = rbp-0x30, addr(dog) = 0xe410, now rax = rsp
+  0x0000000000400966 <+13>:    mov    %rax,%rdi                 // rdi = rax = 0xe410, rbp = 0xe440, rsp = 0xe410 
   0x0000000000400969 <+16>:    callq  0x400a32 <dog_t::dog_t()>
-      0x0000000000400a32 <+0>:     push   %rbp
-      0x0000000000400a33 <+1>:     mov    %rsp,%rbp
-      0x0000000000400a36 <+4>:     sub    $0x10,%rsp        // 0x10 = sizeof(dog)
-      0x0000000000400a3a <+8>:     mov    %rdi,-0x8(%rbp)   // put this in the stack
-      0x0000000000400a3e <+12>:    mov    -0x8(%rbp),%rax   // put this in rax
-      0x0000000000400a42 <+16>:    mov    %rax,%rdi         // put this in rdi
-      0x0000000000400a45 <+19>:    callq  0x400760 <_ZNSsC1Ev@plt>
-          0x0000000000400760 <+0>:     jmpq   *0x2008ba(%rip)        # 0x601020
-          0x0000000000400766 <+6>:     pushq  $0x1
-          0x000000000040076b <+11>:    jmpq   0x400740
-      0x0000000000400a4a <+24>:    leaveq
-      0x0000000000400a4b <+25>:    retq
-   0x000000000040096e <+21>:    lea    -0x20(%rbp),%rax     // rax = rbp-0x20 
-   0x0000000000400972 <+25>:    mov    %rax,%rdi            // rdi = rbp-x20
+      0x0000000000400a32 <+0>:     push   %rbp                  // save last frame base, rbp = 0xe440, rsp = 0xe400
+      0x0000000000400a33 <+1>:     mov    %rsp,%rbp             // rbp = rsp = 0xe400
+      0x0000000000400a36 <+4>:     sub    $0x10,%rsp            // rsp = 0xe3f0, 0x10 = sizeof(dog)
+      0x0000000000400a3a <+8>:     mov    %rdi,-0x8(%rbp)       // rdi = 0xe410 store at 0xe3f8
+      0x0000000000400a3e <+12>:    mov    -0x8(%rbp),%rax       // rax = 0xe410 
+      0x0000000000400a42 <+16>:    mov    %rax,%rdi             // rdi = rax, do nothing
+      0x0000000000400a45 <+19>:    callq  0x400760 <_ZNSsC1Ev@plt>      
+      0x0000000000400a4a <+24>:    leaveq                       // rbp = 0xe440, rsp = 0xe408
+      0x0000000000400a4b <+25>:    retq                         // rbp = 0xe440, rsp = 0xe410
+   0x000000000040096e <+21>:    lea    -0x20(%rbp),%rax         // rax = 0xe420 
+   0x0000000000400972 <+25>:    mov    %rax,%rdi                // rdi = 0xe420
    0x0000000000400975 <+28>:    callq  0x4008fd <adopt_dog()>
-   0x000000000040097a <+33>:    lea    -0x20(%rbp),%rdx     // rdx = rbp-0x20
-   0x000000000040097e <+37>:    lea    -0x30(%rbp),%rax     // rax = rbp-0x30
-   0x0000000000400982 <+41>:    mov    %rdx,%rsi            // rsi = rbp-0x20, parse the argument dog.
-   0x0000000000400985 <+44>:    mov    %rax,%rdi            // rdi = rbp-0x30, parse the argument dog.
+   0x000000000040097a <+33>:    lea    -0x20(%rbp),%rdx         // rdx = 0xe420
+   0x000000000040097e <+37>:    lea    -0x30(%rbp),%rax         // rax = 0xe410(d)
+   0x0000000000400982 <+41>:    mov    %rdx,%rsi                // rsi = 0xe420
+   0x0000000000400985 <+44>:    mov    %rax,%rdi                // rdi = 0xe410(d)
    0x0000000000400988 <+47>:    callq  0x400a66 <dog_t::operator=(dog_t&&)>
      (gdb) disass dog_t::operator=
      Dump of assembler code for function dog_t::operator=(dog_t&&):
