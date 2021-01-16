@@ -1,4 +1,5 @@
 1. https://web.stanford.edu/class/archive/cs/cs107/cs107.1194/guide/x86-64.html
+1. https://docs.oracle.com/cd/E19641-01/802-1948/802-1948.pdf
 1. http://asm.sourceforge.net/articles/linasm.html
 1. https://gist.github.com/mishurov/6bcf04df329973c15044
 1. http://abcdxyzk.github.io/blog/2012/11/23/assembly-args/
