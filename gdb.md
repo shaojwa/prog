@@ -2,6 +2,7 @@
 1. https://www.gnu.org/software/gdb/
 
 #### reverse step
+https://stackoverflow.com/questions/1206872/how-to-go-to-the-previous-line-in-gdb
 ```
 Target multi-thread does not support this command.
 ```
