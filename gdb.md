@@ -1,25 +1,64 @@
 1. https://sourceware.org/gdb/current/onlinedocs/gdb/
 1. https://www.gnu.org/software/gdb/
 
-## tips
-1. using <tab> to break a template-function
-1. break *0x0000000000400448
-1. disass /m main
-1. disass $rip-10,$rip+10
-1. layout asm
-1. layout src
-1. x/i $rip
-1. info locals
-1. info variables
-1. info args
+#### disass
+```
+disass /m main
+disass $rip-10,$rip+10
+```
+  
+#### examine address
+```
+x /oxdutfcsi ADDRESS
+x /i $rip
+```
 
+#### disassemble next source line or insn when execution stops
+it is good
+```
+set  disassemble-next-line on
+show disassemble-next-line
+```
+
+#### breakpoint at address
+```
+break *0x0000000000400448
+```
 
 #### run with args
 ```
 gdb /bin/dcache-dm-test
 (gdb) r --gtest_filter=mdtest.command_line
 ```
-  
+#### show local vars
+```
+info locals
+```
+
+#### args of the current stack frame
+```
+info args
+```
+
+#### all global and static variable names
+```
+info variables
+```
+
+#### layout 
+```
+layout asm
+layout src
+```
+Enter / leave the TUI mode with one of this combinations:
+```
+ctrl + a
+```
+control the register window
+```
+tui reg  float/genetal/next/system
+```
+
 #### hooks
 https://sourceware.org/gdb/current/onlinedocs/gdb/Hooks.html
 ```
@@ -29,12 +68,15 @@ define hook-next
 end
 ```
   
-#####
+##### auto disassemble the next line or insn when execution stops
 ```
-set  disassemble-next-line on
+set disassemble-next-line on
 show disassemble-next-line
 ```
+#### auto complete the template-function name 
 
+using <tab> to break a template-function
+  
 ## breakpoints
 ```
 break filename:linenum
