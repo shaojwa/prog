@@ -1,6 +1,11 @@
 1. https://sourceware.org/gdb/current/onlinedocs/gdb/
 1. https://www.gnu.org/software/gdb/
 
+#### reverse step
+```
+Target multi-thread does not support this command.
+```
+
 #### disass
 ```
 disass /m main
