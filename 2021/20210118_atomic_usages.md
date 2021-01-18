@@ -10,8 +10,8 @@ load atomically loads and returns the current value of the atomic variable. the 
 #### what is operator=
 Atomically assigns the desired value to the atomic variable. the "put" of atomic variable.
 
-#### operator += is ok ?
-it is ok 
+#### operator+= works ?
+yes it works 
 ```
 if (buffer_track_crc) {
   if (cache_adjusts)
