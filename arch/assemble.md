@@ -30,9 +30,6 @@
 1. 退出
 
 ####  Execution unit
-1. 简单整数运算 （加减）
-1. 复杂整数运算 （乘法）
-1. 浮点运算
 
 ## registers
 #### general-purpose registers
@@ -53,21 +50,23 @@
 1. %r14
 1. %r15
 
-#### CS
-#### DS
-#### SS
-#### ES
+#### segments
+x86 memory segmentation refers to the implementation of memory segmentation in the Intel x86 computer instruction set architecture.
+Segmentation was introduced on the Intel 8086 in 1978 as a way to allow programs to address more than 64 KB (65,536 bytes) of memory.
+The Intel 80286 introduced a second version of segmentation in 1982 that added support for virtual memory and memory protection.
+At this point the original model was renamed real mode, and the new version was named protected mode.
 
-#### FS
-FS is used as canary-based stack protector.
-On x86_64, segmented addressing is no longer used, but both the FS and GS registers can be used as base-pointer addresses in order to access special operating system data-structures. So what you're seeing is a value loaded at an offset from the value held in the FS register, and not bit manipulation of the contents of the FS register.
+#### drop segments
+The x86-64 architecture, introduced in 2003, has largely dropped support for segmentation in 64-bit mode.
 
-FS:0x28 on Linux is storing a special sentinel stack-guard value, and the code is performing a stack-guard check. 
+#### CS/DS/SS/ES
+In both real and protected modes, the system uses 16-bit segment registers to derive the actual memory address.
+CS(code segment), DS(data segment), SS(stack segment),ES(extra segment, is the default destination for string operations).
 
-#### GS
-GS is also used in gcc's thread-local storage.
+#### FS/GS
+The Intel 80386, introduced in 1985, adds two additional segment registers, FS and GS, with no specific uses defined by the hardware. 
 
-#### IP 指令指针
+#### IP
 Instruction pointer
 
 #### 浮点寄存器
