@@ -1,3 +1,5 @@
+《Computer Architecture out of order execution》 By Yoav Etsion ppt 64 pages
+
 #### 为什么需要超标量（Superscalar）
 因为需要速度，The need for speed
 
