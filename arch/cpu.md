@@ -15,6 +15,24 @@
 1. linear_address is 32bit
 1. The paging unit may be enabled or disabled; 
 
+#### x86-64
+1. The x86-64 architecture does not use segmentation in long mode (64-bit mode).
+1. Four of the segment registers, CS, SS, DS, and ES, are forced to 0, and the limit to 2^64.
+1. The segment registers FS and GS can still have a nonzero base address.
+1. This allows operating systems to use these segments for special purposes. 
+
+#### segment practice
+```
+CS  0x33
+DS  0x2b
+SS  0
+ES  0
+FS  0
+GS  0
+```
+
+#### why CS  is not zero
+
 
 #### what is preserved across function calls
 http://www.x86-64.org/documentation/abi.pdf (page 20)
