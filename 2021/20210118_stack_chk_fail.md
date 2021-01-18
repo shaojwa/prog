@@ -7,7 +7,7 @@ stacks
 5: (()+0x2f096) [0x7f8581fae096]
 6: (()+0x2f142) [0x7f8581fae142]
 7: (RCache::_enqueue_warm(rcache_object_t&)+0x304) [0x7f85859b7954]
-8: (RCache::rcache_write(object_t const&, snapid_t, unsigned long long, unsigned long long, ceph::buffer::list&, unsigned char)+0xee) [0x7f85859c0dde]
+8: (RCache::rcache_write(object_t const&, snapid_t, unsigned long long, unsigned long long, ...)+0xee) [0x7f85859c0dde]
 9: (DCacheOPProc::do_sparse_read(DCacheOPProc::OpContext*, OSDOp&)+0x5a5) [0x7f85858f9925]
 10: (DCacheOPProc::do_dse_ops(DCacheOPProc::OpContext*, std::vector<OSDOp, std::allocator<OSDOp> >&)+0x546) [0x7f8585917f56]
 11: (DCacheOPProc::dcache_do_op_proc(DCacheOPProc::OpContext*, std::vector<OSDOp, std::allocator<OSDOp> >&)+0x1fe) [0x7f858591881e]
