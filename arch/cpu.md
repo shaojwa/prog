@@ -1,4 +1,4 @@
-## The main components in the processor:
+## The main components in the processor
 #### Control unit
 1. retrieve instructions from memory
 1. Decode  instructions for operation
