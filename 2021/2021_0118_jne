@@ -70,4 +70,10 @@ RCache::_enqueue_warm(rcache_object_t&)():
   6f0717:       64 48 33 04 25 28 00    xor    %fs:0x28,%rax
   6f071e:       00 00
   6f0720:       0f 85 2e 02 00 00       jne    6f0954 <RCache::_enqueue_warm(rcache_object_t&)+0x304>
-  ```
+ ```
+ ```
+  6f0954:       e8 b7 86 dc ff          callq  4b9010 <__stack_chk_fail@plt>
+ ```
+ (0x7f85859b7954 - 0x304)- (6f0650-4b9010) = 0x7F8585780010
+  
+  
