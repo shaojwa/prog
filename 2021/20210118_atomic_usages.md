@@ -21,4 +21,6 @@ if (buffer_track_crc) {
   if (cache_misses)
     buffer_missed_crc += cache_misses;
 }
+
+snapflush_auth_pins += adj;
 ```
