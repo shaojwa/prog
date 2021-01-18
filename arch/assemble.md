@@ -53,16 +53,19 @@
 1. %r14
 1. %r15
 
-#### Segments
-6个16位的寄存器用来处理内存访问
-1. 扁平内存模型
-1. 分段内存模型
-1. CS，代码段
-1. DS，数据段
-1. SS，堆段
-1. ES，附加段
-1. FS，附加段
-1. GS，附加段
+#### CS
+#### DS
+#### SS
+#### ES
+
+#### FS
+FS is used as canary-based stack protector.
+On x86_64, segmented addressing is no longer used, but both the FS and GS registers can be used as base-pointer addresses in order to access special operating system data-structures. So what you're seeing is a value loaded at an offset from the value held in the FS register, and not bit manipulation of the contents of the FS register.
+
+FS:0x28 on Linux is storing a special sentinel stack-guard value, and the code is performing a stack-guard check. 
+
+#### GS
+GS is also used in gcc's thread-local storage.
 
 #### IP 指令指针
 Instruction pointer
