@@ -2,6 +2,11 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 ```
+#### infrastructure
+basic facilities such as transport, communications, power supplies, and buildings
+
+#### unified
+made one, united
 
 #### require vs acquire
 this deadlock requires each thread to acquire its lock at exactly the wrong time.
