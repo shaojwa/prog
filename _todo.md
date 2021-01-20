@@ -1,3 +1,4 @@
+1. 优化：https://www.agner.org/optimize/instruction_tables.pdf
 1. https://www.oschina.net/translate/what-every-programmer-should-know-about-cpu-cache-part2?print
 1. cache-line了解一下
 1. linux 下精确计时有什么好办法(std::chrono::milliseconds)
