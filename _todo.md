@@ -1,3 +1,4 @@
+1. rdstc指令读取tsc https://www.ccsl.carleton.ca/~jamuir/rdtscpm1.pdf 
 1. https://isocpp.github.io/CppCoreGuidelines/
 1. http://oliveryang.net/2015/09/pitfalls-of-TSC-usage/
 1. 优化：https://www.agner.org/optimize/instruction_tables.pdf
