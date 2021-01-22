@@ -1,3 +1,4 @@
+1. http://oliveryang.net/2015/09/pitfalls-of-TSC-usage/
 1. 优化：https://www.agner.org/optimize/instruction_tables.pdf
 1. https://www.oschina.net/translate/what-every-programmer-should-know-about-cpu-cache-part2?print
 1. cache-line了解一下
