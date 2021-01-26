@@ -19,30 +19,10 @@
 - Optional modifier(s)
 - Optional data element(s)
 
-
-## 标记
-#### 状态标识
-1. CF 进位标识
-1. PF 校验位
-1. ZF 零标识
-1. SF 符号标识
-1. OF 溢出标识
-
-#### 控制标记
-DF flag
-
-#### 系统标记
-10个，分别是：
-1. 陷阱标记。
-1. 中断使能标记。
-1. IO优先级标记。
-1. 嵌套任务标记。
-1. 中继标记。
-1. 虚拟8086模式标记。
-1. 对齐检查标记。
-1. 虚拟中断标记。
-1. 虚拟中断等待标记。
-1. 认证标记。
+##  Flags
+#### Status flags
+#### Control flags
+#### System flags
 
 ## AT&T Assembly Syntax
 http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
