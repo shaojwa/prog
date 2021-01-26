@@ -1,4 +1,4 @@
-## opcode 
+## Opcode 
 #### Instruction Code Format (IA-32)
 - Optional instruction prefix
 - Operational code
