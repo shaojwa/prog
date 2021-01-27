@@ -36,3 +36,14 @@ movb $2, (%ebx)	/* Move 2 into the single byte at the address stored in EBX. */
 movw $2, (%ebx)	/* Move the 16-bit integer representation of 2 into the 2 bytes starting at the address in EBX. */
 movl $2, (%ebx) /* Move the 32-bit integer representation of 2 into the 4 bytes starting at the address in EBX. */
 ```
+
+## Instructions
+- Machine instructions generally fall into three categories: data movement, arithmetic/logic, and control-flow.
+- In assembly language, all the labels and numeric constants used as immediate operands.
+
+#### Data Movement Instructions
+- move
+The mov instruction copies the data item referred to by its first operand (i.e. register contents, memory contents, or a constant value) into the location referred to by its second operand (i.e. a register or memory). While register-to-register moves are possible, direct memory-to-memory moves are not. 
+- push
+Specifically, push first decrements ESP by 4, then places its operand into the contents of the 32-bit location at address (%esp)
+
