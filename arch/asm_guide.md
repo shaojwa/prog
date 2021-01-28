@@ -84,3 +84,14 @@ call = push(%rip + 1); jump <addr>;
 #### ret
 rety = jmp $(pop)
 ## Calling Convention
+The C calling convention is based heavily on the use of the hardware-supported stack. It is based on the push, pop, call, and ret instructions. 
+Subroutine parameters are passed on the stack. Registers are saved on the stack, and local variables used by subroutines are placed in memory on the stack.
+
+Before calling a subroutine, the caller should save the contents of certain registers that are designated caller-saved. The caller-saved registers are EAX, ECX, EDX. Since the called subroutine is allowed to modify these registers, if the caller relies on their values after the subroutine returns, the caller must push the values in these registers onto the stack (so they can be restore after the subroutine returns.
+
+EAX: subroutine return value, ECX:
+
+#### Callee Rules
+The base pointer is used by convention as a point of reference for finding parameters and local variables on the stack.
+
+Remember, the caller is not expecting the subroutine to change the value of the base pointer.
