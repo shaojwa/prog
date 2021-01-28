@@ -58,6 +58,29 @@ Load effective address, only the effective address is computed and placed into t
 
 #### add, sub
 #### inc, dec
-#### imul
-Integer multiplication, 
 Increment, Decrement
+#### imul - Integer multiplication
+Integer multiplication, The result (i.e. second) operand must be a register.
+#### idiv - Integer division
+The idiv instruction divides the contents of the 64 bit integer EDX:EAX.
+The quotient result of the division is stored into EAX, while the remainder is placed in EDX.
+#### and, or, xor — Bitwise logical and, or, and exclusive or
+#### not - Bitwise logical not
+Logically negates the operand contents
+#### shl, shr - Shift left and right
+
+## Control Flow Instructions
+#### jmp — Jump
+#### jcondition
+These instructions are conditional jumps that are based on the status of a set of condition codes that are stored in a special register called the machine status word.
+#### comp
+This instruction is equivalent to the sub instruction, except the result of the subtraction is discarded instead of replacing the first operand.
+
+#### call
+Subroutine call and return.The call instruction first pushes the current code location onto the hardware supported stack in memory.
+Unlike the simple jump instructions, the call instruction saves the location to return to when the subroutine completes.
+call = push(%rip + 1); jump <addr>;
+
+#### ret
+rety = jmp $(pop)
+## Calling Convention
