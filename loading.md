@@ -16,21 +16,21 @@ ldd cephfs.so
 readelf -d cephfs.so
 ```
 
-3. 看LD_LIBRARY_PATH中的路径是否正确
+3. 看`LD_LIBRARY_PATH`中的路径是否正确
 ```
 echo $LD_LIBRARY_PATH
 ```
 
 #### elf 中的符号查看
 
-3. 如果需要查看ELF中的符号问题用nm
+3. 如果需要查看`ELF`中的符号问题用`nm`
 ```
 nm cephfs.so  | grep openv
 ```
 
 ## 共享库的加载路径
-这个可以通过ldconfig命令查看，这个是系统默认的库加载路径，优先级非常低，按照顺序，应该是：
-1. ELF文件中的rpath。
+这个可以通过`ldconfig`命令查看，这个是系统默认的库加载路径，优先级非常低，按照顺序，应该是：
+1. `ELF`文件中的`rpath`。
 1. `LD_LIBRARY_PATH`路径。
 1. `/etc/ld.so.conf`中指定的路径。
 1. 可信路径`/lib` 和 `/lib64`。
