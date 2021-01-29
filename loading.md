@@ -1,6 +1,6 @@
 ## 加载问题解决步骤
 
-####　先用ldd看 可执行文件加载的共享库版本对不对
+#### 先用ldd看 可执行文件加载的共享库版本对不对
 ```
 ldd cephfs.so
 ```
@@ -28,4 +28,9 @@ echo $LD_LIBRARY_PATH
 nm cephfs.so  | grep openv
 ```
 
-## 共享库的加载路劲
+## 共享库的加载路径
+这个可以通过ldconfig命令查看，这个是系统默认的库加载路径，优先级非常低，按照顺序，应该是：
+1. ELF文件中的rpath。
+1. `LD_LIBRARY_PATH`路径。
+1. `/etc/ld.so.conf`中指定的路径。
+1. 可信路径`/lib` 和 `/lib64`。
