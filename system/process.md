@@ -41,25 +41,6 @@ Changing kernel processes, however, may require recompiling the kernel.
 
 p->state = TASK_RUNNING
 
-## fork出的进程和父进程的区别
-
-* 独立的pid
-* ppid是父进程pid
-* 不会集成父进程的内存锁（参考mlock和mlockall）
-* 子进程的资源使用率和CPU计数重置为0
-* 子进程的 pending-signal-set 置空
-* 子进程不继承 semaphore adjustments
-* 子进程不继承 record locks
-* 子进程不继承 timer
-* 子进程不继承突出的异步IO操作
-* 子进程不继承异步IO上下文
-
-Let's see how a process reaches a Running state. When you fire off a command such as ls, a shell (bash)
-searches the directories in the search path stored in the PATH environment variable to find where the ls
-command is located. Once the ls file is found, the shell clones itself using the forking method mentioned
-earlier, and then the new child process replaces the binary image it was executing (the shell) with the ls
-command's executable binary image.
-
 ## system calls
 
 A CPU can execute either in kernel mode or in user mode. When a user initiates a process, the process
