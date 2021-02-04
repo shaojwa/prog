@@ -2,18 +2,10 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 ```
-#### infrastructure
-basic facilities such as transport, communications, power supplies, and buildings
 
-#### unified
-made one, united
-
-#### require vs acquire
+#### acquire vs require 
 this deadlock requires each thread to acquire its lock at exactly the wrong time.
  
-#### multi-noun 
-runtime locking correctness validator
-
 #### adhere
 This situation can be avoided: if both threads adhere to a rule stating that A must always be acquired before B,
 
@@ -102,6 +94,9 @@ There was some fairly strong pushback against the mutex patch after last week's 
 
 #### hang
 
+#### infrastructure
+basic facilities such as transport, communications, power supplies, and buildings
+
 #### idempotent
 In other words, signal delivery is idempotent.
 
@@ -120,6 +115,9 @@ logged-in users (ref: man shutdown)
 #### mastery
 #### meant
 Note that these instructions are meant for developers who are compiling the code for development and testing.
+
+#### multi-noun 
+runtime locking correctness validator
 
 #### maintain
 If the mutex type is PTHREAD_MUTEX_RECURSIVE, then the mutex shall maintain the concept of a lock count.
@@ -144,6 +142,9 @@ Things may not come to this point often at all;
 #### possible
 it  is not possible to join with the thread in order to obtain its exit status. 
 
+#### preceding
+The  process  attributes in the preceding list are all specified in POSIX.1-2001. 
+
 #### production
 it is not an option that one would enable on a production system.
 
@@ -167,6 +168,9 @@ Its real purpose is the launching and retrieval of small aeroplanes in flight.
 #### restrict
 Lists the active jobs.  JOBSPEC restricts output to that job.
 
+#### specific
+The parent and child also differ with respect to the following Linux-specific process attributes.
+
 #### speculation
 value speculation.
 
@@ -178,7 +182,10 @@ SUDO gives an audit trail I believe under /var/log/secure.
 
 #### unless
 Unless real-time scheduling  policies  are  being employed.
- 
+
+#### unified
+made one, united
+
 #### vertex
 
 #### violate
