@@ -1,4 +1,3 @@
 - https://static.lwn.net/images/pdf/LDD3/ch00.pdf
-- 《Programming from the Ground Up》
-http://mirror.yongbok.net/nongnu/pgubook/ProgrammingGroundUp-1-0-booksize.pdf
+- http://mirror.yongbok.net/nongnu/pgubook/ProgrammingGroundUp-1-0-booksize.pdf
 - https://www.agner.org/optimize/instruction_tables.pdf
