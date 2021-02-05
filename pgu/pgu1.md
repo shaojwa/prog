@@ -1,4 +1,4 @@
-20210205(p1-19)
+20210205 (p1-p19)
 ## Chapter 1. Introduction
 #### Welcome to Programming
 1. poetry/convey/succinct/pass-over
@@ -49,7 +49,7 @@ The CPU contains the following elements to accomplish this:
 
 it is complicated by the use of cache hierarchies, superscalar processors, pipelining, branch prediction,
 out-of-order execution, microcode translation, coprocessors, and other optimizations. 
-```
+
 #### Some Terms
 1. Addresses which are stored in memory are also called pointers.
 
