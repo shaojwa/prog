@@ -1,4 +1,4 @@
-20210205 (p1-p19)
+20210205 (p1-p18)
 ## Chapter 1. Introduction
 #### Welcome to Programming
 1. poetry/convey/succinct/pass-over
