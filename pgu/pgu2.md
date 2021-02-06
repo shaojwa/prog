@@ -1,3 +1,4 @@
+20210206 (p19-p27)
 #### Entering in the Program
 
 These programs may overwhelm you at first. However, go through them with diligence.
@@ -31,11 +32,42 @@ not actually run by the computer.
 
 The text section of a program is where the program instructions live.
 
-This instructs the assembler that _start is important to remember. _start is a
+This instructs the assembler that \_start is important to remember. \_start is a
 symbol, which means that it is going to be replaced by something else either
 during assembly or linking.
 
-Symbols are generally used to mark locations of
-programs or data, so you can refer to them by name instead of by their location
-number.
+Symbols are generally used to mark locations of programs or data,
+so you can refer to them by name instead of by their location number.
 
+Symbols are used so that the assembler and linker can take care of keeping track of addresses, 
+and you can concentrate on writing your program.
+
+.globl means that the assembler shouldn’t discard this symbol after assembly, because the linker will need it.
+
+\_start is a special symbol that always needs to be
+marked with .globl because it marks the location of the start of the program.
+
+defines the value of the  \_start label. A label is a symbol followed by a colon (symbol vs label). Labels define a symbol’s value.
+
+When the assembler is assembling the program, it has to assign each data value and instruction an address.
+Labels tell the assembler to make the symbol’s value be wherever the next instruction or data element will be.
+
+Other instructions may have an operand hardcoded in. idivl, for example, 
+requires that the dividend be in %eax, and %edx be zero, and the quotient is then transferred to
+%eax and the remainder to %edx.
+
+Some of these registers, like %eip and %eflags can only be accessed through special instructions.
+
+but they have special meanings, special uses, or are simply faster when used in a specific way.
+
+When you make a system call, which we will do shortly, the system call number has to be loaded into %eax.
+
+The extra details, called parameters are stored in other registers.
+
+Note that on x86 processors, even the general-purpose registers have some special purposes.
+
+An interrupt interrupts the normal program flow, and transfers control from our program to Linux so that it will do a system call.
+
+This is done by utilizing the letters a through f in addition to the regular digits.
+
+#### Planning the Program
