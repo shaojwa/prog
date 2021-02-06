@@ -71,3 +71,5 @@ An interrupt interrupts the normal program flow, and transfers control from our 
 This is done by utilizing the letters a through f in addition to the regular digits.
 
 #### Planning the Program
+
+You might not think that something as simple as finding the maximum number from a list would take much planning.
