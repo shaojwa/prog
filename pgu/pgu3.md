@@ -6,3 +6,4 @@
 1. The data item number is the index of data_items.
 1. movl BEGINNINGADDRESS(,%INDEXREGISTER,WORDSIZE)
 1. Jump if the second value was greater than the first value.
+1. feel free to call it anything you want that is adequately descriptive
