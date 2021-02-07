@@ -8,5 +8,6 @@
 1. Jump if the second value was greater than the first value.
 1. feel free to call it anything you want that is adequately descriptive
 
-#### Addressing Modes
+## Addressing Modes
+#### memory address
 ADDRESS_OR_OFFSET(%BASE_OR_OFFSET,%INDEX,MULTIPLIER) All of the fields are optional.
