@@ -27,7 +27,7 @@ mov <con>, <mem>
 
 push
 ```
-// push rbp ti stack
+// push rbp tiostack
 push   %rbp 
 ```
 
