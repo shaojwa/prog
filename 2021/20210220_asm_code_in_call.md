@@ -11,6 +11,19 @@ mov    %rdi,%rbx
 sub    $0x138,%rsp
 ```
 对应的源代码是：
+```
+void RCache::_enqueue_warm(rcache_object_t &obj)
+{
+  dout(3) << __func__ << " obj_id " << obj.obj_id
+    << ", space " << obj.used_space << dendl;
+  obj.queue_id = RCACHE_QUEUE_WARM;
+  _lock_queue(RCACHE_QUEUE_WARM);
+  _warm_queue.push_back(obj);
+  _unlock_queue(RCACHE_QUEUE_WARM);
+  _inc_stat(RC_STAT_WARM_SPACE, obj.used_space);
+  _lru_warm();
+}
+```
 为什么要这样？
 
 #### 一般情况下的成员函数汇编代码是
