@@ -2,8 +2,8 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 ```
-#### before 可以做副词
-表示副词的之前。
+#### before
+used as adverb: I had met Professor Lown before.
 
 #### acquire vs require 
 this deadlock requires each thread to acquire its lock at exactly the wrong time.
