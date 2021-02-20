@@ -1,6 +1,4 @@
-// 源代码
 #include <iostream>
-
 using namespace std;
 
 class Toy {
