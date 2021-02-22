@@ -1,6 +1,17 @@
 1. https://sourceware.org/gdb/current/onlinedocs/gdb/
 1. https://www.gnu.org/software/gdb/
 
+#### 查看eflags寄存器的值
+```
+info reg eflags
+```
+
+#### 开启汇编指令就可以看到当前执行的指令
+
+```
+set  disassemble-next-line on
+```
+
 #### reverse step
 https://stackoverflow.com/questions/1206872/how-to-go-to-the-previous-line-in-gdb
 ```
