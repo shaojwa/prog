@@ -26,3 +26,5 @@ on the stack.
 Also, even when parameters shorter than a word are passed to functions, they are passed as longs on the stack.
 
 The man page for ld.so contains a lot of information about how the Linux dynamic linker works.
+
+Research the use of LD_PRELOAD
