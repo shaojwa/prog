@@ -1,5 +1,5 @@
 
-20210224 p129-p140
+20210224 p129-p148
 
 dynamic-linker: at program startup time.
 
@@ -24,3 +24,5 @@ sent. If we pushed the known arguments first, you wouldn’t be able to tell whe
 on the stack.
 
 Also, even when parameters shorter than a word are passed to functions, they are passed as longs on the stack.
+
+The man page for ld.so contains a lot of information about how the Linux dynamic linker works.
