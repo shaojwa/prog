@@ -12,3 +12,5 @@ necessary functionality for the program that wasn’t handled by the kernel.
 
 When the helloworld program begins, the file /lib/ld-linux.so.2 is loaded first. This is the
 dynamic linker.
+
+The int before the function definition tell what type of value the function will return in %eax when it returns.
