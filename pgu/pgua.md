@@ -1,7 +1,7 @@
-20210224 p147-
+20210224 p149-
+#### The Memory Layout of a Linux Program
 
-## Chapter 9. Intermediate Memory Topics
-
-A computer looks at memory as a long sequence of numbered storage locations.
-The locations holding yourprogram are just like the ones holding your data. 
-In fact, the computer has no idea which are which, except that the executable file tells it where to start executing.
+The actual instructions (the .text section) are loaded at the address 0x08048000
+(numbers starting with 0x are in hexadecimal, which will be discussed in Chapter
+10). The .data section is loaded immediately after that, followed by the .bss
+section.
