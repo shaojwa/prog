@@ -1,5 +1,5 @@
 
-20210224 p129-p138
+20210224 p129-p140
 
 dynamic-linker: at program startup time.
 
@@ -22,3 +22,5 @@ to determine where on the stack the additional arguments are, and what type they
 example, printf uses the format string to determine how many other parameters are being
 sent. If we pushed the known arguments first, you wouldn’t be able to tell where they were
 on the stack.
+
+Also, even when parameters shorter than a word are passed to functions, they are passed as longs on the stack.
