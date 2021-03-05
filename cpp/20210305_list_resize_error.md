@@ -67,4 +67,21 @@ list_resize.cc:12:7: note:   candidate expects 1 argument, 0 provided
 list_resize.cc:12:7: note: candidate: ‘constexpr hash_table_t::hash_table_t(hash_table_t&&)’
 list_resize.cc:12:7: note:   candidate expects 1 argument, 0 provided
 ```
-最后的几个备选构造都发现不行，包括拷贝构造，移动构造，和我们自己定义的默认构造。要让代码中热resize成功运行，需要有无参构造函数。
+最后的几个备选构造都发现不行，包括拷贝构造，移动构造，和我们自己定义的默认构造。
+
+要让代码中热resize成功运行，需要有无参构造函数。
+```
+public：
+hash_table_t(){}
+```
+如果只是定义没有实现的话：
+```
+public：
+hash_table_t(); 
+```
+提示如下：
+```
+/tmp/ccvt3IZP.o: In function `void std::_Construct<hash_table_t>(hash_table_t*)':
+/usr/include/c++/8/bits/stl_construct.h:75: undefined reference to `hash_table_t::hash_table_t()'
+collect2: error: ld returned 1 exit status
+```
