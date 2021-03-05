@@ -67,3 +67,4 @@ list_resize.cc:12:7: note:   candidate expects 1 argument, 0 provided
 list_resize.cc:12:7: note: candidate: ‘constexpr hash_table_t::hash_table_t(hash_table_t&&)’
 list_resize.cc:12:7: note:   candidate expects 1 argument, 0 provided
 ```
+最后的几个备选构造都发现不行，包括拷贝构造，移动构造，和我们自己定义的默认构造。要让代码中热resize成功运行，需要有无参构造函数。
