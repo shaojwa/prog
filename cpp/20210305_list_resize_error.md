@@ -85,3 +85,8 @@ hash_table_t();
 /usr/include/c++/8/bits/stl_construct.h:75: undefined reference to `hash_table_t::hash_table_t()'
 collect2: error: ld returned 1 exit status
 ```
+或者：
+```
+hash_table_t() = default;
+```
+但是不能不写。
