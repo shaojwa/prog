@@ -10,6 +10,6 @@
 为了解决没有必要的copy操作，以及实现完美转发(perfect-forward),赋值操作右边的值如果是rvalue，那么赋值操作符左边的对象可以偷走(steal)右边对象内的资源。
 这样就避免了单独的分配操作，也就是说用来实现move语义。
 
->> Rvalue references are a new reference type introduced in C++0x that help solve the problem of unnecessary copying and enable perfect forwarding.
+> Rvalue references are a new reference type introduced in C++0x that help solve the problem of unnecessary copying and enable perfect forwarding.
 When the right-hand side of an assignment is an rvalue,
 then the left-hand side object can steal resources from the right-hand side object rather than performing a separate allocation, thus enabling move semantics.
