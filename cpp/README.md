@@ -14,3 +14,4 @@
 2. [incomplete_type](/2021/20210305_cpp中的incomplete_type.md)
 3. [通用左值的属性](/2021/20210308_glvalue_properties.md)
 4. [右值的属性](/2021/20210308_rvalue_properties.md)
+5. [转xvalue为什么用static_case<T&&>(v)]()
