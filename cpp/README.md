@@ -15,7 +15,7 @@
 #### c++ 2.0学习笔记
 1. [RVO返回值优化](/2021/20210304_RVO返回值优化.md)
 2. [incomplete_type](/2021/20210305_cpp中的incomplete_type.md)
-3. [为什么prvalue没有多态](2021/20210305_prvalue没有多态什么意思.md)
+3. [为什么prvalue没有多态](/2021/20210305_prvalue没有多态什么意思.md)
 4. [通用左值的属性](/2021/20210308_glvalue_properties.md)
 5. [右值的属性](/2021/20210308_rvalue_properties.md)
 6. [转型成xvalue为什么用static_cast<T&&>(v)]()
