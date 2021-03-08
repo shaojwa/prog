@@ -15,3 +15,4 @@
 3. [通用左值的属性](/2021/20210308_glvalue_properties.md)
 4. [右值的属性](/2021/20210308_rvalue_properties.md)
 5. [转xvalue为什么用static_case<T&&>(v)]()
+6. [右值引用是一种新的引用](/2021/20210308_rvalue_ref_new_ref.md)
