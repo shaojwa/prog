@@ -18,3 +18,4 @@
 6. [右值引用是一种新的引用](/2021/20210308_rvalue_ref_new_ref.md)
 7. [std::list.push_back支持rvalue ref做参数](/2021/20210308_rvalue_ref_in_list.md)
 8. [std::move的实现和引用坍塌](/2021/20210308_move_imp_and_ref_collapse.md)
+9. [模板类的偏特化](/2021/20210308_template_class_partitial_spec.md)
