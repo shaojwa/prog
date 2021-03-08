@@ -1,7 +1,7 @@
 #### std::move 的实现
 
 #### 引用坍塌
-引用坍塌 Reference collapsing，这是c++11引入的规则 (https://en.cppreference.com/w/cpp/language/reference)：
+引用坍塌 Reference collapsing，这是c++11引入的[规则](https://en.cppreference.com/w/cpp/language/reference)：
 ```
 typedef int&  lref;
 typedef int&& rref;
