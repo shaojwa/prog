@@ -14,5 +14,6 @@
 2. [incomplete_type](/2021/20210305_cpp中的incomplete_type.md)
 3. [通用左值的属性](/2021/20210308_glvalue_properties.md)
 4. [右值的属性](/2021/20210308_rvalue_properties.md)
-5. [转xvalue为什么用static_case<T&&>(v)]()
+5. [转型成xvalue为什么用static_cast<T&&>(v)]()
 6. [右值引用是一种新的引用](/2021/20210308_rvalue_ref_new_ref.md)
+7. [std::list.push_back支持rvalue ref做参数](/2021/20210308_rvalue_ref_in_list.md)
