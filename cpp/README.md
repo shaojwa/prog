@@ -8,15 +8,17 @@
 #### 一些细节
 1. [cpp中会改变表达式值的cast](/2021/20210305_cpp中会改变表达式值的cast.md)
 2. [构造和赋值时因为右值参数导致的copy和move版本选择问题](/2021/20210308_copy_or_move.md)
+3. [新的类成员初始化方法](/2021/20210305_新的类成员初始化方法.md)
 
 #### c++ 2.0学习笔记
 1. [RVO返回值优化](/2021/20210304_RVO返回值优化.md)
 2. [incomplete_type](/2021/20210305_cpp中的incomplete_type.md)
-3. [通用左值的属性](/2021/20210308_glvalue_properties.md)
-4. [右值的属性](/2021/20210308_rvalue_properties.md)
-5. [转型成xvalue为什么用static_cast<T&&>(v)]()
-6. [右值引用是一种新的引用](/2021/20210308_rvalue_ref_new_ref.md)
-7. [std::list.push_back支持rvalue ref做参数](/2021/20210308_rvalue_ref_in_list.md)
-8. [std::move的实现和引用坍塌](/2021/20210308_move_imp_and_ref_collapse.md)
-9. [模板类的偏特化](/2021/20210308_template_class_partitial_spec.md)
-10. [完美转发](/2021/2021_perfect_forward.md)
+3. 20210305_新的类成员初始化方法.md
+4. [通用左值的属性](/2021/20210308_glvalue_properties.md)
+5. [右值的属性](/2021/20210308_rvalue_properties.md)
+6. [转型成xvalue为什么用static_cast<T&&>(v)]()
+7. [右值引用是一种新的引用](/2021/20210308_rvalue_ref_new_ref.md)
+8. [std::list.push_back支持rvalue ref做参数](/2021/20210308_rvalue_ref_in_list.md)
+9. [std::move的实现和引用坍塌](/2021/20210308_move_imp_and_ref_collapse.md)
+10. [模板类的偏特化](/2021/20210308_template_class_partitial_spec.md)
+11. [完美转发](/2021/20210308_perfect_forward.md)
