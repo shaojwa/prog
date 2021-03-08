@@ -1,48 +1,49 @@
-1. https://en.cppreference.com/w/cpp/utility/forward 
-2. https://zh.cppreference.com/w/cpp/language/value_category 需要学习
-3. 调试时符号表中的plt是什么意思?
-4. 如何查看进程的调度策略？
-5. fork 和 clone 的区别
-6.  rdstc指令读取tsc https://www.ccsl.carleton.ca/~jamuir/rdtscpm1.pdf 
-7. https://isocpp.github.io/CppCoreGuidelines/
-8. http://oliveryang.net/2015/09/pitfalls-of-TSC-usage/
-9. 优化：https://www.agner.org/optimize/instruction_tables.pdf
-10. https://www.oschina.net/translate/what-every-programmer-should-know-about-cpu-cache-part2?print
-11. cache-line了解一下
-12. linux 下精确计时有什么好办法(std::chrono::milliseconds)
-13. linux dcache hash算法学习一下(ceph_str_hash_linux)
-14. https://cdn.kernel.org/pub/linux/kernel/people/marcelo/linux-2.4/include/linux/dcache.h
-15. C++11 中for循环的三种写法，哪种更好
-16. 浏览文件时less比vim好在什么地方
-17. https://en.cppreference.com/w/cpp/language/dependent_name (20201217)
-18. https://en.cppreference.com/w/cpp/language/sfinae (20201217)
-19. 非递归的快排
-20. c++中的动态绑定和静态绑定（https://www.jianshu.com/p/177c21837004）
-21. noexcept 修饰符学习一下。
-22. https://www.stroustrup.com/
-23. the best ref of c++ https://isocpp.github.io/CppCoreGuidelines/
-24. c++中的bind机制了解一下，以及类似的lambda表达式。（20201202）
-25. linux中的sparse文件了解一下。
-26. gdb系统学习 https://sourceware.org/gdb/current/onlinedocs/gdb/
-27. lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
-28. 同步信号和异步信号需要学习
-29. 为什么build可执行文件的时候才会检查函数的实现？
-30. gdb把实例显示成函数
-31. 什么是perfect/cuckoo hashing？
-32. 什么是deterministic acyclic finite state automaton (DAFSA)
-33. 有没有更好的更实时的计算框架？（专访黄东旭）
-34. 两条路线，一条学术路线去扎实的做理论。另一条系统架构的路线，包括分布式存储和计算框架。（专访黄东旭）
-35. 另外一些比较偏实际的就是积极的参与开源社区，而且要和社区的人主动沟通起来。（专访黄东旭）
-36. 还有一点是好好学英语，这个非常重要，非常重要，非常重要！（专访黄东旭）
-37. 现在很火的 Hadoop 是 Google 02 ~ 06 年的几篇论文；
-38. 很火的容器技术的核心 cgroup 其实好多年前就已经进入了linux内核。
-39. https://www.52cs.com/archives/story/前辈之路
-40. decode接口有没有针对char指针的输出进行处理？
-41. 单例中资源的释放
-42. 线程 alternate signal stack 是什么？
-43. understanding the python gil
-44. c++中的右值引用是怎么回事？
-45. libc里已经有strtol()，但是ceph中又实现 strict_strtol() 系列函数将string转为整数，为什么要新实现一个？
+1. 编译器对cpp中异常处理的实现
+2. https://en.cppreference.com/w/cpp/utility/forward 
+3. https://zh.cppreference.com/w/cpp/language/value_category 需要学习
+4. 调试时符号表中的plt是什么意思?
+5. 如何查看进程的调度策略？
+6. fork 和 clone 的区别
+7.  rdstc指令读取tsc https://www.ccsl.carleton.ca/~jamuir/rdtscpm1.pdf 
+8. https://isocpp.github.io/CppCoreGuidelines/
+9. http://oliveryang.net/2015/09/pitfalls-of-TSC-usage/
+10. 优化：https://www.agner.org/optimize/instruction_tables.pdf
+11. https://www.oschina.net/translate/what-every-programmer-should-know-about-cpu-cache-part2?print
+12. cache-line了解一下
+13. linux 下精确计时有什么好办法(std::chrono::milliseconds)
+14. linux dcache hash算法学习一下(ceph_str_hash_linux)
+15. https://cdn.kernel.org/pub/linux/kernel/people/marcelo/linux-2.4/include/linux/dcache.h
+16. C++11 中for循环的三种写法，哪种更好
+17. 浏览文件时less比vim好在什么地方
+18. https://en.cppreference.com/w/cpp/language/dependent_name (20201217)
+19. https://en.cppreference.com/w/cpp/language/sfinae (20201217)
+20. 非递归的快排
+21. c++中的动态绑定和静态绑定（https://www.jianshu.com/p/177c21837004）
+22. noexcept 修饰符学习一下。
+23. https://www.stroustrup.com/
+24. the best ref of c++ https://isocpp.github.io/CppCoreGuidelines/
+25. c++中的bind机制了解一下，以及类似的lambda表达式。（20201202）
+26. linux中的sparse文件了解一下。
+27. gdb系统学习 https://sourceware.org/gdb/current/onlinedocs/gdb/
+28. lockdep机制： /usr/src/kernel4.4.0/Documentation/locking/lockdep-design.txt
+29. 同步信号和异步信号需要学习
+30. 为什么build可执行文件的时候才会检查函数的实现？
+31. gdb把实例显示成函数
+32. 什么是perfect/cuckoo hashing？
+33. 什么是deterministic acyclic finite state automaton (DAFSA)
+34. 有没有更好的更实时的计算框架？（专访黄东旭）
+35. 两条路线，一条学术路线去扎实的做理论。另一条系统架构的路线，包括分布式存储和计算框架。（专访黄东旭）
+36. 另外一些比较偏实际的就是积极的参与开源社区，而且要和社区的人主动沟通起来。（专访黄东旭）
+37. 还有一点是好好学英语，这个非常重要，非常重要，非常重要！（专访黄东旭）
+38. 现在很火的 Hadoop 是 Google 02 ~ 06 年的几篇论文；
+39. 很火的容器技术的核心 cgroup 其实好多年前就已经进入了linux内核。
+40. https://www.52cs.com/archives/story/前辈之路
+41. decode接口有没有针对char指针的输出进行处理？
+42. 单例中资源的释放
+43. 线程 alternate signal stack 是什么？
+44. understanding the python gil
+45. c++中的右值引用是怎么回事？
+46. libc里已经有strtol()，但是ceph中又实现 strict_strtol() 系列函数将string转为整数，为什么要新实现一个？
   int level = (int) strict_strtol(levelstr.c_str(), 10, &err);
 1. 试试用指针的引用。
 1. ceph中如果嵌套比较深，会不会倾向用if把特例先continue掉，这样减少嵌套深度。
