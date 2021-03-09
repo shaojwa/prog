@@ -54,4 +54,4 @@ forward(typename remove_reference<_Tp>::type&& __t) _NOEXCEPT
     return static_cast<_Tp&&>(__t);
 }
 ```
-问题来了，为什么需要两个版本？
+问题来了，为什么需要两个版本？因为标准库考虑到传入是右值引用的情况，可以进行更加完善的匹配。
