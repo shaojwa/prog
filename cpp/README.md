@@ -24,3 +24,4 @@
 9. [std::move的实现和引用坍塌](/2021/20210308_move_imp_and_ref_collapse.md)
 10. [模板类的偏特化](/2021/20210308_template_class_partitial_spec.md)
 11. [完美转发](/2021/20210308_perfect_forward.md)
+12. [move aware class](2021/20210309_move_aware_class.md)
