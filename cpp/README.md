@@ -5,13 +5,6 @@
 4. [什么是隐式转换](/2021/20210308_implicit_conversions.md)
 
 ----
-#### 一些细节
-1. [cpp中会改变表达式值的cast](/2021/20210305_cpp中会改变表达式值的cast.md)
-2. [构造和赋值时因为右值参数导致的copy和move版本选择问题](/2021/20210308_copy_or_move.md)
-3. [新的类成员初始化方法](/2021/20210305_新的类成员初始化方法.md)
-
-
-
 #### c++ 2.0学习笔记
 1. [RVO返回值优化](/2021/20210304_RVO返回值优化.md)
 2. [incomplete_type](/2021/20210305_cpp中的incomplete_type.md)
@@ -25,3 +18,10 @@
 10. [模板类的偏特化](/2021/20210308_template_class_partitial_spec.md)
 11. [完美转发](/2021/20210308_perfect_forward.md)
 12. [move aware class](2021/20210309_move_aware_class.md)
+
+----
+#### 碰到的一些细节和问题
+1. [cpp中会改变表达式值的cast](/2021/20210305_cpp中会改变表达式值的cast.md)
+2. [构造和赋值时因为右值参数导致的copy和move版本选择问题](/2021/20210308_copy_or_move.md)
+3. [新的类成员初始化方法](/2021/20210305_新的类成员初始化方法.md)
+4. [list resize时碰到的默认构造和复制函数deleted问题](/2021/20210305_list_resize_error.md)
