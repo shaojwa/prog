@@ -182,6 +182,9 @@ out-of-order general scheme.
 #### trail
 SUDO gives an audit trail I believe under /var/log/secure.
 
+#### though / even-though
+He is an honest man, I must say, even though I have opposed him.
+
 #### unless
 Unless real-time scheduling  policies  are  being employed.
 
