@@ -18,6 +18,8 @@
 10. [模板类的偏特化](/2021/20210308_template_class_partitial_spec.md)
 11. [完美转发](/2021/20210308_perfect_forward.md)
 12. [move aware class](2021/20210309_move_aware_class.md)
+13. [decltype operator](2021/20210311_decltype_operator.md)
+14. [lambda express](2021/20210311_lambda_express.md)
 
 ----
 #### 碰到的一些细节和问题
