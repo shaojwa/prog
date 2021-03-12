@@ -1,3 +1,15 @@
+dmesg command is used in common when debugging segfault.
+so How to get the accurate info when we got the output of dmesg?
+
+## sample output
+```
+
+```
+## the fields
+```
+<timestamp> <task_name[<task_pid>] segfault at <addr> ip <addr> sp <addr> error <code> in <elf>[addr+offset]
+```
+## error code meanings
 ```
 /*
  * Page fault error code bits:
