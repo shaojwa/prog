@@ -44,3 +44,6 @@ someone point out that, maybe integer execution unit and float-point unit shares
 Code layout and  alignment optimizations relative  to the shared resources can improve performance.
 
 > the processor has the capability to memorize ONE jump instruction for every 16 bytes(32 bytes in newer processors)
+
+## other refs
+[amd-nopw-assembly-instruction](https://stackoverflow.com/questions/4798356/amd64-nopw-assembly-instruction)
