@@ -1,0 +1,1 @@
+SELECT w1.id FROM Weather w1 JOIN Weather w2 WHERE DATEDIFF(w1.Date, w2.Date) = 1 and w1.Temperature > w2.Temperature;
