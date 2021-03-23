@@ -1,20 +1,26 @@
-- [日志](#日志)
+- [assert](#assert)
+- [log](#log)
 
-#### 出错提示
-```
-Invalid type keyword: mem
-```
+# design
+#### using non-void function only in necessary
+void function make the code concise and clean
 
-#### 定义空的析构函数是否合适
-一般说来，不合适，会导致派生类也不得不生成析构函数，进而引入无意义的函数调用。
+#### destroy/shutdown function should be idempotent
+shutdown/destroy function should be called multiple times whiout side effects.
 
-#### 注意内联函数的使用
-很多场景下，可以多用内联，特别是使用频率高的函数。
+#### to find the best place of a line of code
+every line of code should in the best place of the code-tree
+we know that program should be designed in levels from top down in logic.
 
-#### destroy或者shutdown等清理函数最好可以多次调用
-无返回值状态，可以多次调用，保持幂等性可能方便调用者设计流程。
+# log
+#### log line should contain one key string at least to track flow
+in the op-handling flow of a object, object_id is the key string in log to track all steps of the op.
 
-#### 任何时用到状态都可以考虑位段bit-field
+# coding
+#### should we define the up-level pointer first in calss?
+#### what is the order of member-field and member-function?
+#### should we assign the value of enum-field explicitly?
+#### think about bit-field when anytime state-machine in need
 ```
 union obj_state_t {
   struct {
@@ -29,23 +35,28 @@ union obj_state_t {
 };
 ```
 
-#### 类中的回溯指针是否应该优先定义
-#### class中的成员顺序需要仔细安排么
-#### 函数返回值直接返回0表示成功是否合适
-个人觉返回0而不是用专门的宏表示是合适的。
+### empty destructor is ok?
+generally speaking, empty destructor is not appropriate.
+empty destructor causes the destructors of the derived-class be generated forcelly, which cause the meaningless function calls.
 
-#### 变量位置
-在变量真正需要使用时再定义，不要让定义和使用离太远，这样其初值更有意义。
+#### using inline functions
+we should keep in mind that inline-function is critical to the preformance.
 
-#### 类或者结构体中，数据成员在前，函数成员在后。
-#### 枚举型每个类型是否都要显示指定值
-#### 函数尽量不用返回值
-底层函数设计时，没有返回值很正常，没有问题，设计时也可以往这个方向设计。
+#### assert
+using **assert** in need, especially in scenarioes of invalid code branches.
 
-#### assert不要过多使用 
-没必要的异常处理去掉，没必要的assert去掉。
+#### error handling
 
-#### 指针初始化用nullptr不要用NULL
+#### avoid assert-abuse
+remove asserts not in need, same to exceptions-handles.
+
+#### using 0 as the return value without a macro
+it is ok in my opinion.
+
+#### the position to declare the variable in c++
+declaring the variable just before the place in use.
+
+#### using nullptr instead of NULL in c++
 ```
 MDSRankDispatcher *mds_rank = nullptr;
 // tick and other timer fun
@@ -53,8 +64,8 @@ Context *tick_event = nullptr;
 class MDSSocketHook *asok_hook = nullptr;
 ```
 
-#### 判断值是否为0的方式
-ceph中AsyncConnection.cc中的写法都是最简单的写法，不用等于和不等于：
+#### the style of testing zero
+AsyncConnection.cc in ceph use the simplest way like follows:
 ```
 unsigned middle_len = current_header.middle_len;
 if (middle_len) {
@@ -62,21 +73,25 @@ if (middle_len) {
 if (!middle.length())
 }
 ```
+avoid using 'middle_len == 0' or 'middle_len != 0'
 
-#### 构造函数初始化列表可以直接用this
-构造函数中可以用this指针构造成成员，也可以用new来分配内存给成员，参考MDSRank::MDSRank：
+#### using this in self-class initialization list
+using this in constructor is allowed, refer to MDSRank::MDSRank：
 ```
 DataManager::DataManager():
-_dm_lock("dm::_dm_lock"),  _dm_state(DM_STATE_NONE),  _cache_table(new dm_hash_table_t(this)) {}
+_dm_lock("dm::_dm_lock"), 
+_dm_state(DM_STATE_NONE),
+_cache_table(new dm_hash_table_t(this)) {}
 ```
 
-#### 析构函数不需要在free之后设置为nullptr
-析构函数中delete指针指向的内存先判断指针是否为空，析构函数中的成员指针不需要赋值为null，参考class InoTable。
+#### setting member-pointer to nullptr is not in need in destructor.
+in destructor, we using delete to free the memory pointed by the member-pointer.
+after deleting, it is not in need to setting the member-pointer to nullptr.
+but before deleting, we should check if the pointer is nullptr.
+please refer to the class InoTable.
 
-#### new返回值不需要校验是否为null
+#### not check to the return value of operator new()
 ```
 // start mds
 mds = new MDSDaemon(g_conf()->name.get_id().c_str(), msgr, &mc, ctxpool);
 ```
-
-## 日志
