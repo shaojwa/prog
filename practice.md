@@ -1,3 +1,5 @@
+- [日志](#日志)
+
 #### 出错提示
 ```
 Invalid type keyword: mem
@@ -76,3 +78,5 @@ _dm_lock("dm::_dm_lock"),  _dm_state(DM_STATE_NONE),  _cache_table(new dm_hash_t
 // start mds
 mds = new MDSDaemon(g_conf()->name.get_id().c_str(), msgr, &mc, ctxpool);
 ```
+
+## 日志
