@@ -1,6 +1,13 @@
 1. https://sourceware.org/gdb/current/onlinedocs/gdb/
 1. https://www.gnu.org/software/gdb/
 
+## target
+```
+the executable gdb started is the target.
+the core-file gdb specified is the target.
+the process after run in gdb is the target.
+```
+
 #### 查看eflags寄存器的值
 ```
 info reg eflags
