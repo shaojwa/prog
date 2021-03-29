@@ -21,4 +21,7 @@ fs.inotify.max_user_watches = 8192
 ## IO
 
 ## MM
-
+#### max_map_count
+```
+vm.max_map_count = 65530
+```
