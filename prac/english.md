@@ -8,6 +8,9 @@ sy,no,ny,mous
 synch,ro,nous
 ```
 
+#### abandon
+If you abandon a place, thing, or person, you leave the place, thing, or person permanently or for a long time.
+
 #### before
 used as adverb: I had met Professor Lown before.
 
