@@ -2,6 +2,12 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 ```
+#### synonymous vs synchronous
+```
+sy,no,ny,mous
+synch,ro,nous
+```
+
 #### before
 used as adverb: I had met Professor Lown before.
 
