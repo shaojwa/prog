@@ -8,6 +8,21 @@ the core-file gdb specified is the target.
 the process after run in gdb is the target.
 ```
 
+## info files
+```
+ 0x000055d3b9455000 - 0x000055d3b9456000 is load1a
+ 0x000055d3b9456000 - 0x000055d3b9456000 is load1b
+ 0x000055d3ba7c5000 - 0x000055d3ba7e8000 is load2
+ 0x000055d3ba7e8000 - 0x000055d3baa88000 is load3
+ 0x000055d3baa88000 - 0x000055d3badde000 is load4
+ 0x00007f4970000000 - 0x00007f4a70000000 is load5
+ 0x00007f4a70800000 - 0x00007f4b70800000 is load6
+ 0x00007f4b71000000 - 0x00007f4b72001000 is load7
+ 0x00007f4b72800000 - 0x00007f4b75a01000 is load8
+ 0x00007f4b75a01000 - 0x00007f4b75a02000 is load9
+ 0x00007f4b75a02000 - 0x00007f4b76001000 is load10
+```
+
 #### examine eflags
 ```
 info reg eflags
