@@ -8,12 +8,12 @@ the core-file gdb specified is the target.
 the process after run in gdb is the target.
 ```
 
-#### 查看eflags寄存器的值
+#### examine eflags
 ```
 info reg eflags
 ```
 
-#### 开启汇编指令就可以看到当前执行的指令
+#### turn on disassemble
 
 ```
 set  disassemble-next-line on
