@@ -8,7 +8,7 @@ void function make the code concise and clean
 ## destroy/shutdown function should be idempotent
 shutdown/destroy function should be called multiple times whiout side effects.
 
-## to find the best place of a line of code
+## find the best place for each line of code
 every line of code should in the best place of the code-tree
 we know that program should be designed in levels from top down in logic.
 
