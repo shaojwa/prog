@@ -2,21 +2,20 @@
 - [log](#log)
 
 # design
-#### using non-void function only in necessary
+## using non-void function only in necessary
 void function make the code concise and clean
 
-#### destroy/shutdown function should be idempotent
+## destroy/shutdown function should be idempotent
 shutdown/destroy function should be called multiple times whiout side effects.
 
-#### to find the best place of a line of code
+## to find the best place of a line of code
 every line of code should in the best place of the code-tree
 we know that program should be designed in levels from top down in logic.
 
-# log
-#### log line should contain one key string at least to track flow
-in the op-handling flow of a object, object_id is the key string in log to track all steps of the op.
+## who should do the work
+find most suitable object to do the work, the best object, in which the code placed.
 
-# coding
+# code
 #### should we define the up-level pointer first in calss?
 #### what is the order of member-field and member-function?
 #### should we assign the value of enum-field explicitly?
@@ -95,3 +94,7 @@ please refer to the class InoTable.
 // start mds
 mds = new MDSDaemon(g_conf()->name.get_id().c_str(), msgr, &mc, ctxpool);
 ```
+
+# log
+## log line should contain one key string at least to track flow
+in the op-handling flow of a object, object_id is the key string in log to track all steps of the op.
