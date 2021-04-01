@@ -15,6 +15,8 @@ we know that program should be designed in levels from top down in logic.
 ## who should do the work
 find most suitable object to do the work, the best object, in which the code placed.
 
+## Make the logic as strict as possible
+
 # code
 #### should we define the up-level pointer first in calss?
 #### what is the order of member-field and member-function?
