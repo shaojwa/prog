@@ -13,7 +13,12 @@ return is not exact
 NO
 
 ## select
-k (hash function nnumber) and m (bloom filter len) n (numbers of inserted element), p (positives)
+```
+n (numbers of inserted element)
+p (fault positives)
+m (bloom filter len)
+k (hash function nnumber)
+```
 
 ![](<http://latex.codecogs.com/gif.latex?m=-\frac{n\ln p}{(\ln2)^2}>)
 
