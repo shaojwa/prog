@@ -2,6 +2,26 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 ```
+
+#### symbol names
+```
+"!"  bang
+"*"  asterisk
+"-"  dash
+"_"  underscore
+"\"  backslash
+"/"  forward slash
+"~"  tilde
+"^"  caret
+","  comma
+"'"  single quote
+"`"  back quote
+"{}" brace
+"[]" bracket
+"()" parenthesis
+"<>" angle bracket
+```
+
 #### synonymous vs synchronous
 ```
 sy,no,ny,mous
