@@ -17,6 +17,6 @@ k (hash function nnumber) and m (bloom filter len) n (numbers of inserted elemen
 
 ![](<http://latex.codecogs.com/gif.latex?m=-\frac{n\ln p}{(\ln2)^2}>)
 
-![](<http://latex.codecogs.com/gif.latex?k=-\frac{m}{n}\ln2>)
+![](<http://latex.codecogs.com/gif.latex?k=\frac{m}{n} \ln2>)
 
 ## MurmurHash and Fnv 
