@@ -15,6 +15,8 @@ NO
 ## select
 k (hash function nnumber) and m (bloom filter len) n (numbers of inserted element), p (positives)
 
-![](http://latex.codecogs.com/gif.latex?\-\\frac{n\\ln p}{(ln2)^2})
+![](http://latex.codecogs.com/gif.latex?-\\frac{n\\ln p}{(ln2)^2})
+
+![](http://latex.codecogs.com/gif.latex?\\frac{1}{1+sin(x)})
 
 ## MurmurHash and Fnv 
