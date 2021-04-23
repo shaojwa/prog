@@ -17,3 +17,6 @@ If any non-default constructors are declared, the compiler does not provide a de
 
 ## force declare the default constructor
 using keyword default
+
+## declare and define
+using **default** keyword to **declare** the default dsestructor, the compiler will **define** the function only if needed.
