@@ -207,6 +207,8 @@ value speculation.
 
 #### scheme
 out-of-order general scheme.
+#### transient
+transient hostname
 
 #### trail
 SUDO gives an audit trail I believe under /var/log/secure.
