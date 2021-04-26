@@ -8,8 +8,9 @@ set args
 
 ## run
 run with args
-// method 1
+
 ```
+// method 1
 $ gdb  --args /bin/dcache-dm-test --gtest_filter=mdtest.command_line
 
 // method 2
