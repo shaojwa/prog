@@ -1,5 +1,5 @@
 1. https://sourceware.org/gdb/current/onlinedocs/gdb/
-1. https://www.gnu.org/software/gdb/
+2. https://www.gnu.org/software/gdb/
 
 ## set args
 ```
@@ -8,14 +8,25 @@ set args
 
 ## run
 run with args
+// method 1
 ```
-gdb /bin/dcache-dm-test
-(gdb) r --gtest_filter=mdtest.command_line
+$ gdb  --args /bin/dcache-dm-test --gtest_filter=mdtest.command_line
+
+// method 2
+$ gdb /bin/dcache-dm-test
+(gdb) run --gtest_filter=mdtest.command_line
+
+// method 3
+$ gdb
+(gdb) file /bin/dcache-dm-test
+(gdb) set args --gtest_filter=mdtest.command_line
+(gdb) run
 ```
 
 ## break
 common breaks
 ```
+break <linenum>
 break filename:linenum
 break filename:function
 rbreak DMTest::WriteObj*
@@ -59,6 +70,14 @@ info variables
 eflags
 ```
 info reg eflags
+```
+## list
+```
+ # 10 lines
+list 10
+
+# list function
+list thread_routine
 ```
 
 ## examine
