@@ -22,10 +22,10 @@
 14. [lambda express](/2021/20210311_lambda_express.md)
 
 #### c++11
-1. [自动类型推断](/2021/20210506_cpp_auto.md)
+1. [auto自动类型推断](/2021/20210506_cpp_auto.md)
 2. [全局的begin和end](/2021/20210506_begin_end.md)
 3. [decltype使用](/2021/20210311_decltype.md)
-4. [初始化](/2021/20210506_init.md)
+4. [list init 列表初始化](/2021/20210506_list_init.md)
 
 ----
 #### 碰到的一些细节和问题
