@@ -26,6 +26,7 @@
 2. [全局的begin和end](/2021/20210506_begin_end.md)
 3. [decltype使用](/2021/20210311_decltype.md)
 4. [list init 列表初始化](/2021/20210506_list_init.md)
+5. [uniform init统一初始化](/2021/20210506_unifrom_init.md)
 
 ----
 #### 碰到的一些细节和问题
