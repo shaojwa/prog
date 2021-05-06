@@ -18,13 +18,13 @@
 10. [模板类的偏特化](/2021/20210308_template_class_partitial_spec.md)
 11. [完美转发](/2021/20210308_perfect_forward.md)
 12. [move aware class](/2021/20210309_move_aware_class.md)
-13. [decltype operator](/2021/20210311_decltype_operator.md)
+13. [decltype operator](/2021/20210311_decltype.md)
 14. [lambda express](/2021/20210311_lambda_express.md)
 
 #### c++11
 1. [自动类型推断](/2021/20210506_cpp_auto.md)
 2. [全局的begin和end](/2021/20210506_begin_end.md)
-3. [decltype使用](/2021/20210506_decltype.md)
+3. [decltype使用](/2021/20210311_decltype.md)
 4. [初始化](/2021/20210506_init.md)
 
 ----
