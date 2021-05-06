@@ -17,13 +17,13 @@
 9. [std::move的实现和引用坍塌](/2021/20210308_move_imp_and_ref_collapse.md)
 10. [模板类的偏特化](/2021/20210308_template_class_partitial_spec.md)
 11. [完美转发](/2021/20210308_perfect_forward.md)
-12. [move aware class](2021/20210309_move_aware_class.md)
-13. [decltype operator](2021/20210311_decltype_operator.md)
-14. [lambda express](2021/20210311_lambda_express.md)
+12. [move aware class](/2021/20210309_move_aware_class.md)
+13. [decltype operator](/2021/20210311_decltype_operator.md)
+14. [lambda express](/2021/20210311_lambda_express.md)
 
 #### c++11
-1. [自动类型推断](2021/20210506_cpp_auto.md)
-2. [初始化](2021/20210506_init.md)
+1. [自动类型推断](/2021/20210506_cpp_auto.md)
+2. [初始化](/2021/20210506_init.md)
 
 ----
 #### 碰到的一些细节和问题
