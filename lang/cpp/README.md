@@ -21,6 +21,10 @@
 13. [decltype operator](2021/20210311_decltype_operator.md)
 14. [lambda express](2021/20210311_lambda_express.md)
 
+#### c++11
+1. [自动类型推断](2021/20210506_cpp_auto.md)
+2. [初始化](2021/20210506_init.md)
+
 ----
 #### 碰到的一些细节和问题
 1. [cpp中会改变表达式值的cast](/2021/20210305_cpp中会改变表达式值的cast.md)
