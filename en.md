@@ -31,6 +31,9 @@ synch,ro,nous
 #### abandon
 If you abandon a place, thing, or person, you leave the place, thing, or person permanently or for a long time.
 
+#### bear
+But it covers the basics and could serve as a tutorial of sorts, **bearing in mind** there's a lot more to gdb than I used here.
+
 #### before
 used as adverb: I had met Professor Lown before.
 
