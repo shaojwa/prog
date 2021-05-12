@@ -1,5 +1,16 @@
 1. https://sourceware.org/gdb/current/onlinedocs/gdb/
 2. https://www.gnu.org/software/gdb/
+## list of classes of commands
+|class|command| desc|
+|:-|:-|:-|
+|breakpoint|||
+|data|||
+||ptype||
+|runing|||
+|stack|||
+|status|||
+||info||
+
 
 ## set args
 ```
