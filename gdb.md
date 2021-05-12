@@ -6,7 +6,7 @@
 |breakpoint|||
 |data|||
 ||ptype||
-|runing|||
+|running|||
 |stack|||
 |status|||
 ||info||
