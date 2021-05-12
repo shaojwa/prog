@@ -121,6 +121,9 @@ This is equivalent to calling pthread_exit(3) with the value
 #### fairly
 There was some fairly strong pushback against the mutex patch after last week's article was written.
 
+#### frustrate
+If something **frustrates** you, it upsets or angers you because you are unable to do anything about the problems it creates.
+
 #### heuristic
 
 #### hang
@@ -195,6 +198,9 @@ Its real purpose is the launching and retrieval of small aeroplanes in flight.
 #### respect
 
 #### redundant
+
+#### remind
+If someone **reminds** you of a fact or event that you already know about, they say something which makes you think about it.
 
 #### restrict
 Lists the active jobs.  JOBSPEC restricts output to that job.
