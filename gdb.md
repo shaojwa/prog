@@ -10,6 +10,7 @@
 |stack|||
 |status|||
 ||info||
+||info files||
 
 
 ## set args
@@ -64,6 +65,11 @@ p /t $rdi
 ```
 
 ## info
+list the memory regions of the binary currently being debugged.
+```
+info files 
+```
+
 local vars
 ```
 info locals
@@ -83,6 +89,7 @@ eflags
 ```
 info reg eflags
 ```
+
 ## list
 ```
  # 10 lines
