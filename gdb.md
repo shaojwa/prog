@@ -9,8 +9,13 @@
 |running|||
 |stack|||
 |status|||
-||info||
-||info files||
+||info| info files|
+
+## batch mode
+```
+-batch
+-ex command  // Execute given GDB command.
+```
 
 
 ## set args
