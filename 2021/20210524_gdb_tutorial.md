@@ -45,4 +45,8 @@ info symbol set_curterm
 ```
 set $rdi=0xbecb90
 ```
- set command to overwrite memory and replace zero with the previous argument of
+
+## 20. Conditional Breakpoints
+```
+cond 1 $rdi==0x0
+``
