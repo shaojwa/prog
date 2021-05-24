@@ -58,6 +58,7 @@ delete 4
 breakpoint at address
 ```
 break *0x0000000000400448
+break *doupdate + 289
 ```
 
 ## data
