@@ -10,6 +10,10 @@
 |stack|||
 |status|||
 ||info| info files|
+||info| info proc m|
+
+## info Memory Mappings
+You can double check if zero is valid using i proc m (short for info proc mappings)
 
 ## batch mode
 ```
