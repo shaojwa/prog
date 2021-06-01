@@ -3,3 +3,5 @@
 3. parameter, 形参
 4. interval, 时间间隔, every interval (default: 10 seconds) information is shown. (man atop)
 5. occupation, 资源占用
+6. cpu consumption, cpu 消耗
+7. sample, 采样
