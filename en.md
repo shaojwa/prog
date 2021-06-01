@@ -69,6 +69,9 @@ The 'gdb' script provided below can be modified as fits.
 #### care
 Making a thread detached is useful for some types of daemon threads whose exit status the application does not need to care  about.
 
+#### check
+it checks whether the standard output channel is connected to a screen, or to a file.
+
 #### concurrent
  mutex is useful for protecting shared data structures from concurrent modifications
 
