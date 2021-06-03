@@ -9,7 +9,7 @@ https://stackoverflow.com/questions/892928/why-are-x86-registers-named-the-way-t
 ## functionc calls
 https://stackoverflow.com/questions/2535989/what-are-the-calling-conventions-for-unix-linux-system-calls-and-user-space-f
 
-####  segment copy
+#### segment + index
 DS:SI (DataSegment:SourceIndex)  to  to ES:DI(ExtraSegment:DestinationIndex), SI to rsi, di to rdi in x86_64
 
 #### rdi
