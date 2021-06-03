@@ -1,21 +1,34 @@
+
+## X86
 https://low-level.readthedocs.io/en/latest/arch/x86/
 
+## regs name
+http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+https://stackoverflow.com/questions/892928/why-are-x86-registers-named-the-way-they-are
+
+## functionc calls
+https://stackoverflow.com/questions/2535989/what-are-the-calling-conventions-for-unix-linux-system-calls-and-user-space-f
+
+####  segment copy
+DS:SI (DataSegment:SourceIndex)  to  to ES:DI(ExtraSegment:DestinationIndex), SI to rsi, di to rdi in x86_64
 
 #### rdi
-register destination index， first argument
+register destination index, first argument
 
 #### rsi
-register source index， second argument
+register source index, second argument
 
 #### rdx
-register d extended
+register d extended, d means data
 
 #### rcx
-register c extended
+register c extended, c means counter, since it was used to hold a loop index.
 
 #### rbx
+register c extended, b means base
+
 #### rax
-register a extended， return reg
+register a extended, return reg, a means accumulator
 
 #### r8
 5th argument
