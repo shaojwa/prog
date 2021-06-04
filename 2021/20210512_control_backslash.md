@@ -1,1 +1,1 @@
-type control-typeslash to quit program.
+type control-backslash to quit program.
