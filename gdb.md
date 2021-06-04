@@ -15,6 +15,8 @@
 ## info Memory Mappings
 You can double check if zero is valid using i proc m (short for info proc mappings)
 
+1. (print std::map)[2021/20210604_gdb_print_std_map.md]
+
 ## batch mode
 ```
 -batch
