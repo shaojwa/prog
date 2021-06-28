@@ -21,6 +21,9 @@
 13. [decltype specifier](/2021/20210311_decltype.md)
 14. [lambda express](/2021/20210311_lambda_express.md)
 
+#### c++ 基础
+14. [static_assert](static_assert.md)
+
 #### c++11
 1. [auto自动类型推断](/2021/20210506_cpp_auto.md)
 2. [全局的begin和end](/2021/20210506_begin_end.md)
