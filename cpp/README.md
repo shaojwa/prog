@@ -22,7 +22,7 @@
 14. [lambda express](/2021/20210311_lambda_express.md)
 
 #### c++ 基础
-14. [static_assert](static_assert.md)
+
 
 #### c++11
 1. [auto自动类型推断](/2021/20210506_cpp_auto.md)
@@ -30,10 +30,11 @@
 3. [decltype使用](/2021/20210311_decltype.md)
 4. [list init 列表初始化](/2021/20210506_list_init.md)
 5. [uniform init 统一初始化](/2021/20210506_uniform_init.md)
-6. [constexpr的引入](mcp/lec15_constexpr.md)
+6. [constexpr 引入](constexpr.md)
+7. [static_assert](static_assert.md)
 
 #### c++14
-1. [constexpr改进](mcp/lec15_constexpr.md)
+1. [constexpr 改进](mcp/lec15_constexpr.md)
 
 ----
 #### 碰到的一些细节和问题
