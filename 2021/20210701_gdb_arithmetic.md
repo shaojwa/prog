@@ -1,1 +1,0 @@
-gdb/gdb_arithmetic_operation.md
