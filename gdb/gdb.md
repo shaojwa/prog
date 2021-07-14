@@ -15,7 +15,18 @@
 ## info Memory Mappings
 You can double check if zero is valid using i proc m (short for info proc mappings)
 
-[print std::map](2021/20210604_gdb_print_std_map.md)
+[print std::map in gdb](2021/20210604_gdb_print_std_map.md)
+
+
+## The $ Variable
+```
+(gdb) p mgmt_thread_data.next_thread
+$67 = (struct k_thread *) 0x2000188c <eswifi0+48>
+(gdb) p $.next_thread
+$68 = (struct k_thread *) 0x200022ac <eswifi_spi0+20>
+(gdb) <enter>
+$69 = (struct k_thread *) 0x2000a120 <k_sys_work_q+20>
+```
 
 ## batch mode
 ```
