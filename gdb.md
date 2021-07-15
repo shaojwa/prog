@@ -1,5 +1,7 @@
-1. https://sourceware.org/gdb/current/onlinedocs/gdb/
-2. https://www.gnu.org/software/gdb/
+1. https://www.gnu.org/software/gdb/
+2. https://sourceware.org/gdb/current/onlinedocs/gdb/
+3. https://www.brendangregg.com/blog/2016-08-09/gdb-example-ncurses.html
+4. https://interrupt.memfault.com/blog/advanced-gdb
 
 ## info Memory Mappings
 You can double check if zero is valid using i proc m (short for info proc mappings)
