@@ -6,7 +6,7 @@
 ## info Memory Mappings
 You can double check if zero is valid using i proc m (short for info proc mappings)
 
-## The $ Variable
+## Value History
 ```
 (gdb) p mgmt_thread_data.next_thread
 $67 = (struct k_thread *) 0x2000188c <eswifi0+48>
