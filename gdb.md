@@ -1,22 +1,8 @@
 1. https://sourceware.org/gdb/current/onlinedocs/gdb/
 2. https://www.gnu.org/software/gdb/
-## list of classes of commands
-|class|command| desc|
-|:-|:-|:-|
-|breakpoint|||
-|data|||
-||ptype||
-|running|||
-|stack|||
-|status|||
-||info| info files|
-||info| info proc m|
 
 ## info Memory Mappings
 You can double check if zero is valid using i proc m (short for info proc mappings)
-
-[print std::map in gdb](2021/20210604_gdb_print_std_map.md)
-
 
 ## The $ Variable
 ```
@@ -33,7 +19,6 @@ $69 = (struct k_thread *) 0x2000a120 <k_sys_work_q+20>
 -batch
 -ex command  // Execute given GDB command.
 ```
-
 
 ## set args
 ```
@@ -177,7 +162,7 @@ info files
 0x00007f4b75a02000 - 0x00007f4b76001000 is load10
 ```
 
-#### reverse step
+## reverse step
 https://stackoverflow.com/questions/1206872/how-to-go-to-the-previous-line-in-gdb
 ```
 Target multi-thread does not support this command.
@@ -207,7 +192,6 @@ end
 ```
 
 ## auto complete the template-function name 
-
 using <tab> to break a template-function
 ## stack
 ```
@@ -239,28 +223,4 @@ si(stepi)
 thread 4
 thread apply
 thread find
-```
-
-## class of commands
-```
-aliases -- Aliases of other commands
-breakpoints -- Making program stop at certain points
-data -- Examining data
-files -- Specifying and examining files
-internals -- Maintenance commands
-obscure -- Obscure features
-running -- Running the program
-stack -- Examining the stack
-status -- Status inquiries
-support -- Support facilities
-tracepoints -- Tracing of program execution without stopping the program
-user-defined -- User-defined commands
-```
-
-## get help
-```
-Type "help" followed by a class name for a list of commands in that class.
-Type "help all" for the list of all commands.
-Type "help" followed by command name for full documentation.
-Type "apropos word" to search for commands related to "word".
 ```
