@@ -1,3 +1,5 @@
+https://web.stanford.edu/class/cs97si/
+
 1. 编译器对cpp中异常处理的实现
 2. https://en.cppreference.com/w/cpp/utility/forward 
 3. https://zh.cppreference.com/w/cpp/language/value_category 需要学习
