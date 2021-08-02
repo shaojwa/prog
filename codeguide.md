@@ -1,8 +1,8 @@
 - [assert](#assert)
 - [log](#log)
 
-# design
-## using non-void function only in necessary
+## 设计
+#### using non-void function only in necessary
 void function make the code concise and clean
 
 ## destroy/shutdown function should be idempotent
@@ -17,7 +17,7 @@ find most suitable object to do the work, the best object, in which the code pla
 
 ## Make the logic as strict as possible
 
-# code
+## 编码
 #### should we define the up-level pointer first in calss?
 #### what is the order of member-field and member-function?
 #### should we assign the value of enum-field explicitly?
