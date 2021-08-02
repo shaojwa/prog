@@ -1,6 +1,5 @@
-- [assert](#assert)
-- [log](#log)
-- 
+如何编写更好的代码，这是每一个程序员的最高追求。
+
 ## 编码准则
 #### 每一行代码都考虑放在什么地方最合适
 every line of code should in the best place of the code-tree
