@@ -2,17 +2,17 @@
 - [log](#log)
 
 ## 设计
-#### using non-void function only in necessary
+1. using non-void function only in necessary
 void function make the code concise and clean
 
-## destroy/shutdown function should be idempotent
+2. destroy/shutdown function should be idempotent
 shutdown/destroy function should be called multiple times whiout side effects.
 
-## find the best place for each line of code
+3. find the best place for each line of code
 every line of code should in the best place of the code-tree
 we know that program should be designed in levels from top down in logic.
 
-## who should do the work
+- who should do the work
 find most suitable object to do the work, the best object, in which the code placed.
 
 ## Make the logic as strict as possible
