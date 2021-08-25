@@ -167,6 +167,9 @@ const int const_hours_in_day = 24
 
 #### 函数命名
 - 常规函数用小写字母以及下划线连接。
+- 函数命名以动词开始。
+- 函数命名动词要准确。
+比如，让挂起的destage-task继续处理新的事务，可以用`wakeup_destage_task()` 而不要用`start_destage_task()`，免得误以为要启动一个新的task。
 
 #### 枚举命名
 - 同宏一致，用全大写和下划线，比如`ENUM_NAME`。
