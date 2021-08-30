@@ -1,7 +1,8 @@
-1. command argument, 命令行参数(man atop)
-2. argument, 实参
-3. parameter, 形参
-4. interval, 时间间隔, every interval (default: 10 seconds) information is shown. (man atop)
-5. occupation, 资源占用
-6. cpu consumption, cpu 消耗
-7. sample, 采样
+1. command argument (man atop)
+2. argument
+3. parameter
+4. interval: every interval (default: 10 seconds) information is shown. (man atop)
+5. occupation
+6. cpu consumption
+7. sample
+8. according to the rules of precedence.
