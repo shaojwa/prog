@@ -22,6 +22,18 @@ https://wikidiff.com/dispatch/deliver
 "<>" angle bracket
 ```
 
+#### terms
+```
+command argument (man atop)
+argument.
+parameter.
+interval: every interval (default: 10 seconds) information is shown. (man atop)
+occupation.
+cpu consumption.
+sample.
+according to the rules of precedence.
+```
+
 #### synonymous vs synchronous
 ```
 sy,no,ny,mous
