@@ -22,16 +22,17 @@ https://wikidiff.com/dispatch/deliver
 "<>" angle bracket
 ```
 
-#### terms
+#### 翻译
 ```
-command argument (man atop)
-argument.
-parameter.
-interval: every interval (default: 10 seconds) information is shown. (man atop)
-occupation.
-cpu consumption.
-sample.
-according to the rules of precedence.
+argument  实参数
+command argument (man atop) 命令行参数
+cpu consumption CPU消耗
+interval  间隔/区间
+occupation 占用
+parameter 形参
+precedence 优先权
+sample 采样
+shutdown 关闭
 ```
 
 #### synonymous vs synchronous
