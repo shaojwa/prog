@@ -22,14 +22,14 @@ https://wikidiff.com/dispatch/deliver
 "<>" angle bracket
 ```
 
-#### 翻译
+#### trans
 ```
-argument  实参数
+argument  实参数 （Actual Argument）
 command argument (man atop) 命令行参数
 cpu consumption CPU消耗
 interval  间隔/区间
 occupation 占用
-parameter 形参
+parameter 形参 (Formal Parameter)
 precedence 优先权
 sample 采样
 shutdown 关闭
