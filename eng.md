@@ -22,7 +22,7 @@ https://wikidiff.com/dispatch/deliver
 "<>" angle bracket
 ```
 
-#### trans
+#### terms
 ```
 argument  实参数 （Actual Argument）
 command argument (man atop) 命令行参数
@@ -33,6 +33,12 @@ parameter 形参 (Formal Parameter)
 precedence 优先权
 sample 采样
 shutdown 关闭
+```
+
+#### 常用单词
+```
+rectify 纠正
+bizarre 怪异的
 ```
 
 #### synonymous vs synchronous
