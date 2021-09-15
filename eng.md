@@ -37,15 +37,12 @@ shutdown 关闭
 
 #### 常用单词
 ```
-rectify 纠正
 bizarre 非常怪异的
+rectify 纠正
+synchronous 同步的
+synonymous 等同于
 ```
 
-#### synonymous vs synchronous
-```
-sy,no,ny,mous
-synch,ro,nous
-```
 
 #### abandon
 If you abandon a place, thing, or person, you leave the place, thing, or person permanently or for a long time.
