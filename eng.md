@@ -38,7 +38,7 @@ shutdown 关闭
 #### 常用单词
 ```
 rectify 纠正
-bizarre 怪异的
+bizarre 非常怪异的
 ```
 
 #### synonymous vs synchronous
