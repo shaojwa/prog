@@ -24,25 +24,25 @@ https://wikidiff.com/dispatch/deliver
 
 #### terms
 ```
-argument  实参数 （Actual Argument）
-command argument (man atop) 命令行参数
-cpu consumption CPU消耗
-interval  间隔/区间
-occupation 占用
-parameter 形参 (Formal Parameter)
-precedence 优先权
-sample 采样
-shutdown 关闭
+实参 argument （Actual Argument）
+命令行参数 command argument (man atop) 
+消耗 cpu consumption CPU消耗
+间隔/区间 interval
+占用 occupation 
+形参 parameter  (Formal Parameter)
+优先 precedence 
+采样 sample 
+关闭 shutdown 
+取整 round (round up)
 ```
 
-#### 常用单词
+#### words
 ```
 bizarre 非常怪异的
 rectify 纠正
-synchronous 同步的
-synonymous 等同于
+synchronous 同步 
+synonymous 等同
 ```
-
 
 #### abandon
 If you abandon a place, thing, or person, you leave the place, thing, or person permanently or for a long time.
