@@ -8,7 +8,8 @@
 
 #### 结合dmesg输出查看代码：
 ```
-[Sat Oct  9 00:06:18 2021] Processer_18[1816266]: segfault at 100 ip 000055c57a5fc888 sp 00007f4c3caff960 error 4 in dse[55c579c00000+ea2000]
+[Sat Oct  9 00:06:18 2021] Processer_18[1816266]:
+  segfault at 100 ip 000055c57a5fc888 sp 00007f4c3caff960 error 4 in dse[55c579c00000+ea2000]
 ```
 我们知道出现段错误的代码是地址是：000055c57a5fc888，
 其中的0x55c579c00000是代码段起始地址：
