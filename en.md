@@ -5,6 +5,10 @@ https://wikidiff.com/dispatch/deliver
 #### 设施/功能 facility
 GDB provides these facilities for debugging multi-thread programs.
 
+#### 查询 inquire
+```
+'info threads', a command to inquire about existing threads.
+```
 #### symbol names
 ```
 "!"  bang
