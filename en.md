@@ -2,6 +2,8 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 ```
+#### 设施/功能 facility
+GDB provides these facilities for debugging multi-thread programs.
 
 #### symbol names
 ```
