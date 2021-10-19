@@ -1,14 +1,7 @@
 ```
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
-```
-#### 设施/功能 facility
-GDB provides these facilities for debugging multi-thread programs.
 
-#### 查询 inquire
-```
-'info threads', a command to inquire about existing threads.
-```
 #### symbol names
 ```
 "!"  bang
@@ -244,6 +237,7 @@ value speculation.
 
 #### scheme
 out-of-order general scheme.
+
 #### transient
 transient hostname
 
@@ -272,3 +266,17 @@ Without options, the status of all active jobs is displayed.
 
 #### wall
 wall message: the mssage sent by command wall 
+
+```
+#### 设施/功能 facility
+GDB provides these facilities for debugging multi-thread programs.
+
+#### 查询 inquire
+```
+'info threads', a command to inquire about existing threads.
+```
+
+#### so forth
+```
+You may find this useful in writing breakpoint conditional expressions, command scripts, and so forth.
+```
