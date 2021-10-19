@@ -201,6 +201,9 @@ it  is not possible to join with the thread in order to obtain its exit status.
 #### preceding
 The  process  attributes in the preceding list are all specified in POSIX.1-2001. 
 
+#### pricise
+The precise semantics of threads differ from one operating system to another.
+
 #### production
 it is not an option that one would enable on a production system.
 
