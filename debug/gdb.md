@@ -3,10 +3,10 @@
 3. https://www.brendangregg.com/blog/2016-08-09/gdb-example-ncurses.html
 4. https://interrupt.memfault.com/blog/advanced-gdb
 
-## info Memory Mappings
+#### info Memory Mappings
 You can double check if zero is valid using i proc m (short for info proc mappings)
 
-## Value History
+#### Value History
 ```
 (gdb) p mgmt_thread_data.next_thread
 $67 = (struct k_thread *) 0x2000188c <eswifi0+48>
@@ -16,18 +16,18 @@ $68 = (struct k_thread *) 0x200022ac <eswifi_spi0+20>
 $69 = (struct k_thread *) 0x2000a120 <k_sys_work_q+20>
 ```
 
-## batch mode
+#### batch mode
 ```
 -batch
 -ex command  // Execute given GDB command.
 ```
 
-## set args
+#### set args
 ```
 set args
 ```
 
-## run
+#### run
 run with args
 
 ```
@@ -45,7 +45,7 @@ $ gdb
 (gdb) run
 ```
 
-## break
+#### break
 common breaks
 ```
 break <linenum>
@@ -61,7 +61,7 @@ break *0x0000000000400448
 break *doupdate + 289
 ```
 
-## data
+#### data
 ```
 p ((Inode*)0x7f183001cb70)->ll_ref
 p ((Inode*)0x7f183001cb70)->_ref
@@ -74,7 +74,7 @@ p /o $rdi
 p /t $rdi
 ```
 
-## info
+#### info
 list the memory regions of the binary currently being debugged.
 ```
 info files 
@@ -100,16 +100,16 @@ eflags
 info reg eflags
 ```
 
-## list
+#### list
 ```
  # 10 lines
 list 10
 
-# list function
+#### list function
 list thread_routine
 ```
 
-## examine
+#### examine
 ```
 x /oxdutfcsi ADDRESS
 x /i $rip
@@ -121,7 +121,7 @@ x $rdi
 display/i $rip
 ```
 
-## disass
+#### disass
 turn on disassemble
 ```
 set  disassemble-next-line on
@@ -141,14 +141,14 @@ set  disassemble-next-line on
 show disassemble-next-line
 ```
 
-## target
+#### target
 ```
 the executable gdb started is the target.
 the core-file gdb specified is the target.
 the process after run in gdb is the target.
 ```
 
-## info
+#### info
 info files
 ```
 0x000055d3b9455000 - 0x000055d3b9456000 is load1a
@@ -170,7 +170,7 @@ https://stackoverflow.com/questions/1206872/how-to-go-to-the-previous-line-in-gd
 Target multi-thread does not support this command.
 ```
 
-## layout 
+#### layout 
 ```
 layout asm
 layout src
@@ -193,7 +193,7 @@ define hook-next
 end
 ```
 
-## auto complete the template-function name 
+#### auto complete the template-function name 
 using <tab> to break a template-function
 ## stack
 ```
@@ -201,7 +201,7 @@ bt
 frame
 ```
 
-## status
+#### status
 ```
 info addr obj_locate_snap
 info symbol 0x7f5b6879750c 
@@ -211,7 +211,7 @@ info vtbl this
 info locals
 ```
 
-## running
+#### running
 ```
 attach
 detach
