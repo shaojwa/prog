@@ -1,6 +1,6 @@
 
 CXX = g++
-CXXFLAGS = -Wall -O0 -g --std=c++11
+CXXFLAGS = -Wall -O0 -g --std=c++11 -lpthread
 BINARY = out
 last_source = $(shell ls -tr | grep \\.cc | tail -1)
 
