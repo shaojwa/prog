@@ -1,1 +1,5 @@
+按照POSIX手册，调用pthread_conf_wait的线程，如果没有持有mutex，那么函数调用的行为是未定义的。
 
+实际测试的时候，如果不指定mutex的PTHREAD_MUTEX_ERRORCHECK属性，那么pthread_cond_wait也会挂起，而不会返回EPERM错误。
+看起来，此时的mutex就像是有PTHRAD_MUTEX_RECURSIVE属性一样。其实是PTHEAD_MUTEX_DEFAULT属性，会尝试循环lock，但是具体行为也许是未定义的。
+这不是推荐的做法，我们应该指定一种特定的属性。
