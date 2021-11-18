@@ -1,4 +1,4 @@
-`c++`中表示一个范围都是用半闭半开区间，比如`[first, last)`，所以：
+`c++`中表示一个范围都是用左闭右开区间表示，比如`[first, last)`，所以：
 
 当`range.lower_bound(key)`本意是取一个以key作为下界的range的子集`[range.lower_bound(key), last)`
 所以，`lower_bound(key)` 得到的是要第一个大于等于key的。
