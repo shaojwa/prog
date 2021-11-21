@@ -7,11 +7,12 @@
 #include <strings.h>
 #include <string.h>
 #include <netdb.h>
+#include <iostream>
+using namespace std;
 
-
-void error(char *msg) 
+void error(string msg) 
 {
-  perror(msg);
+  perror(msg.data());
   exit(1);
 }
 
@@ -32,6 +33,7 @@ int launch_server(int port_no) {
   if (bind(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
     error("error: on binding");
   }
+  cout << "listening..." << endl;
   listen(sockfd, 5);
   client_len = sizeof (client_addr);
   newsockfd = accept(sockfd, (struct sockaddr *)&client_addr, (socklen_t *)&client_len);
@@ -43,10 +45,10 @@ int launch_server(int port_no) {
   if (n < 0) {
     error("error: reading from socket");
   }
-  printf("here is the message: %s\n", buffer);
-  n = write(newsockfd, "i got your message\n", 20);
+  printf("recv: %s\n", buffer);
+  n = write(newsockfd, "server ack\n", 12);
   if (n < 0) error("error: writing to socket");
-  sleep(60);
+  sleep(10);
   return 0;
 }
 
@@ -56,9 +58,6 @@ int start_client(char* host_name, int port_no) {
   char buffer[256];
   struct sockaddr_in server_addr;
   struct hostent *server;
-  int width = 3;
-  int num = 10;
-  printf("----%*d\n", width, num);
   portno = port_no;
   sockfd = socket(AF_INET, SOCK_STREAM, 0);
   if (sockfd < 0) {
@@ -94,7 +93,23 @@ int start_client(char* host_name, int port_no) {
   return 0;
 }
 
-int main(void) {
-  launch_server(1102);
+int main(int argc, char **argv) {
+  if (argc < 2) {
+    cout << "usage: sock-test { s| c <server> <port> }" << endl;
+    exit(-1);
+  }
+  if (strcmp(argv[1], "c") == 0) {
+    if (argc != 4) {
+      cout << "usage: sock-test { s| c <server> <port> }" << endl;
+      exit(-1);
+    }
+    cout << "start client, connect to server: " << argv[2] << ", at port " << argv[3] << endl;
+    start_client(argv[2], stoi(argv[3])); 
+  } else if (strcmp(argv[1], "s") == 0) {
+    launch_server(1102);
+  } else {
+    cout << "usage: sock-test { s| c <server> <port> }" << endl;
+    exit(-1);
+  }
   return 0;
 }
