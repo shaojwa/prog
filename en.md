@@ -1,4 +1,3 @@
-```
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 
