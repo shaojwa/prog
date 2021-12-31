@@ -1,6 +1,14 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
+#### Arithmetic
+```
+Arithmetic is the part of mathematics that is concerned with the addition, subtraction, multiplication, and division of numbers.
+```
 
+#### Algebra
+```
+Algebra is a type of mathematics in which letters are used to represent possible quantities.
+```
 #### symbol names
 ```
 "!"  bang
