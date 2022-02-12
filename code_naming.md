@@ -7,9 +7,18 @@ MDSIOContextBase
 MDSLogContextBase
 ```
 
+#### 数据成员命名
+```
+op_shardedwq
+osd_op_tp
+peering_wq
+peering_tp
+```
+
 #### 函数命名
 ```
-get_or_create // 去获取，如果获取不到就创建
+get_or_create               // 用or，去获取，如果获取不到就创建
+maybe_create_new_object()   // 用maybe
 ```
 
 #### 配置项命名
