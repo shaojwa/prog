@@ -17,8 +17,11 @@ peering_tp
 
 #### 函数命名
 ```
-get_or_create               // 用or，去获取，如果获取不到就创建
-maybe_create_new_object()   // 用maybe
+// 用or，去获取，如果获取不到就创建
+get_or_create
+
+// 用maybe
+maybe_create_new_object()
 ```
 
 #### 配置项命名
