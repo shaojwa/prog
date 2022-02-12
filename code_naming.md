@@ -13,7 +13,7 @@ get_or_create // 去获取，如果获取不到就创建
 ```
 
 #### 配置项命名
-mds的配置项将近1800个，有不少命名非常准确，学习下：
+mds的配置项将近1800个，有不少命名非常准确：
 ```
 // 开关类以enabled结尾
 async_compressor_enabled 
