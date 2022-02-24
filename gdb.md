@@ -119,7 +119,7 @@ x /i $rip
 x $rdi
 ```
 
-## display
+#### display
 ```
 display/i $rip
 ```
