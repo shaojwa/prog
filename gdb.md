@@ -225,13 +225,30 @@ thread apply
 thread find
 ```
 
-
-
 #### batch mode
 ```
 gdb -batch -ex <command> -x  // Execute given GDB command.
 ```
+#### remote debug
 
+```
+gdbserver --attach :4444 <pid>
+gdb ceph-mds
+target remote 192.168.0.11:4444
+```
+
+#### start with args
+```
+(gdb) file /opt/bin/ceph-mds
+(gdb) set args -f --cluster ceph --id mds0 --setuser ceph --setgroup ceph
+(gdb) run
+```
+    
+#### start with command
+```
+gdb -p 1234 -ex 'break MOSDOpReply::decode_payload'
+```
+    
 #### target
 ```
 the executable gdb started is the target.
@@ -244,7 +261,7 @@ the process after run in gdb is the target.
 breakpoints: break
 data: print, set, x, display
 file: list
-running: run, step, continue
-stack: bt
+running: run, step, continue, thread
+stack: bt, frame
 statuc: info
 ```
