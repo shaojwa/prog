@@ -3,8 +3,16 @@
 3. https://www.brendangregg.com/blog/2016-08-09/gdb-example-ncurses.html
 4. https://interrupt.memfault.com/blog/advanced-gdb
 
+#### Attempt to extract a component of a value that is not a structure pointer
+```
+(gdb) p ((dm_objsnap_t *)) 0x7fe64bb0f000)->cached_ints
+Attempt to extract a component of a value that is not a structure pointer
+// solution
+(gdb) p ((::dm_objsnap_t *)) 0x7fe64bb0f000)->cached_ints
+```
+
 #### info Memory Mappings
-You can double check if zero is valid using i proc m (short for info proc mappings)
+You can double check if zero is valid using `i proc m` (short for info proc mappings)
 
 #### Value History
 ```
@@ -16,12 +24,6 @@ $68 = (struct k_thread *) 0x200022ac <eswifi_spi0+20>
 $69 = (struct k_thread *) 0x2000a120 <k_sys_work_q+20>
 ```
 
-#### batch mode
-```
--batch
--ex command  // Execute given GDB command.
-```
-
 #### set args
 ```
 set args
@@ -29,7 +31,6 @@ set args
 
 #### run
 run with args
-
 ```
 // method 1
 $ gdb  --args /bin/dcache-dm-test --gtest_filter=mdtest.command_line
@@ -104,12 +105,14 @@ info reg eflags
 ```
  # 10 lines
 list 10
+```
 
 #### list function
+```
 list thread_routine
 ```
 
-#### examine
+#### x
 ```
 x /oxdutfcsi ADDRESS
 x /i $rip
@@ -141,12 +144,6 @@ set  disassemble-next-line on
 show disassemble-next-line
 ```
 
-#### target
-```
-the executable gdb started is the target.
-the core-file gdb specified is the target.
-the process after run in gdb is the target.
-```
 
 #### info
 info files
@@ -164,7 +161,7 @@ info files
 0x00007f4b75a02000 - 0x00007f4b76001000 is load10
 ```
 
-## reverse step
+#### reverse step
 https://stackoverflow.com/questions/1206872/how-to-go-to-the-previous-line-in-gdb
 ```
 Target multi-thread does not support this command.
@@ -184,7 +181,7 @@ control the register window
 tui reg  float/genetal/next/system
 ```
 
-## hooks
+#### hooks
 https://sourceware.org/gdb/current/onlinedocs/gdb/Hooks.html
 ```
 # put this into ~/.gdbinit:
@@ -194,8 +191,9 @@ end
 ```
 
 #### auto complete the template-function name 
-using <tab> to break a template-function
-## stack
+using `tab` to break a template-function
+ 
+#### stack
 ```
 bt
 frame
@@ -225,4 +223,28 @@ si(stepi)
 thread 4
 thread apply
 thread find
+```
+
+
+
+#### batch mode
+```
+gdb -batch -ex <command> -x  // Execute given GDB command.
+```
+
+#### target
+```
+the executable gdb started is the target.
+the core-file gdb specified is the target.
+the process after run in gdb is the target.
+```
+
+#### command class
+```
+breakpoints: break
+data: print, set, x, display
+file: list
+running: run, step, continue
+stack: bt
+statuc: info
 ```
