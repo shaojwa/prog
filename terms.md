@@ -33,21 +33,24 @@ Algebra is a type of mathematics in which letters are used to represent possible
 
 #### 占用
 ```
-occupation: It shows the occupation of the most critical hardware resources。(man atop)
+occupation: any activity on which time is spent by a person.
+It shows the occupation of the most critical hardware resources. (man atop)
 ```
 
 #### 消耗
 ```
-consumption: CPU consumption
+consumption：the amount of them that is used or the act of using them.
+CPU consumption
 ```
 
 #### 优先
 ```
-precedence: 
+priority: order, importance 
+precedence: more, preceding 
 take precedence over sth: Have as much fun as possible at college, but don't let it take precedence over work.
-
-priority: 
 ```
+priority： 优先级，中性名词，没有倾向没有比较。precedence 优先的状态，有倾向有比较的感觉。
+As nouns the difference between priority and precedence is that priority is an item's relative importance while precedence is the state of preceding in importance or priority.
 
 #### 取整
 ```
@@ -105,9 +108,9 @@ launch
 sample 
 ```
 
-#### 设施功能
+#### 设施/功能
 ```
-facility // buildings, equipmend, device
+facility // buildings, equipment, device
 ```
 GDB provides these facilities for debugging multi-thread programs.
 
@@ -120,4 +123,4 @@ ipmitool - utility for controlling IPMI-enabled devices
 ```
 inquire
 ```
-'info threads', a command to inquire about existing threads.
+info threads, a command to inquire about existing threads.
