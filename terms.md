@@ -36,7 +36,6 @@ Algebra is a type of mathematics in which letters are used to represent possible
 消耗 cpu consumption CPU消耗
 占用 occupation 
 ```
-####
 
 #### 优先
 ```
@@ -63,7 +62,7 @@ argument (Actual Argument)
 ```
 command argument (man atop) 
 ```
-The  intervals  are repeated till the number of samples (specified as command argument) is reached, or till the key 'q' is pressed in  interactive mode.
+The intervals  are repeated till the number of samples (specified as command argument) is reached, or till the key 'q' is pressed in  interactive mode.
 
 #### 区间范围
 ```
@@ -93,12 +92,13 @@ boot
 ```
 
 ```
-// To launch a rocket, missile, or satellite means to send it into the air or into space.
-// To launch a ship or a boat means to put it into water, often for the first time after it has been built.
-// To launch a large and important activity, for example a military attack, means to start it.
-// If a company launches a new product, it makes it available to the public.
 launch 
 ```
+> // To launch a rocket, missile, or satellite means to send it into the air or into space.
+> // To launch a ship or a boat means to put it into water, often for the first time after it has been built.
+> // To launch a large and important activity, for example a military attack, means to start it.
+> // If a company launches a new product, it makes it available to the public.
+
 
 #### 采样
 ```
@@ -117,7 +117,7 @@ utility  // usefulness
 ipmitool - utility for controlling IPMI-enabled devices
 
 #### 查询
+```
 inquire
 ```
 'info threads', a command to inquire about existing threads.
-```
