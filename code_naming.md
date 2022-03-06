@@ -4,6 +4,14 @@ auth
 intrval
 ```
 
+#### 状态命名
+```
+STATE_BOOTING
+STATE_ACTIVE
+STATE_STOPPING
+STATE_STOPED
+```
+
 #### 类命名
 ```
 $ egrep "class.+\w+Base {" -rn mds | awk '{print $(NF-1)}' | sort | uniq
