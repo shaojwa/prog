@@ -31,6 +31,13 @@ Algebra is a type of mathematics in which letters are used to represent possible
 "()" parenthesis
 "<>" angle bracket
 ```
+
+#### 状态
+```
+state
+status
+```
+
 #### 提示符
 ```
 Prompt
