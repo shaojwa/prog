@@ -1,0 +1,9 @@
+今天看到一个配置名缩写，叫intrval，完整的应该是interval。
+```
+[root@node0 ~]# ipmitool lan print
+...
+Gratituous ARP Intrvl   : 0.0 seconds
+...
+User Lockout Interval   : 0
+...
+```
