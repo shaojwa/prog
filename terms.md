@@ -31,15 +31,22 @@ Algebra is a type of mathematics in which letters are used to represent possible
 "<>" angle bracket
 ```
 
-#### terms
+#### 占用
 ```
-消耗 cpu consumption CPU消耗
-占用 occupation 
+occupation: It shows the occupation of the most critical hardware resources。(man atop)
+```
+
+#### 消耗
+```
+consumption: CPU consumption
 ```
 
 #### 优先
 ```
-precedence
+precedence: 
+take precedence over sth: Have as much fun as possible at college, but don't let it take precedence over work.
+
+priority: 
 ```
 
 #### 取整
@@ -47,7 +54,6 @@ precedence
 round up
 round to
 ```
-
 #### 参数
 ```
 parameter
@@ -67,8 +73,6 @@ The intervals  are repeated till the number of samples (specified as command arg
 #### 区间范围
 ```
 interval
-```
-```
 range
 ```
 
@@ -89,16 +93,12 @@ Threshold
 ```
 start
 boot
-```
-
-```
 launch 
+// To launch a rocket, missile, or satellite means to send it into the air or into space.
+// To launch a ship or a boat means to put it into water, often for the first time after it has been built.
+// To launch a large and important activity, for example a military attack, means to start it.
+// If a company launches a new product, it makes it available to the public.
 ```
-> // To launch a rocket, missile, or satellite means to send it into the air or into space.
-> // To launch a ship or a boat means to put it into water, often for the first time after it has been built.
-> // To launch a large and important activity, for example a military attack, means to start it.
-> // If a company launches a new product, it makes it available to the public.
-
 
 #### 采样
 ```
