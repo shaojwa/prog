@@ -1,5 +1,6 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
+
 #### 算术
 ```
 Arithmetic
@@ -29,6 +30,19 @@ Algebra is a type of mathematics in which letters are used to represent possible
 "[]" bracket
 "()" parenthesis
 "<>" angle bracket
+```
+#### 提示符
+```
+Prompt
+```
+
+#### 管理
+```
+manage
+```
+#### 要求
+```
+requirements
 ```
 
 #### 占用
