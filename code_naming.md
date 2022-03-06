@@ -1,3 +1,9 @@
+#### 缩写命名
+```
+auth
+intrval
+```
+
 #### 类命名
 ```
 $ egrep "class.+\w+Base {" -rn mds | awk '{print $(NF-1)}' | sort | uniq
