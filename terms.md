@@ -1,6 +1,13 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 
+
+#### 简写
+```
+shorthand
+&| is the shorthand of 2>&1 | 
+```
+
 #### 算术
 ```
 Arithmetic
