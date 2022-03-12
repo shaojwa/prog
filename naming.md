@@ -1,3 +1,73 @@
+mds的配置项将近1800个，有不少命名非常准确：
+
+#### 重试次数
+用retries
+```
+net.ipv4.tcp_syn_retries = 6
+net.ipv4.tcp_synack_retries = 5
+net.ipv6.idgen_retries = 3
+```
+
+#### 使能
+```
+// 开关类以enabled结尾
+async_compressor_enabled 
+```
+
+#### 超时
+```
+// 超时类以timeout结尾
+async_compressor_thread_timeout
+```
+
+#### 时间间隔
+```
+// 时间间隔interval_second
+async_repair_local_map_send_interval_second
+```
+
+#### 数量
+```
+// 数量类以num结尾
+async_repair_max_num
+```
+
+#### 计数
+```
+// 次数类用count
+bdev_nvme_retry_count
+```
+
+#### 大小
+```
+// 大小类size
+bluestore_max_alloc_size
+```
+
+#### 平均值
+```
+// 平均值用avg结尾
+con_stats_mon_avg
+
+// 频率类per_io值一般是整数
+async_repair_sector_num_per_io
+```
+
+#### 比率
+```
+比率类ratio值一般是小数
+bluefs_log_compact_min_ratio
+```
+
+#### 限流值
+```
+// 限流类用throttle，控制数据的流量或者事件产生的频率，倾向于平均值的限制。
+bluestore_throttle_bytes
+
+//  限流类也用threshold，控制数据占用的最大值，倾向于峰值的控制。
+filestore_queue_high_threshold
+```
+
 #### 缩写命名
 ```
 auth
@@ -36,41 +106,4 @@ get_or_create
 
 // 用maybe
 maybe_create_new_object()
-```
-
-#### 配置项命名
-mds的配置项将近1800个，有不少命名非常准确：
-```
-// 开关类以enabled结尾
-async_compressor_enabled 
-
-// 超时类以timeout结尾
-async_compressor_thread_timeout
-
-// 时间间隔interval_second
-async_repair_local_map_send_interval_second
-
-// 数量类以num结尾
-async_repair_max_num
-
-// 次数类用count
-bdev_nvme_retry_count
-
-// 大小类size
-bluestore_max_alloc_size
-
-// 平均值用avg结尾
-con_stats_mon_avg
-
-// 频率类per_io值一般是整数
-async_repair_sector_num_per_io
-
-比率类ratio值一般是小数
-bluefs_log_compact_min_ratio
-
-// 限流类用throttle，控制数据的流量或者事件产生的频率，倾向于平均值的限制。
-bluestore_throttle_bytes
-
-//  限流类也用threshold，控制数据占用的最大值，倾向于峰值的控制。
-filestore_queue_high_threshold
 ```
