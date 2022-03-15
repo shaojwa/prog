@@ -106,4 +106,7 @@ get_or_create
 
 // 用maybe
 maybe_create_new_object()
+
+// 用may
+lsm_may_suspend_for_new_engmap_epoch()
 ```
