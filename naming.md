@@ -1,5 +1,14 @@
 mds的配置项将近1800个，有不少命名非常准确：
 
+#### race
+```
+data race
+```
+#### custom
+```
+custom deleter (cppreference std::shared_ptr)
+```
+
 #### 重试次数
 用retries
 ```
