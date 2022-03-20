@@ -10,3 +10,5 @@
 #### 为了 in order to 
 but size must still be greater than zero, in order to ensure backward compatibility when new epoll applications are run on older kernels.
 
+#### 处于什么原因 for sth reasons
+When  used as an edge-triggered interface, for performance reasons，it is possible to add the file descriptor inside the epoll interface.
