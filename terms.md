@@ -1,6 +1,10 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 
+#### 陷阱
+```
+pitfall
+```
 
 #### 简写
 ```
