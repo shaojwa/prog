@@ -51,7 +51,7 @@ select就能支持你希望的机制，轮询，还是死等。
 最后poll会把发生的event单独存放到revent中，而不是和select一样，回去影响入参数，确实，变强大了一点，但是并不是很大的飞跃。
 
 #### 什么是epoll
-select是同步的IO多路复用，poll也类似，都是等待IO就绪。比较epoll和poll的用法，我们可以知道。
+epoll是什么，epoll就是event-poll，select是同步的IO多路复用，poll也类似，都是等待IO就绪。比较epoll和poll的用法，我们可以知道。
 poll是基于fd的，关注的event和收到的event都是围绕fd来划分，返回值也是告诉你，有多少个fd收到event。
 但是，epoll的视角变了，它成了一套机制，这套机制围绕event，而不是fd，以event作为关注点。
 因为epoll的核心接口epoll_wait()以event作为参数，而不再是fd，最多可以收集多少events，放在那里，都在参数中指定。
@@ -60,20 +60,22 @@ poll是基于fd的，关注的event和收到的event都是围绕fd来划分，�
 epoll的使用需要先创建一个epoll-instance，这个和select和poll不一样，但是epoll也是支持阻塞等待的。
 在默认情况下epoll的水平触发模式和poll功能是类似的，在用poll的地方都可以用epoll。只是epoll是一种更快的poll。
 
-
 #### 为什么需要epoll
-上面说道，epoll是一种更快的poll，但是只是以为内快么？为什么需要epoll，原因有两个：
-（1）epoll支持边沿触发。
+上面说道，epoll是一种更快的poll，但是只是因为快么？为什么需要epoll，原因有两个：
 
-什么是边沿触发？man epoll里有个例子，简单来说就是。
-你调用epoll_wait()时，有数据就绪，你读取了一部分数据（还剩下一部分没有读取），然后你再次epoll_wait()，如果说水平触发，你的epoll_wait会马上返回。
-而边沿触发模式下，你的epoll_wait()需要有事件来触发，此时没有新的数据过来，epoll_wait不会返回。
-所以边沿触发的意思是，只有当fd的状态发生变化时，event才会被发送，而不管是否还是有数据可用。
+（1）epoll是linux特有的多路并发epoll支持边沿触发。
+
+什么是边沿触发？man epoll里有个例子，简单来说就是。你调用epoll_wait()时，有数据就绪，你读取了一部分数据（还剩下一部分没有读取），然后你再次epoll_wait()时会卡主。
+如果说水平触发，你的epoll_wait会马上返回，这样你就可以继续读取没读完的数据。所以边沿触发模式下，你的epoll_wait()需要有事件来触发。
+当fd的状态发生变化时，event才会被发送，而不管是否还是有数据可用。
 
 （2）对大规模文件描述符监控的支持。
+这是因为epoll改变了监控机制，原先是轮询，现在是事件触发，虽然都是内核在支持，但是方式已经不一样。
+现在内核可以更加高效，所以就可以支持大规模的fd集合。
 
 
-最后说点不是很重要的细节：
+
+最后说几个细节：
 
 #### 为什么man epoll显示和man select/poll不一样
 如果我们man一下select，或者pool，我们会发现这两个接口都是man(2)下的，但是我们man epoll，显示的确是在man(7)下，并显示epoll - I/O event notification facility。
