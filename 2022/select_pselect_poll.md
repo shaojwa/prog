@@ -33,6 +33,9 @@
 所以，现在的关键是，我们怎么对多个fd进行统一的监听？可以的，你想要的，内核都会支持你。这个特性的关键是什么，应该是多路，所以这个特性翻译过来叫
 多路转接（multiplexing）
 
+#### multiplex
+这个是本来是通信工程中的概念，意思就是一个通道发送两个或者多个信号或者消息。
+
 #### 多路转接的模式
 现在我们可以监听多个fd，那么具体还是有很多细节可以考虑？最简单的就是阻塞还是不阻塞？没关系，select都可以做到，只要你给合适的参数。
 select就能支持你希望的机制，轮询，还是死等。
@@ -47,5 +50,40 @@ select就能支持你希望的机制，轮询，还是死等。
 但是如果数量是N，那么select会监听0~N-1的fd，但是poll是可以指定的，这N个fd没什么限制，这显然增强了灵活性，而且数量也更多了，不再受到1024的限制。
 最后poll会把发生的event单独存放到revent中，而不是和select一样，回去影响入参数，确实，变强大了一点，但是并不是很大的飞跃。
 
-#### 为什么需要epoll
+#### 什么是epoll
+select是同步的IO多路复用，poll也类似，都是等待IO就绪。比较epoll和poll的用法，我们可以知道。
+poll是基于fd的，关注的event和收到的event都是围绕fd来划分，返回值也是告诉你，有多少个fd收到event。
+但是，epoll的视角变了，它成了一套机制，这套机制围绕event，而不是fd，以event作为关注点。
+因为epoll的核心接口epoll_wait()以event作为参数，而不再是fd，最多可以收集多少events，放在那里，都在参数中指定。
+其实模式没有变化，一致等待，阻塞一段时间，还是马上返回，和select/poll是样的，epoll可有这些行为可选。
 
+epoll的使用需要先创建一个epoll-instance，这个和select和poll不一样，但是epoll也是支持阻塞等待的。
+在默认情况下epoll的水平触发模式和poll功能是类似的，在用poll的地方都可以用epoll。只是epoll是一种更快的poll。
+
+
+#### 为什么需要epoll
+上面说道，epoll是一种更快的poll，但是只是以为内快么？为什么需要epoll，原因有两个：
+（1）epoll支持边沿触发。
+
+什么是边沿触发？man epoll里有个例子，简单来说就是。
+你调用epoll_wait()时，有数据就绪，你读取了一部分数据（还剩下一部分没有读取），然后你再次epoll_wait()，如果说水平触发，你的epoll_wait会马上返回。
+而边沿触发模式下，你的epoll_wait()需要有事件来触发，此时没有新的数据过来，epoll_wait不会返回。
+所以边沿触发的意思是，只有当fd的状态发生变化时，event才会被发送，而不管是否还是有数据可用。
+
+（2）对大规模文件描述符监控的支持。
+
+
+最后说点不是很重要的细节：
+
+#### 为什么man epoll显示和man select/poll不一样
+如果我们man一下select，或者pool，我们会发现这两个接口都是man(2)下的，但是我们man epoll，显示的确是在man(7)下，并显示epoll - I/O event notification facility。
+因为epoll已经不是一个单独的接口，这代表一套机制，我们要是查看具体的epoll接口，比如epoll_create，那么就可以在man(2)下找到。
+
+
+#### epoll的Ask And Question 很有意思
+（1）epoll可以注册多个相同的fd到一个epoll-instance中么？一般是不可以的，但是duplicate-fd是可以加到同一个epoll-instance中的。
+为什么这么做，因为这样，如果不同的fd设置不通过的event掩码，那么可以用不同的fd来处理不同的event，这样可以对event进行过滤。
+
+（2）相同的fd可以注册到多个不同的epoll-instance中么？可以的。毕竟这样更通用。
+
+（3）一个fd的关闭，会不会导致这个fd从相关的所有epoll-set中移除？
