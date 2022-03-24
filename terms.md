@@ -1,6 +1,11 @@
 https://wikidiff.com/deliver/send
 https://wikidiff.com/dispatch/deliver
 
+#### 运算符优先级
+```
+Operator Precedence
+```
+
 #### 陷阱
 ```
 pitfall
