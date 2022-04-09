@@ -1,0 +1,3 @@
+今天看到 pthread_mutex_lock的manual，看到一句话说到pthread_mutex_t是倾向于提供低层的原始的服务，是其他线程同步函数建立的基础。
+所以，mutex需要尽可能的高效。所以mutex的默认属性配置都是按照怎么快怎么来的，比如并不提供同一线程的double-lock检测。
+同样的道理，如果需要知道当前mutex的所有者，那就需要记录线程id，而这个会导致不可接受的开销（level of overhead）。
