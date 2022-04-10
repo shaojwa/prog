@@ -5,7 +5,6 @@ https://wikidiff.com/dispatch/deliver
 ```
 Operator Precedence
 ```
-
 #### 陷阱
 ```
 pitfall
