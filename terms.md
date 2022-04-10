@@ -1,10 +1,13 @@
-https://wikidiff.com/deliver/send
-https://wikidiff.com/dispatch/deliver
+#### 登入用户
+```
+logged-in users (ref: man shutdown) 
+```
 
 #### 运算符优先级
 ```
 Operator Precedence
 ```
+
 #### 陷阱
 ```
 pitfall
