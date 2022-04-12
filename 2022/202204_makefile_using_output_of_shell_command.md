@@ -1,0 +1,3 @@
+```
+nproc := $(shell nproc)
+```
