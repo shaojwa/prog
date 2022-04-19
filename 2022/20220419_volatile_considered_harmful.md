@@ -15,3 +15,6 @@ If shared_data were declared volatile, the locking would still be necessary.
 If the memory barriers are right, then the "volatile" doesn't matter.
 And if the memory barriers aren't right, then "volatile" doesn't help.
 ```
+
+The problem with volatile in a multithreaded context is that it doesn't provide all the guarantees we need.
+It does have a few properties we need, but not all of them, so we can't rely on volatile alone.
