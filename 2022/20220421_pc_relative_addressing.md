@@ -25,7 +25,7 @@ Dump of assembler code for function _Z8reorder2v:
    0x0000000000402556 <+29>:    pop    %rbp
    0x0000000000402557 <+30>:    retq
 ```
-用objdump 加r选项：
+用objdump 加r选项查看重定位项信息：
 ```
 [wsh@node80 wsh]$ objdump -dr compile.o
 compile.o:     file format elf64-x86-64
