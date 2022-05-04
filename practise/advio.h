@@ -1,6 +1,6 @@
 
-#ifndef ADV_IO_H_
-#define ADV_IO_H_
+#ifndef _ADVIO_H_
+#define _ADVIO_H_
 
 #include <string>
 using namespace std;
