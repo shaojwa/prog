@@ -1,3 +1,5 @@
+https://tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/
+
 #### 什么是TCP的长连接
 TCP的连接，也就会socket抽象层，在没有数据发送的时候，是需要发包来保活的。
 
