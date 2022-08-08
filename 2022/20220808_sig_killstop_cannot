@@ -1,0 +1,8 @@
+SIGKILL和SIGSTOP是不能被设置handler的，也就是不能被catch。
+```
+[wsh@li984-80 testcode]$ make run
+pid 3234754, sig_init1, signal signum 9 fail, errno is 22
+pid 3234754, sig_init1, signal signum 19 fail, errno is 22
+pid 3234754, sig_init1, signal signum 2 done, prev handler 0
+```
+22 就是 EINVAL。
