@@ -8,8 +8,7 @@
 
 using namespace std;
 
-
-int threads_count = 10;
+int threads_count = 100;
 pthread_mutex_t glock;
 
 
@@ -17,36 +16,38 @@ int gettid() {
   return syscall(SYS_gettid);
 }
 
-int wait_to_lock() {
+int wait_to_lock(long long num) {
   pthread_mutex_lock(&glock);
-  cout << "got lock... i am thread " << gettid() << endl;
-  sleep(1);
+  cout << "got lock. i am thread #" << num << ", tid " << gettid() << endl;
   pthread_mutex_unlock(&glock);
+  return 0;
 }
 
 
 void* start_routine(void *param) {
   // cout << "i am #" << reinterpret_cast<int>(param) << " thread " << gettid() << endl;
-  cout << "i am #" << (long long)param << " thread " << gettid() << endl;
-  wait_to_lock();
+  long long num = (long long)param;
+  cout << "i am thread #" << num << " tid " << gettid() << endl;
+  wait_to_lock(num);
+  return nullptr;
 }
 
 
 void create_threads(pthread_t threads[], int threads_count) {
   for (int i = 0; i < threads_count; i++) {
-    // cout << "create thread " << i << endl;
+    cout << "create thread " << i << endl;
     int ret = pthread_create(&threads[i], NULL, start_routine, reinterpret_cast<void *>(i));
     if (0 != ret) {
       cout << " error: create thread fail. i " << i << endl;
     }
-    // cout << "create thread success, sleep 1 second,  tid " << threads[i] << endl;
-    sleep(1);
+    cout << "create thread success, tid " << threads[i] << endl;
+    usleep(1000);
   }
 }
 
 void join_threads(pthread_t threads[], int threads_count) {
   for (int i = 0; i < threads_count; i++) {
-    pthread_join(threads[i], NULL);
+    pthread_join(threads[i], nullptr);
   }
 }
 
@@ -62,6 +63,6 @@ int main(int argc, char *argv[]) {
   pthread_mutex_unlock(&glock);
   cout << "join threads" << endl;
   join_threads(tids, threads_count);
-  cout << "quit" << endl;
+  cout << "done" << endl;
   return 0;
 }

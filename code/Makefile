@@ -18,7 +18,7 @@ vim:
 	vim $(last_source)
 
 run:
-	./out
+	@./out
 
 help:
 	@echo  "make { last | ass | pre | vim | run }"
