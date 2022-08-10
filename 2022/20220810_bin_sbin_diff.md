@@ -1,6 +1,6 @@
-[wikipedia ref](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
-[redhat ref](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/reference_guide/s1-filesystem-fhs)
-[linuxfoundation](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/ch03s04.html)
+-[wikipedia ref](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
+-[redhat ref](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/4/html/reference_guide/s1-filesystem-fhs)
+-[linuxfoundation](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/ch03s04.html)
 
 
 #### /bin
