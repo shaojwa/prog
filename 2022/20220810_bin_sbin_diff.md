@@ -18,4 +18,10 @@ The /sbin/ directory stores executables used by the root user.
 That means that /usr should be shareable between various FHS-compliant hosts and must not be written to.
 Any information that is host-specific or varies with time is stored elsewhere.
 
+The /usr/ directory is for files that can be shared across multiple machines.
+The /usr/ directory is often on its own partition and is mounted read-only. 
+
 #### /usr/bin
+
+#### /usr/lib/
+contains object files and libraries that are not designed to be directly utilized by users or shell scripts. 
