@@ -25,3 +25,6 @@ The /usr/ directory is often on its own partition and is mounted read-only.
 
 #### /usr/lib/
 contains object files and libraries that are not designed to be directly utilized by users or shell scripts. 
+
+#### /opt
+The /opt/ directory provides storage for large, static application software packages.
