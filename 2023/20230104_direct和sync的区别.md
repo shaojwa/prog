@@ -1,0 +1,5 @@
+O_DIRECT,最小化cache对IO的影响，这里的direct的意思是，IO是直接to/from用户态的缓存的。direct会尝试用sync的模式来传输数据，但是并不承诺。
+
+O_SYNC就是同步IO，write操作会在文件描述符上block调用的process，直到这个数据已经写入底层的硬件。
+
+O_ASYNC支持请求被取消。就是信号驱动IO，当这个文件描述符上有input或者output时，会发送SIGIO信号。
