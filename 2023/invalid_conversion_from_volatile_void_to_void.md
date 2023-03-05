@@ -19,11 +19,17 @@ int test_spinlock_space()
 
     pthread_create(&thr1, NULL, routine, &gspl);
     pthread_create(&thr2, NULL, routine, &gspl);
+    
+    pthread_join(thr1, NULL);
+    pthread_join(thr2, NULL);
+
+    pthread_spin_destroy(&spl);
+    return 0;
+}
 ```
-problem recurrent
+because the type `pthread_spinlock_t` is defined with keyword `volatile` like this:
 ```
-extern int pthread_create (pthread_t *__restrict __newthread,
-                           const pthread_attr_t *__restrict __attr,
-                           void *(*__start_routine) (void *),
-                           void *__restrict __arg) __THROWNL __nonnull ((1, 3));
+/usr/include/bits/pthreadtypes.h:226:typedef volatile int pthread_spinlock_t;
 ```
+
+
