@@ -1,24 +1,26 @@
 # author wsh @2022
 #
 CXX = g++
-CXXFLAGS = -Wall -O0 -g --std=c++11 -lpthread
-BINARY = out
+CXXFLAGS = -Wall -O0 --std=c++11 -lpthread
+
 last_source = $(shell ls -tr | grep \\.cc | tail -1)
+binary = $(basename $(last_source))
+$(info last_source: $(last_source), binary: $(binary))
 
 last:
-	$(CXX) $(CXXFLAGS) -o $(BINARY) $(last_source)
+	$(CXX) $(CXXFLAGS) -o $(binary) $(last_source)
 
-ass:
+s:
 	$(CXX) -S $(last_source)
 
-pre:
+e:
 	$(CXX) -E $(last_source)
 
-vim:
+v:
 	vim $(last_source)
 
-run:
-	@./out
+r:
+	./$(binary)
 
 help:
-	@echo  "make { last | ass | pre | vim | run }"
+	@echo  "make { last | s | e | v | r }"

@@ -85,7 +85,7 @@ class Dog: public Animal {
     Dog(string name, int age, string color): Animal(name, age), _color(color) {
       }
     string say_something() {
-      return "I'm " + get_name() + ", I am " + to_string(get_age()) + " years old";
+      return "I'm " + get_name() + ", I'm " + to_string(get_age()) + " years old";
     }
     string get_color() { 
       return _color;
@@ -155,18 +155,19 @@ void run_cpp_cases() {
 }
 
 void probe_vector() {
-  Dog d("wsh", 3, "black");
-  std::vector<Dog> dogs(10, d);
+  Dog d("suse", 3, "white");
+  std::vector<Dog> dogs(10);
+  //std::vector<Dog> dogs(10, d);
+  //for (auto& d : dogs_until11) {
+  //  cout << d.say_something() << endl;
+  //}
+}
+
+void probe_explicit() {
+  Dog d("suse", 3, "white");
+  // std::vector<Dog> dogs = 10;
+  std::vector<Dog> dogs(10, d); // explicit vector (size_type count); util c++14
   for (auto& d : dogs) {
     cout << d.say_something() << endl;
   }
 }
-
-
-void probe_expilict() {
-  std::vector<Dog> dogs(10); // 10 dogs
-  for (auto& d : dogs) {
-    cout << d.say_something() << endl;
-  }
-}
-

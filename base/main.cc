@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <iostream>
-#include <unistd.h>
 using namespace std;
 
 
@@ -27,8 +26,8 @@ int main()
   //run_cpp_cases();
   //cout << pow2(19) << endl;
   //cout << pow3(19) << endl;
-  probe_spinlock_stack();
-  //iprobe_vector();
-  //sleep(10);
+  //probe_spinlock_stack();
+  probe_vector();
+  probe_explicit();
   return 0;
 }
