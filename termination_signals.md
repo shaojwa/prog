@@ -8,14 +8,14 @@ They have different names because they’re used for slightly different purposes
 The reason for handling these signals is usually so your program can tidy up as appropriate before actually terminating. 
 For example, you might want to save state information, delete temporary files, or restore the previous terminal modes.
 
-## SIGTERM
+#### SIGTERM
 The SIGTERM signal is a generic signal used to cause program termination.
 Unlike SIGKILL, this signal can be blocked, handled, and ignored. It is the normal way to politely ask a program to terminate.
 
-## SIGINT
+#### SIGINT
 The SIGINT (“program interrupt”) signal is sent when the user types the INTR character.
 
-## SIGQUIT
+#### SIGQUIT
 SIGQUIT produces a core dump when it terminates the process, just like a program error signal. pay attention to 'program error'.
 Certain kinds of cleanups are best omitted in handling SIGQUIT. For example, if the program creates temporary files, 
 it should handle the other termination requests by deleting the temporary files.
@@ -29,4 +29,4 @@ This signal is usually generated only by explicit request. Since it cannot be ha
 In fact, if SIGKILL fails to terminate a process, that by itself constitutes an operating system bug which you should report.
 The system will generate SIGKILL for a process itself under some unusual conditions where the program cannot possibly continue to run (even to run a signal handler).
 
-## SIGHUP
+#### SIGHUP
