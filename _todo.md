@@ -95,39 +95,38 @@
 - linux存在强制锁（mandatory lock）和劝告锁（advisory lock），使用场景是什么？
 - xfs 文件系统写数据有journal么？
 - 进程以及线程对不同信号的处理方式？
-1. linux 内核中的三个 tcp keepalive参数是什么含义？
-1. 对目录调用 stat 系统调用时的返回值是什么意思？
-1. sync，syncfs，fsync，fdatasync 等系统调用的区别和注意点？
-1. lock_gettime() 接口中，CLOCK_REALTIME and CLOCK_MONOTONIC 区别以及适用场景？
-1. 正常TCP会话会保持多久？
-1. TCP/IP重传超时RTO是什么意思？
-1. 优先级倒置是什么意思？
-1. fork创建的子进程不会继承父进程挂起的信号，而exec创建的进程会继承父进程挂起的信号，为什么？
-1. 进程中的信号相关配置存储在哪里？
-1. chroot 的适用场景是什么？
-1. select微秒级精读是什么意思？
-1. poll毫秒精度是什么意思？
-1. pselect/ppoll纳秒级精但毫秒级已经不可靠
-1. 深入linux PAM体系结构    
-1. EINTER 系统调用被中断    
-1. ctrl+\终止前台进程组中进程并产生core
-1. linux 系统编程p55
-1. 原生编程规范 是什么意思？
-1. iopath结合图理解
-1. std::unordered_map;
-1. std::unordered_multimap;
-1. std::hash (std::bitset)
-1. move也会抛出异常，所以不是所有的类型都是movable
-1. 信心上限树是什么(UCT) 是什么东西？
-1. 1234b2有其他算法需要了解下
-1. 红黑树实现：https://chortle.ccsu.edu/AssemblyTutorial/   http://kerneltrap.org/node/517
-1. 5.5.4 Thread-Specific Breakpoints  
+- linux 内核中的三个 tcp keepalive参数是什么含义？
+- 对目录调用 stat 系统调用时的返回值是什么意思？
+- sync，syncfs，fsync，fdatasync 等系统调用的区别和注意点？
+- lock_gettime() 接口中，CLOCK_REALTIME and CLOCK_MONOTONIC 区别以及适用场景？
+- 正常TCP会话会保持多久？
+- TCP/IP重传超时RTO是什么意思？
+- 优先级倒置是什么意思？
+- fork创建的子进程不会继承父进程挂起的信号，而exec创建的进程会继承父进程挂起的信号，为什么？
+- 进程中的信号相关配置存储在哪里？
+- chroot 的适用场景是什么？
+- select微秒级精读是什么意思？
+- poll毫秒精度是什么意思？
+- pselect/ppoll纳秒级精但毫秒级已经不可靠
+- 深入linux PAM体系结构    
+- EINTER 系统调用被中断    
+- ctrl+\终止前台进程组中进程并产生core
+- linux 系统编程p55
+- 原生编程规范 是什么意思？
+- iopath结合图理解
+- std::unordered_map;
+- std::unordered_multimap;
+- std::hash (std::bitset)
+- move也会抛出异常，所以不是所有的类型都是movable
+- 信心上限树是什么(UCT) 是什么东西？
+- 1234b2有其他算法需要了解下
+- 红黑树实现：https://chortle.ccsu.edu/AssemblyTutorial/   http://kerneltrap.org/node/517
+- 5.5.4 Thread-Specific Breakpoints  
   https://sourceware.org/gdb/onlinedocs/gdb/Non_002dStop-Mode.html
   https://sourceware.org/gdb/onlinedocs/gdb/Asynchronous-and-non_002dstop-modes.html
   https://stackoverflow.com/questions/19181834/what-is-the-concept-of-vruntime-in-cfs
-1. 20200714 pthread_spin_lock了解一下 https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
-1. paire vs struct-with-2-fields https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using-a-struct-with-two-fields-and-a-pair
-1. 想用一套框架来处理不同的batch和task，那么自然，接口中都是用的基类指针。但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
-batch中的不同task又怎么在框架内构造？不同的派生task，派生batch必然需要有自己的特定接口吧
+- 20200714 pthread_spin_lock了解一下 https://docs.oracle.com/cd/E19253-01/816-5137/ggecq/index.html
+- paire vs struct-with-2-fields https://stackoverflow.com/questions/2236182/what-is-the-difference-between-using-a-struct-with-two-fields-and-a-pair
+- 想用一套框架来处理不同的batch和task，那么自然，接口中都是用的基类指针。但是派生类的构造是不是只能独立于框架接口，不同的batch用batcher的工厂模式创建么？
+- batch中的不同task又怎么在框架内构造？不同的派生task，派生batch必然需要有自己的特定接口吧
 - https://web.stanford.edu/class/cs97si/
-
