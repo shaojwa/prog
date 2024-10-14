@@ -1,0 +1,2 @@
+- https://www.cnblogs.com/william-cheung/p/4831085.html
+- http://wiki.osdev.org/C%2B%2B
