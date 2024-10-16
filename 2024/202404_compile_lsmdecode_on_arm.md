@@ -1,9 +1,9 @@
-ARM处理器是aarch64：
+aarch64(ARM)：
 ```
 lsm-decode: ELF 64-bit LSB shared object, ARM aarch64, version 1 (GNU/Linux), dynamically linked (uses shared libs)
 ```
 
-x86-64处理器是：
+x86-64：
 ```
 $ file lsm-decode
 lsm-decode: ELF 64-bit LSB shared object, x86-64, version 1 (GNU/Linux), dynamically linked (uses shared libs),
